@@ -41,9 +41,9 @@ var sEye1W, sEye2W, sEye3W, sEye4W;
 var pug1, pug2, pug3, pug4, pug5, pug6, pug7, pug8;
 //likes
 var rain, sleep, milk, squir, steak, tulip
-//dislikes
+    //dislikes
 var bath, choc, pepper, yell, spider, thunder
-//status input
+    //status input
 var input, button;
 //dog position
 var dogx, dogy;
@@ -147,16 +147,16 @@ function setup() {
 }
 
 function draw() {
-    welcomePage();
-    if (makeProfile >= 1) {
-        editProfile();
-    }
-    if (makePic >= 1) {
-        choosePic();
-    }
-    if (imageChange >= 1) {
-        editProfile();
-    }
+    //  welcomePage();
+    //if (makeProfile >= 1) {
+    //  editProfile();
+    //}
+    //if (makePic >= 1) {
+    choosePic();
+    //}
+    //if (imageChange >= 1) {
+    //    editProfile();
+    //}
 }
 
 function welcomePage() {
@@ -173,6 +173,7 @@ function welcomePage() {
         makeProfile += 1;
     }
 }
+
 function editProfile() {
     //background
     animation(profilePage, 400, 400);
@@ -183,30 +184,30 @@ function editProfile() {
     //spawn boxes for likes 
     fill(200);
     rect(120, 465, 80, 80);
-        if(mouseIsPressed && mouseX > 120 && mouseX < 200 && mouseY > 465 && mouseY < 545){ 
-            //fill later
-        }
+    if (mouseIsPressed && mouseX > 120 && mouseX < 200 && mouseY > 465 && mouseY < 545) {
+        //fill later
+    }
     rect(360, 465, 80, 80);
-        if(mouseIsPressed && mouseX > 440 && mouseX < 545 && mouseY > 465 && mouseY < 545){
-            //fill later
-        }
+    if (mouseIsPressed && mouseX > 440 && mouseX < 545 && mouseY > 465 && mouseY < 545) {
+        //fill later
+    }
     rect(600, 465, 80, 80);
-        if(mouseIsPressed && mouseX > 600 && mouseX < 680 && mouseY > 465 && mouseY < 545){
-            //fill later
-        }
+    if (mouseIsPressed && mouseX > 600 && mouseX < 680 && mouseY > 465 && mouseY < 545) {
+        //fill later
+    }
     //spawn boxes for dislikes
     rect(120, 665, 80, 80);
-        if(mouseIsPressed && mouseX > 120 && mouseX < 200 && mouseY > 665 && mouseY < 745){
-            //fill later
-        }
+    if (mouseIsPressed && mouseX > 120 && mouseX < 200 && mouseY > 665 && mouseY < 745) {
+        //fill later
+    }
     rect(360, 665, 80, 80);
-        if(mouseIsPressed && mouseX > 360 && mouseX < 440 && mouseY > 665 && mouseY < 745){
-            //fill later
-        }
+    if (mouseIsPressed && mouseX > 360 && mouseX < 440 && mouseY > 665 && mouseY < 745) {
+        //fill later
+    }
     rect(600, 665, 80, 80);
-        if(mouseIsPressed && mouseX > 600 && mouseX < 680 && mouseY > 665 && mouseY < 745){
-            //fill later
-        }
+    if (mouseIsPressed && mouseX > 600 && mouseX < 680 && mouseY > 665 && mouseY < 745) {
+        //fill later
+    }
     //stage change for profile picture
     if (mouseIsPressed && mouseX >= picX && mouseX <= picX + picL && mouseY >= picY && mouseY <= mouseY + picH) {
         makePic += 1;
@@ -225,68 +226,69 @@ function editProfile() {
     text('dislikes', 75, 630);
     imageSet;
 }
+
 function choosePic() {
     //background
     animation(startPage, 400, 400);
     //corgi\\
     animation(corgi1, dogx, dogy);
-    if (mouseIsPressed && mouseX >= dogx-50 && mouseX <= dogx+30 && mouseY >= dogy-50 && mouseY <= dogy+20) {
+    if (mouseIsPressed && mouseX >= dogx - 50 && mouseX <= dogx + 30 && mouseY >= dogy - 50 && mouseY <= dogy + 20) {
         imageSet = animation(corgi1, dogx + 100, dogy + 100);
     }
     animation(corgi2, dogx + 100, dogy);
-    if (mouseIsPressed && mouseX >= dogx+50 && mouseX <= dogx+130 && mouseY >= dogy-50 && mouseY <= dogy+20) {
+    if (mouseIsPressed && mouseX >= dogx + 50 && mouseX <= dogx + 130 && mouseY >= dogy - 50 && mouseY <= dogy + 20) {
         imageSet = animation(corgi2, dogx + 100, dogy + 100);
     }
     animation(corgi3, dogx + 200, dogy);
-    if (mouseIsPressed && mouseX >= dogx+150 && mouseX <= dogx+230 && mouseY >= dogy-50 && mouseY <= dogy+20) {
+    if (mouseIsPressed && mouseX >= dogx + 150 && mouseX <= dogx + 230 && mouseY >= dogy - 50 && mouseY <= dogy + 20) {
         imageSet = animation(corgi3, dogx + 100, dogy + 100);
     }
     animation(corgi4, dogx + 300, dogy);
-    if (mouseIsPressed && mouseX >= dogx+250 && mouseX <= dogx+330 && mouseY >= dogy-50 && mouseY <= dogy+20) {
+    if (mouseIsPressed && mouseX >= dogx + 250 && mouseX <= dogx + 330 && mouseY >= dogy - 50 && mouseY <= dogy + 20) {
         imageSet = animation(corgi4, dogx + 100, dogy + 100);
     }
     //ibizan\\
     animation(iEar2B, dogx, dogy + 100);
-    if (mouseIsPressed && mouseX >= dogx-50 && mouseX <= dogx+30 && mouseY >= dogy+50 && mouseY <= dogy+160) {
+    if (mouseIsPressed && mouseX >= dogx - 50 && mouseX <= dogx + 30 && mouseY >= dogy + 50 && mouseY <= dogy + 160) {
         imageSet = animation(iEar2B, dogx + 100, dogy + 100);
     }
     animation(iEar3G, dogx + 100, dogy + 100);
-    if (mouseIsPressed && mouseX >= dogx+50 && mouseX <= dogx+130 && mouseY >= dogy+50 && mouseY <= dogy+160) {
+    if (mouseIsPressed && mouseX >= dogx + 50 && mouseX <= dogx + 130 && mouseY >= dogy + 50 && mouseY <= dogy + 160) {
         imageSet = animation(iEar3G, dogx + 100, dogy + 100);
     }
     animation(iEar4M, dogx + 200, dogy + 100);
-    if (mouseIsPressed && mouseX >= dogx + 200 && mouseX <= dogx + 300 && mouseY >= dogy + 100 && mouseY <= dogy + 200) {
+    if (mouseIsPressed && mouseX >= dogx + 150 && mouseX <= dogx + 230 && mouseY >= dogy + 50 && mouseY <= dogy + 160) {
         imageSet = animation(iEar4M, dogx + 100, dogy + 100);
-        imageChange += 1;
+        //imageChange += 1;
     }
     animation(iEar1W, dogx + 300, dogy + 100);
-    if (mouseIsPressed && mouseX >= dogx + 300 && mouseX <= dogx + 300 && mouseY >= dogy + 100 && mouseY <= dogy + 200) {
+    if (mouseIsPressed && mouseX >= dogx + 250 && mouseX <= dogx + 300 && mouseY >= dogy + 50 && mouseY <= dogy + 160) {
         imageSet = animation(iEar1W, dogx + 100, dogy + 100);
     }
     //shepherd\\
     animation(sEye1B, dogx, dogy + 225);
-    if (mouseIsPressed && mouseX >= dogx && mouseX <= dogx + 100 && mouseY >= dogy + 200 && MouseY <= dogy + 300) {
+    if (mouseIsPressed && mouseX >= dogx - 50 && mouseX <= dogx + 30 && mouseY >= dogy + 150 && mouseY <= dogy + 300) {
         imageSet = animation(sEye1B, dogx + 100, dogy + 100);
     }
     animation(sEye1BL, dogx + 100, dogy + 225);
-    if (mouseIsPressed && mouseX >= dogx + 100 && mouseX <= dogx + 200 && mouseY >= dogy + 200 && mouseY <= dogy + 300) {
+    if (mouseIsPressed && mouseX >= dogx + 50 && mouseX <= dogx + 130 && mouseY >= dogy + 150 && mouseY <= dogy + 300) {
         imageSet = animation(sEye1BL, dogx + 100, dogy + 100);
     }
     animation(sEye3G, dogx + 200, dogy + 225);
-    if (mouseIsPressed && mouseX >= dogx + 200 && mouseX <= dogx + 300 && mouseY >= dogy + 200 && mouseY <= dogy + 300) {
+    if (mouseIsPressed && mouseX >= dogx + 150 && mouseX <= dogx + 230 && mouseY >= dogy + 150 && mouseY <= dogy + 300) {
         imageSet = animation(sEye3G, dogx + 100, dogy + 100);
     }
     animation(sEye2W, dogx + 300, dogy + 225);
-    if (mouseIsPressed && mouseX >= dogx + 300 && mouseX <= dogx + 400 && mouseY >= dogy + 200 && mouseY <= dogy + 300) {
+    if (mouseIsPressed && mouseX >= dogx + 250 && mouseX <= dogx + 330 && mouseY >= dogy + 150 && mouseY <= dogy + 300) {
         imageSet = animation(sEye2W, dogx + 100, dogy + 100);
     }
     //pug\\
     image(pug1, dogx - 60, dogy + 225, 200, 200);
-    if (mouseIsPressed && mouseX >= dogx && mouseX <= dogx + 100 && mouseY >= dogy + 300 && mouseY <= dogy + 400) {
+    if (mouseIsPressed && mouseX >= dogx - 50 && mouseX <= dogx + 50 && mouseY >= dogy + 300 && mouseY <= dogy + 440) {
         imageSet = image(pug1, dogx + 100, dogy + 100);
     }
     image(pug2, dogx + 60, dogy + 225, 200, 200);
-    if (mouseIsPressed && mouseX >= dogx + 100 && mouseX <= dogx + 200 && mouseY >= dogy + 300 && mouseY <= dogy + 400) {
+    if (mouseIsPressed && mouseX >= dogx + 50 && mouseX <= dogx + 180 && mouseY >= dogy + 300 && mouseY <= dogy + 440) {
         imageSet = image(pug2, dogx + 100, dogy + 100);
     }
     image(pug6, dogx + 180, dogy + 225, 200, 200);
@@ -300,180 +302,179 @@ function choosePic() {
 }
 //choose like functions
 function chooseLike1() {
-	//background
-	animation(startPage, 400, 400);
-	//likes
-	animation(rain, 100, 100);
-	if (mouseIsPressed && mouseX >= 100 && mouseX <= 200 && mouseY >=100 && mouseY <= 200) {
+    //background
+    animation(startPage, 400, 400);
+    //likes
+    animation(rain, 100, 100);
+    if (mouseIsPressed && mouseX >= 100 && mouseX <= 200 && mouseY >= 100 && mouseY <= 200) {
         likeSet1 = animation(rain, 120, 465);
     }
-	animation(sleep, 200, 100);
+    animation(sleep, 200, 100);
     if (mouseIsPressed && mouseX >= 200 && mouseX <= 300 && mouseY >= 100 && mouseY <= 200) {
         likeSet1 = animation(sleep, 120, 465);
     }
-	animation(milk, 300, 100);
+    animation(milk, 300, 100);
     if (mouseIsPressed && mouseX >= 300 && mouseX <= 400 && mouseY >= 100 && mouseY <= 200) {
         likeSet1 = animation(milk, 120, 465);
     }
-	animation(squir, 100, 200);
+    animation(squir, 100, 200);
     if (mouseIsPressed && mouseX >= 100 && mouseX <= 200 && mouseY >= 200 && mouseY <= 300) {
         likeSet1 = animation(squir, 120, 465);
     }
-	animation(steak, 200, 200);
+    animation(steak, 200, 200);
     if (mouseIsPressed && mouseX >= 200 && mouseX <= 300 && mouseY >= 200 && mouseY <= 300) {
         likeSet1 = animation(steak, 120, 465);
     }
-	animation(tulip, 300, 200);
+    animation(tulip, 300, 200);
     if (mouseIsPressed && mouseX >= 300 && mouseX <= 400 && mouseY >= 200 && mouseY <= 300) {
         likeSet1 = animation(tulip, 120, 465);
     }
 }
+
 function chooseLike2() {
-	//background
-	animation(startPage, 400, 400);
-	//likes
-	animation(rain, 100, 100);
+    //background
+    animation(startPage, 400, 400);
+    //likes
+    animation(rain, 100, 100);
     if (mouseIsPressed && mouseX >= 100 && mouseX <= 200 && mouseY >= 100 && mouseY <= 200) {
         likeSet2 = animation(rain, 360, 465);
     }
-	animation(sleep, 200, 100);
+    animation(sleep, 200, 100);
     if (mouseIsPressed && mouseX >= 200 && mouseX <= 300 && mouseY >= 100 && mouseY <= 200) {
         likeSet2 = animation(sleep, 360, 465);
     }
-	animation(milk, 300, 100);
+    animation(milk, 300, 100);
     if (mouseIsPressed && mouseX >= 300 && mouseX <= 400 && mouseY >= 100 && mouseY <= 200) {
         likeSet2 = animation(milk, 360, 465);
     }
-	animation(squir, 100, 200);
+    animation(squir, 100, 200);
     if (mouseIsPressed && mouseX >= 100 && mouseX <= 200 && mouseY >= 200 && mouseY <= 300) {
         likeSet2 = animation(squir, 360, 465);
     }
-	animation(steak, 200, 200);
+    animation(steak, 200, 200);
     if (mouseIsPressed && mouseX >= 200 && mouseX <= 300 && mouseY >= 200 && mouseY <= 300) {
         likeSet2 = animation(steak, 360, 465);
     }
-	animation(tulip, 300, 200); 
+    animation(tulip, 300, 200);
     if (mouseIsPressed && mouseX >= 300 && mouseX <= 400 && mouseY >= 200 && mouseY <= 300) {
         likeSet2 = animation(tulip, 360, 465);
     }
 }
 
-function chooseLike3(){
-	//background
-	animation(startPage, 400, 400);
-	//likes
-	animation(rain, 100, 100);
+function chooseLike3() {
+    //background
+    animation(startPage, 400, 400);
+    //likes
+    animation(rain, 100, 100);
     if (mouseIsPressed && mouseX >= 100 && mouseX <= 200 && mouseY >= 100 && mouseY <= 200) {
         likeSet3 = animation(rain, 600, 465);
     }
-	animation(sleep, 200, 100);
+    animation(sleep, 200, 100);
     if (mouseIsPressed && mouseX >= 200 && mouseX <= 300 && mouseY >= 100 && mouseY <= 200) {
         likeSet3 = animation(sleep, 600, 465);
     }
-	animation(milk, 300, 100);
+    animation(milk, 300, 100);
     if (mouseIsPressed && mouseX >= 300 && mouseX <= 400 && mouseY >= 100 && mouseY <= 200) {
         likeSet3 = animation(milk, 600, 465);
     }
-	animation(squir, 100, 200);
+    animation(squir, 100, 200);
     if (mouseIsPressed && mouseX >= 100 && mouseX <= 200 && mouseY >= 200 && mouseY <= 300) {
         likeSet3 = animation(squir, 600, 465);
     }
-	animation(steak, 200, 200);
+    animation(steak, 200, 200);
     if (mouseIsPressed && mouseX >= 200 && mouseX <= 300 && mouseY >= 200 && mouseY <= 300) {
         likeSet3 = animation(steak, 600, 465);
     }
-	animation(tulip, 300, 200);
+    animation(tulip, 300, 200);
     if (mouseIsPressed && mouseX >= 300 && mouseX <= 400 && mouseY >= 200 && mouseY <= 300) {
         likeSet3 = animation(tulip, 600, 465);
     }
 }
-
 //choose dislike functions
-function chooseDislike1(){
-    //background
-    animation(startPage, 400,400);
-    //dislikes
-    animation(bath, 100, 100);
-    if (mouseIsPressed && mouseX >= 100 && mouseX <= 200 && mouseY >= 100 && mouseY <= 200){
-        disSet1 = animation (bath, 120, 665);
-    }
-    animation(choc, 200, 100);
-    if (mouseIsPressed && mouseX >= 200 && mouseX <= 300 && mouseY >= 100 && mouseY <= 200){
-        disSet1 = animation (choc, 120, 665);
-    }
-    animation(pepper, 300, 100);
-     if (mouseIsPressed && mouseX >= 300 && mouseX <= 400 && mouseY >= 100 && mouseY <= 200){
-         disSet1 = animation (pepper, 120, 665);
-     }
-    animation(yell, 100, 200);
-    if (mouseIsPressed && mouseX >= 100 && mouseX <= 200 && mouseY >= 200 && mouseY <= 300){
-        disSet1 = animation (yell, 120, 665);
-    }
-    animation(spider, 200, 200);
-    if (mouseIsPressed && mouseX >= 200 && mouseX <= 300 && mouseY >= 200 && mouseY <= 300){
-        disSet1 = animation (spider, 120, 665); 
-    }
-    animation(thunder, 300, 200);
-    if(mouseIsPressed && mouseX >= 300 && mouseX <= 400 && mouseY >= 200 && mouseY <= 300){
-        disSet1 = animation (thunder, 120, 665);  
-    }
-}
-
-function chooseDislike2(){
-    //background
-    animation(startPage, 400,400);
-   
-    animation(bath, 100, 100);
-    if (mouseIsPressed && mouseX >= 100 && mouseX <= 200 && mouseY >= 100 && mouseY <= 200){
-        disSet2 = animation (bath, 360, 665);
-    }
-    animation(choc, 200, 100);
-    if (mouseIsPressed && mouseX >= 200 && mouseX <= 300 && mouseY >= 100 && mouseY <= 200){
-        disSet2 = animation (choc, 360, 665);
-    }
-    animation(pepper, 300, 100);
-     if (mouseIsPressed && mouseX >= 300 && mouseX <= 400 && mouseY >= 100 && mouseY <= 200){
-         disSet2 = animation (pepper, 360, 665);
-     }
-    animation(yell, 100, 200);
-    if (mouseIsPressed && mouseX >= 100 && mouseX <= 200 && mouseY >= 200 && mouseY <= 300){
-        disSet2 = animation (yell, 360, 665);
-    }
-    animation(spider, 200, 200);
-    if (mouseIsPressed && mouseX >= 200 && mouseX <= 300 && mouseY >= 200 && mouseY <= 300){
-        disSet2 = animation (spider, 360, 665);  
-    }
-    animation(thunder, 300, 200);
-     if(mouseIsPressed && mouseX >= 300 && mouseX <= 400 && mouseY >= 200 && mouseY <= 300){
-        disSet2 = animation (thunder, 360, 665);
-    }
-}
-function chooseDislike3(){
+function chooseDislike1() {
     //background
     animation(startPage, 400, 400);
-   
+    //dislikes
     animation(bath, 100, 100);
-    if (mouseIsPressed && mouseX >= 100 && mouseX <= 200 && mouseY >= 100 && mouseY <= 200){
-        disSet3 = animation (bath, 600, 665);
+    if (mouseIsPressed && mouseX >= 100 && mouseX <= 200 && mouseY >= 100 && mouseY <= 200) {
+        disSet1 = animation(bath, 120, 665);
     }
     animation(choc, 200, 100);
-    if (mouseIsPressed && mouseX >= 200 && mouseX <= 300 && mouseY >= 100 && mouseY <= 200){
-        disSet3 = animation (choc, 600, 665);
+    if (mouseIsPressed && mouseX >= 200 && mouseX <= 300 && mouseY >= 100 && mouseY <= 200) {
+        disSet1 = animation(choc, 120, 665);
     }
     animation(pepper, 300, 100);
-    if (mouseIsPressed && mouseX >= 300 && mouseX <= 400 && mouseY >= 100 && mouseY <= 200){
-         disSet3 = animation (pepper, 600, 665);
-     }
+    if (mouseIsPressed && mouseX >= 300 && mouseX <= 400 && mouseY >= 100 && mouseY <= 200) {
+        disSet1 = animation(pepper, 120, 665);
+    }
     animation(yell, 100, 200);
-    if (mouseIsPressed && mouseX >= 100 && mouseX <= 200 && mouseY >= 200 && mouseY <= 300){
-        disSet3 = animation (yell, 600, 665);
+    if (mouseIsPressed && mouseX >= 100 && mouseX <= 200 && mouseY >= 200 && mouseY <= 300) {
+        disSet1 = animation(yell, 120, 665);
     }
     animation(spider, 200, 200);
-    if (mouseIsPressed && mouseX >= 200 && mouseX <= 300 && mouseY >= 200 && mouseY <= 300){
-        disSet3 = animation (spider, 600, 665);
+    if (mouseIsPressed && mouseX >= 200 && mouseX <= 300 && mouseY >= 200 && mouseY <= 300) {
+        disSet1 = animation(spider, 120, 665);
     }
     animation(thunder, 300, 200);
-    if(mouseIsPressed && mouseX >= 300 && mouseX <= 400 && mouseY >= 200 && mouseY <= 300){
-        disSet3 = animation (thunder, 600, 665);  
+    if (mouseIsPressed && mouseX >= 300 && mouseX <= 400 && mouseY >= 200 && mouseY <= 300) {
+        disSet1 = animation(thunder, 120, 665);
+    }
+}
+
+function chooseDislike2() {
+    //background
+    animation(startPage, 400, 400);
+    animation(bath, 100, 100);
+    if (mouseIsPressed && mouseX >= 100 && mouseX <= 200 && mouseY >= 100 && mouseY <= 200) {
+        disSet2 = animation(bath, 360, 665);
+    }
+    animation(choc, 200, 100);
+    if (mouseIsPressed && mouseX >= 200 && mouseX <= 300 && mouseY >= 100 && mouseY <= 200) {
+        disSet2 = animation(choc, 360, 665);
+    }
+    animation(pepper, 300, 100);
+    if (mouseIsPressed && mouseX >= 300 && mouseX <= 400 && mouseY >= 100 && mouseY <= 200) {
+        disSet2 = animation(pepper, 360, 665);
+    }
+    animation(yell, 100, 200);
+    if (mouseIsPressed && mouseX >= 100 && mouseX <= 200 && mouseY >= 200 && mouseY <= 300) {
+        disSet2 = animation(yell, 360, 665);
+    }
+    animation(spider, 200, 200);
+    if (mouseIsPressed && mouseX >= 200 && mouseX <= 300 && mouseY >= 200 && mouseY <= 300) {
+        disSet2 = animation(spider, 360, 665);
+    }
+    animation(thunder, 300, 200);
+    if (mouseIsPressed && mouseX >= 300 && mouseX <= 400 && mouseY >= 200 && mouseY <= 300) {
+        disSet2 = animation(thunder, 360, 665);
+    }
+}
+
+function chooseDislike3() {
+    //background
+    animation(startPage, 400, 400);
+    animation(bath, 100, 100);
+    if (mouseIsPressed && mouseX >= 100 && mouseX <= 200 && mouseY >= 100 && mouseY <= 200) {
+        disSet3 = animation(bath, 600, 665);
+    }
+    animation(choc, 200, 100);
+    if (mouseIsPressed && mouseX >= 200 && mouseX <= 300 && mouseY >= 100 && mouseY <= 200) {
+        disSet3 = animation(choc, 600, 665);
+    }
+    animation(pepper, 300, 100);
+    if (mouseIsPressed && mouseX >= 300 && mouseX <= 400 && mouseY >= 100 && mouseY <= 200) {
+        disSet3 = animation(pepper, 600, 665);
+    }
+    animation(yell, 100, 200);
+    if (mouseIsPressed && mouseX >= 100 && mouseX <= 200 && mouseY >= 200 && mouseY <= 300) {
+        disSet3 = animation(yell, 600, 665);
+    }
+    animation(spider, 200, 200);
+    if (mouseIsPressed && mouseX >= 200 && mouseX <= 300 && mouseY >= 200 && mouseY <= 300) {
+        disSet3 = animation(spider, 600, 665);
+    }
+    animation(thunder, 300, 200);
+    if (mouseIsPressed && mouseX >= 300 && mouseX <= 400 && mouseY >= 200 && mouseY <= 300) {
+        disSet3 = animation(thunder, 600, 665);
     }
 }
