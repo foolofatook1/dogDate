@@ -47,7 +47,8 @@ var bath, choc, pepper, yell, spider, thunder
 var input, button;
 //dog position
 var dogx, dogy;
-//initializes the image change
+//profile pages\\
+var corgi1_p, corgi2_p, corgi3_p, corgi4_p, ibizan1_p, ibizan2_p, ibizan3_p, ibizan4_p, pug1_p, pug2_p, pug3_p, pug4_p, shep1_p, shep2_p, shep3_p, shep4_p;
 /////////preload/////////
 function preload() {
     //font
@@ -85,20 +86,16 @@ function preload() {
     pug2 = loadImage('assets/textures/dogSprites/pug2.png');
     pug6 = loadImage('assets/textures/dogSprites/pug6.png');
     pug7 = loadImage('assets/textures/dogSprites/pug7.png');
-    //likes
-    rain = loadAnimation('assets/textures/likes/likes_rain.png');
-    sleep = loadAnimation('assets/textures/likes/likes_sleeping.png');
-    milk = loadAnimation('assets/textures/likes/milk.png');
-    squir = loadAnimation('assets/textures/likes/squirrel.gif');
-    steak = loadAnimation('assets/textures/likes/steak.gif');
-    tulip = loadAnimation('assets/textures/likes/tulips.png');
-    //dislikes
-    bath = loadAnimation('assets/textures/dislikes/bath.gif');
-    choc = loadAnimation('assets/textures/dislikes/chocolate.png');
-    pepper = loadAnimation('assets/textures/dislikes/dislike_peppers.png');
-    yell = loadAnimation('assets/textures/dislikes/dislike_yelling.png');
-    spider = loadAnimation('assets/textures/dislikes/spider.png');
-    thunder = loadAnimation('assets/textures/dislikes/thunder_icon.gif');
+    //loading the profile pages\\
+    corgi1_p = loadAnimation('assets/textures/avatars/corgi_1.png');
+    corgi2_p = loadAnimation('assets/textures/avatars/corgi_2.png');
+    corgi3_p = loadAnimation('assets/textures/avatars/corgi_3.png');
+    corgi4_p = loadAnimation('assets/textures/avatars/corgi_4.png');
+    ibizan1_p = loadAnimation('assets/textures/avatars/ibizan_1.png');
+    ibizan2_p = loadAnimation('assets/textures/avatars/ibizan_2.png');
+    ibizan3_p = loadAnimation('assets/textures/avatars/ibizan_3.png');
+    ibizan4_p = loadAnimation('assets/textures/avatars/ibizan_4.png');
+    pg
 }
 
 function setup() {
