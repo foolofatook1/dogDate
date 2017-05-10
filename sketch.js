@@ -122,8 +122,8 @@ function setup() {
     picL = 270;
     picH = 295;
     //dog position
-    dogx = 100;
-    dogy = 100;
+    dogx = 250;
+    dogy = 250;
     //status input
     //input = createInput();
     //input.position(414, 83);
