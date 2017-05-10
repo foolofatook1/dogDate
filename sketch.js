@@ -230,28 +230,28 @@ function choosePic() {
     animation(startPage, 400, 400);
     //corgi\\
     animation(corgi1, dogx, dogy);
-    if (mouseIsPressed && mouseX >= dogx-20 && mouseX <= dogx + 100 && mouseY >= dogy && mouseY <= dogy + 100) {
+    if (mouseIsPressed && mouseX >= dogx-50 && mouseX <= dogx+30 && mouseY >= dogy-50 && mouseY <= dogy+20) {
         imageSet = animation(corgi1, dogx + 100, dogy + 100);
     }
     animation(corgi2, dogx + 100, dogy);
-    if (mouseIsPressed && mouseX >= dogx + 100 && mouseX <= dogx + 200 && mouseY >= dogy && mouseY <= dogy + 100) {
+    if (mouseIsPressed && mouseX >= dogx+50 && mouseX <= dogx+130 && mouseY >= dogy-50 && mouseY <= dogy+20) {
         imageSet = animation(corgi2, dogx + 100, dogy + 100);
     }
     animation(corgi3, dogx + 200, dogy);
-    if (mouseIsPressed && mouseX >= dogx + 200 && mouseX <= dogx + 300 && mouseY >= dogy && mouseY <= dogy + 100) {
+    if (mouseIsPressed && mouseX >= dogx+150 && mouseX <= dogx+230 && mouseY >= dogy-50 && mouseY <= dogy+20) {
         imageSet = animation(corgi3, dogx + 100, dogy + 100);
     }
     animation(corgi4, dogx + 300, dogy);
-    if (mouseIsPressed && mouseX >= dogx + 300 && mouseX <= dogx + 400 && mouseY >= dogy && mouseY <= dogy + 100) {
+    if (mouseIsPressed && mouseX >= dogx+250 && mouseX <= dogx+330 && mouseY >= dogy-50 && mouseY <= dogy+20) {
         imageSet = animation(corgi4, dogx + 100, dogy + 100);
     }
     //ibizan\\
     animation(iEar2B, dogx, dogy + 100);
-    if (mouseIsPressed && mouseX >= dogx && mouseX <= dogx + 100 && mouseY >= dogy + 100 && mouseY <= dogy + 200) {
+    if (mouseIsPressed && mouseX >= dogx-50 && mouseX <= dogx+30 && mouseY >= dogy+50 && mouseY <= dogy+160) {
         imageSet = animation(iEar2B, dogx + 100, dogy + 100);
     }
     animation(iEar3G, dogx + 100, dogy + 100);
-    if (mouseIsPressed && mouseX >= dogx + 100 && mouseX <= dogx + 200 && mouseY >= dogy + 100 && mouseY <= dogy + 200) {
+    if (mouseIsPressed && mouseX >= dogx+50 && mouseX <= dogx+130 && mouseY >= dogy+50 && mouseY <= dogy+160) {
         imageSet = animation(iEar3G, dogx + 100, dogy + 100);
     }
     animation(iEar4M, dogx + 200, dogy + 100);
