@@ -51,8 +51,6 @@ var dogx, dogy;
 var corgi1_p, corgi2_p, corgi3_p, corgi4_p, ibizan1_p, ibizan2_p, ibizan3_p, ibizan4_p, pug1_p, pug2_p, pug3_p, pug4_p, shep1_p, shep2_p, shep3_p, shep4_p;
 //integer for choosing different avatar\\
 var corgi1_s, corgi2_s, corgi3_s, corgi4_s, ibizan1_s, ibizan2_s, ibizan3_s, ibizan4_s, pug1_s, pug2_s, pug3_s, pug4_s, shep1_s, shep2_s, shep3_s, shep4_s;
-//returns to dog choice\\
-var goBack, goBack1, goBack2, goBack3, goBack4, goBack5, goBack6, goBack7, goBack8, goBack9, goBack10, goBack11, goBack12, goBack13, goBack14, goBack15;
 /////////preload/////////
 function preload() {
     //font
@@ -103,10 +101,10 @@ function preload() {
     pug2_p = loadImage('assets/textures/avatars/pug_2.png');
     pug3_p = loadImage('assets/textures/avatars/pug_3.png');
     pug4_p = loadImage('assets/textures/avatars/pug_4.png');
-    shep1_p = loadImage('assets/textures/avatars/shepard_1.png');
-    shep2_p = loadImage('assets/textures/avatars/shepard_2.png');
-    shep3_p = loadImage('assets/textures/avatars/shepard_3.png');
-    shep4_p = loadImage('assets/textures/avatars/shepard_4.png');
+    shep1_p = loadImage('assets/textures/avatars/shepard_3.png');
+    shep2_p = loadImage('assets/textures/avatars/shepard_1.png');
+    shep3_p = loadImage('assets/textures/avatars/shepard_4.png');
+    shep4_p = loadImage('assets/textures/avatars/shepard_2.png');
 }
 
 function setup() {
@@ -150,23 +148,6 @@ function setup() {
     shep2_s = 0;
     shep3_s = 0;
     shep4_s = 0;
-    //returns you to choosing an avatar\\
-    goBack = 0;
-    goBack1 = 0;
-    goBack2 = 0;
-    goBack3 = 0;
-    goBack4 = 0;
-    goBack5 = 0;
-    goBack6 = 0;
-    goBack7 = 0;
-    goBack8 = 0;
-    goBack9 = 0;
-    goBack10 = 0;
-    goBack11 = 0;
-    goBack12 = 0;
-    goBack13 = 0;
-    goBack14 = 0;
-    goBack15 = 0;
 }
 
 function draw() {
@@ -176,97 +157,97 @@ function draw() {
     }
     if (corgi1_s >= 1) {
         corgi1Profile();
-        if (goBack >= 1) {
+        if (corgi1_s == 0) {
             chooseProfile();
         }
     }
     if (corgi2_s >= 1) {
         corgi2Profile();
-        if (goBack1 >= 1) {
+        if (corgi2_s == 0) {
             chooseProfile();
         }
     }
     if (corgi3_s >= 1) {
         corgi3Profile();
-        if (goBack2 >= 1) {
+        if (corgi3_s == 0) {
             chooseProfile();
         }
     }
     if (corgi4_s >= 1) {
         corgi4Profile();
-        if (goBack3 >= 1) {
+        if (corgi4_s == 0) {
             chooseProfile();
         }
     }
     if (ibizan1_s >= 1) {
         ibizan1Profile();
-        if (goBack4 >= 1) {
+        if (ibizan1_s == 0) {
             chooseProfile();
         }
     }
     if (ibizan2_s >= 1) {
         ibizan2Profile();
-        if (goBack5 >= 1) {
+        if (ibizan2_s == 0) {
             chooseProfile();
         }
     }
     if (ibizan3_s >= 1) {
         ibizan3Profile();
-        if (goBack6 >= 1) {
+        if (ibizan3_s == 0) {
             chooseProfile();
         }
     }
     if (ibizan4_s >= 1) {
         ibizan4Profile();
-        if (goBack7 >= 1) {
+        if (ibizan4_s == 0) {
             chooseProfile();
         }
     }
     if (pug1_s >= 1) {
         pug1Profile();
-        if (goBack8 >= 1) {
+        if (pug1_s == 0) {
             chooseProfile();
         }
     }
     if (pug2_s >= 1) {
         pug2Profile();
-        if (goBack9 >= 1) {
+        if (pug2_s == 0) {
             chooseProfile();
         }
     }
     if (pug3_s >= 1) {
         pug3Profile();
-        if (goBack10 >= 1) {
+        if (pug3_s == 0) {
             chooseProfile();
         }
     }
     if (pug4_s >= 1) {
         pug4Profile();
-        if (goBack11 >= 1) {
+        if (pug4_s == 0) {
             chooseProfile();
         }
     }
     if (shep1_s >= 1) {
         shep1Profile();
-        if (goBack12 >= 1) {
+        if (shep1_s == 0) {
             chooseProfile();
         }
     }
     if (shep2_s >= 1) {
         shep2Profile();
-        if (goBack13 >= 1) {
+        if (shep2_s == 0) {
             chooseProfile();
         }
     }
     if (shep3_s >= 1) {
         shep3Profile();
-        if (goBack14 >= 1) {
+        if (shep3_s == 0) {
             chooseProfile();
         }
     }
     if (shep4_s >= 1) {
         shep4Profile();
-        if (goBack15 >= 1) {
+        if (shep4_s == 0) {
             chooseProfile();
         }
     }
@@ -366,7 +347,7 @@ function corgi1Profile() {
     rect(650, 776, 125, 100);
     rect(525, 776, 124, 100);
     if (mouseIsPressed && mouseX >= 650 && mouseX <= 775 && mouseY >= 776) {
-        goBack += 1;
+        corgi1_s--;
     }
     fill(255, 0, 220);
     textFont(Font, 50);
@@ -381,7 +362,7 @@ function corgi2Profile() {
     rect(650, 776, 125, 100);
     rect(525, 776, 124, 100);
     if (mouseIsPressed && mouseX >= 650 && mouseX <= 775 && mouseY >= 776) {
-        goBack1 += 1;
+        corgi2_s--;
     }
     fill(255, 0, 220);
     textFont(Font, 50);
@@ -396,7 +377,7 @@ function corgi3Profile() {
     rect(650, 776, 125, 100);
     rect(525, 776, 124, 100);
     if (mouseIsPressed && mouseX >= 650 && mouseX <= 775 && mouseY >= 776) {
-        goBack2 += 1;
+        corgi3_s--;
     }
     fill(255, 0, 220);
     textFont(Font, 50);
@@ -411,7 +392,7 @@ function corgi4Profile() {
     rect(650, 776, 125, 100);
     rect(525, 776, 124, 100);
     if (mouseIsPressed && mouseX >= 650 && mouseX <= 775 && mouseY >= 776) {
-        goBack3 += 1;
+        corgi4_s--;
     }
     fill(255, 0, 220);
     textFont(Font, 50);
@@ -426,7 +407,7 @@ function ibizan1Profile() {
     rect(650, 776, 125, 100);
     rect(525, 776, 124, 100);
     if (mouseIsPressed && mouseX >= 650 && mouseX <= 775 && mouseY >= 776) {
-        goBack4 += 1;
+        ibizan1_s--;
     }
     fill(255, 0, 220);
     textFont(Font, 50);
@@ -441,7 +422,7 @@ function ibizan2Profile() {
     rect(650, 776, 125, 100);
     rect(525, 776, 124, 100);
     if (mouseIsPressed && mouseX >= 650 && mouseX <= 775 && mouseY >= 776) {
-        goBack5 += 1;
+        ibizan2_s--;
     }
     fill(255, 0, 220);
     textFont(Font, 50);
@@ -451,12 +432,12 @@ function ibizan2Profile() {
 }
 
 function ibizan3Profile() {
-    image(ibizan3, 0, 0, 800, 800);
+    image(ibizan3_p, 0, 0, 800, 800);
     fill(180);
     rect(650, 776, 125, 100);
     rect(525, 776, 124, 100);
     if (mouseIsPressed && mouseX >= 650 && mouseX <= 775 && mouseY >= 776) {
-        goBack6 += 1;
+       ibizan3_s--;
     }
     fill(255, 0, 220);
     textFont(Font, 50);
@@ -471,7 +452,7 @@ function ibizan4Profile() {
     rect(650, 776, 125, 100);
     rect(525, 776, 124, 100);
     if (mouseIsPressed && mouseX >= 650 && mouseX <= 775 && mouseY >= 776) {
-        goBack7 += 1;
+        ibizan4_s--;
     }
     fill(255, 0, 220);
     textFont(Font, 50);
@@ -486,7 +467,7 @@ function pug1Profile() {
     rect(650, 776, 125, 100);
     rect(525, 776, 124, 100);
     if (mouseIsPressed && mouseX >= 650 && mouseX <= 775 && mouseY >= 776) {
-        goBack8 += 1;
+        pug1_s--;
     }
     fill(255, 0, 220);
     textFont(Font, 50);
@@ -501,7 +482,7 @@ function pug2Profile() {
     rect(650, 776, 125, 100);
     rect(525, 776, 124, 100);
     if (mouseIsPressed && mouseX >= 650 && mouseX <= 775 && mouseY >= 776) {
-        goBack9 += 1;
+        pug2_s--;
     }
     fill(255, 0, 220);
     textFont(Font, 50);
@@ -516,7 +497,7 @@ function pug3Profile() {
     rect(650, 776, 125, 100);
     rect(525, 776, 124, 100);
     if (mouseIsPressed && mouseX >= 650 && mouseX <= 775 && mouseY >= 776) {
-        goBack10 += 1;
+        pug3_s--;
     }
     fill(255, 0, 220);
     textFont(Font, 50);
@@ -531,7 +512,7 @@ function pug4Profile() {
     rect(650, 776, 125, 100);
     rect(525, 776, 124, 100);
     if (mouseIsPressed && mouseX >= 650 && mouseX <= 775 && mouseY >= 776) {
-        goBack11 += 1;
+        pug4_s--;
     }
     fill(255, 0, 220);
     textFont(Font, 50);
@@ -546,7 +527,7 @@ function shep1Profile() {
     rect(650, 776, 125, 100);
     rect(525, 776, 124, 100);
     if (mouseIsPressed && mouseX >= 650 && mouseX <= 775 && mouseY >= 776) {
-        goBack12 += 1;
+        shep1_s--;
     }
     fill(255, 0, 220);
     textFont(Font, 50);
@@ -561,7 +542,7 @@ function shep2Profile() {
     rect(650, 776, 125, 100);
     rect(525, 776, 124, 100);
     if (mouseIsPressed && mouseX >= 650 && mouseX <= 775 && mouseY >= 776) {
-        goBack13 += 1;
+        shep2_s--;
     }
     fill(255, 0, 220);
     textFont(Font, 50);
@@ -576,7 +557,7 @@ function shep3Profile() {
     rect(650, 776, 125, 100);
     rect(525, 776, 124, 100);
     if (mouseIsPressed && mouseX >= 650 && mouseX <= 775 && mouseY >= 776) {
-        goBack14 += 1;
+        shep3_s--;
     }
     fill(255, 0, 220);
     textFont(Font, 50);
@@ -591,7 +572,7 @@ function shep4Profile() {
     rect(650, 776, 125, 100);
     rect(525, 776, 124, 100);
     if (mouseIsPressed && mouseX >= 650 && mouseX <= 775 && mouseY >= 776) {
-        goBack15 += 1;
+        shep4_s--;
     }
     fill(255, 0, 220);
     textFont(Font, 50);
