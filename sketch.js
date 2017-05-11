@@ -49,6 +49,10 @@ var input, button;
 var dogx, dogy;
 //profile pages\\
 var corgi1_p, corgi2_p, corgi3_p, corgi4_p, ibizan1_p, ibizan2_p, ibizan3_p, ibizan4_p, pug1_p, pug2_p, pug3_p, pug4_p, shep1_p, shep2_p, shep3_p, shep4_p;
+//integer for choosing different avatar\\
+var corgi1_s, corgi2_s, corgi3_s, corgi4_s, ibizan1_s, ibizan2_s, ibizan3_s, ibizan4_s, pug1_s, pug2_s, pug3_s, pug4_s, shep1_s, shep2_s, shep3_s, shep4_s;
+//returns to dog choice\\
+var goBack, goBack1, goBack2, goBack3, goBack4, goBack5, goBack6, goBack7, goBack8, goBack9, goBack10, goBack11, goBack12, goBack13, goBack14, goBack15;
 /////////preload/////////
 function preload() {
     //font
@@ -87,15 +91,22 @@ function preload() {
     pug6 = loadImage('assets/textures/dogSprites/pug6.png');
     pug7 = loadImage('assets/textures/dogSprites/pug7.png');
     //loading the profile pages\\
-    corgi1_p = loadAnimation('assets/textures/avatars/corgi_1.png');
-    corgi2_p = loadAnimation('assets/textures/avatars/corgi_2.png');
-    corgi3_p = loadAnimation('assets/textures/avatars/corgi_3.png');
-    corgi4_p = loadAnimation('assets/textures/avatars/corgi_4.png');
-    ibizan1_p = loadAnimation('assets/textures/avatars/ibizan_1.png');
-    ibizan2_p = loadAnimation('assets/textures/avatars/ibizan_2.png');
-    ibizan3_p = loadAnimation('assets/textures/avatars/ibizan_3.png');
-    ibizan4_p = loadAnimation('assets/textures/avatars/ibizan_4.png');
-    pg
+    corgi1_p = loadImage('assets/textures/avatars/corgi_1.png');
+    corgi2_p = loadImage('assets/textures/avatars/corgi_2.png');
+    corgi3_p = loadImage('assets/textures/avatars/corgi_3.png');
+    corgi4_p = loadImage('assets/textures/avatars/corgi_4.png');
+    ibizan1_p = loadImage('assets/textures/avatars/ibizan_1.png');
+    ibizan2_p = loadImage('assets/textures/avatars/ibizan_2.png');
+    ibizan3_p = loadImage('assets/textures/avatars/ibizan_3.png');
+    ibizan4_p = loadImage('assets/textures/avatars/ibizan_4.png');
+    pug1_p = loadImage('assets/textures/avatars/pug_1.png');
+    pug2_p = loadImage('assets/textures/avatars/pug_2.png');
+    pug3_p = loadImage('assets/textures/avatars/pug_3.png');
+    pug4_p = loadImage('assets/textures/avatars/pug_4.png');
+    shep1_p = loadImage('assets/textures/avatars/shepard_1.png');
+    shep2_p = loadImage('assets/textures/avatars/shepard_2.png');
+    shep3_p = loadImage('assets/textures/avatars/shepard_3.png');
+    shep4_p = loadImage('assets/textures/avatars/shepard_4.png');
 }
 
 function setup() {
@@ -121,13 +132,143 @@ function setup() {
     //counter that changes to profile choice page
     makeProfile = 0;
     //sets profile image
-    imageSet = null;
+    profileSet = 0;
+    //integer for choosing different avatar\\
+    corgi1_s = 0;
+    corgi2_s = 0;
+    corgi3_s = 0;
+    corgi4_s = 0
+    ibizan1_s = 0;
+    ibizan2_s = 0;
+    ibizan3_s = 0;
+    ibizan4_s = 0;
+    pug1_s = 0;
+    pug2_s = 0;
+    pug3_s = 0;
+    pug4_s = 0;
+    shep1_s = 0;
+    shep2_s = 0;
+    shep3_s = 0;
+    shep4_s = 0;
+    //returns you to choosing an avatar\\
+    goBack = 0;
+    goBack1 = 0;
+    goBack2 = 0;
+    goBack3 = 0;
+    goBack4 = 0;
+    goBack5 = 0;
+    goBack6 = 0;
+    goBack7 = 0;
+    goBack8 = 0;
+    goBack9 = 0;
+    goBack10 = 0;
+    goBack11 = 0;
+    goBack12 = 0;
+    goBack13 = 0;
+    goBack14 = 0;
+    goBack15 = 0;
 }
 
 function draw() {
     welcomePage();
     if (makeProfile >= 1) {
-        choosePic();
+        chooseProfile();
+    }
+    if (corgi1_s >= 1) {
+        corgi1Profile();
+        if (goBack >= 1) {
+            chooseProfile();
+        }
+    }
+    if (corgi2_s >= 1) {
+        corgi2Profile();
+        if (goBack1 >= 1) {
+            chooseProfile();
+        }
+    }
+    if (corgi3_s >= 1) {
+        corgi3Profile();
+        if (goBack2 >= 1) {
+            chooseProfile();
+        }
+    }
+    if (corgi4_s >= 1) {
+        corgi4Profile();
+        if (goBack3 >= 1) {
+            chooseProfile();
+        }
+    }
+    if (ibizan1_s >= 1) {
+        ibizan1Profile();
+        if (goBack4 >= 1) {
+            chooseProfile();
+        }
+    }
+    if (ibizan2_s >= 1) {
+        ibizan2Profile();
+        if (goBack5 >= 1) {
+            chooseProfile();
+        }
+    }
+    if (ibizan3_s >= 1) {
+        ibizan3Profile();
+        if (goBack6 >= 1) {
+            chooseProfile();
+        }
+    }
+    if (ibizan4_s >= 1) {
+        ibizan4Profile();
+        if (goBack7 >= 1) {
+            chooseProfile();
+        }
+    }
+    if (pug1_s >= 1) {
+        pug1Profile();
+        if (goBack8 >= 1) {
+            chooseProfile();
+        }
+    }
+    if (pug2_s >= 1) {
+        pug2Profile();
+        if (goBack9 >= 1) {
+            chooseProfile();
+        }
+    }
+    if (pug3_s >= 1) {
+        pug3Profile();
+        if (goBack10 >= 1) {
+            chooseProfile();
+        }
+    }
+    if (pug4_s >= 1) {
+        pug4Profile();
+        if (goBack11 >= 1) {
+            chooseProfile();
+        }
+    }
+    if (shep1_s >= 1) {
+        shep1Profile();
+        if (goBack12 >= 1) {
+            chooseProfile();
+        }
+    }
+    if (shep2_s >= 1) {
+        shep2Profile();
+        if (goBack13 >= 1) {
+            chooseProfile();
+        }
+    }
+    if (shep3_s >= 1) {
+        shep3Profile();
+        if (goBack14 >= 1) {
+            chooseProfile();
+        }
+    }
+    if (shep4_s >= 1) {
+        shep4Profile();
+        if (goBack15 >= 1) {
+            chooseProfile();
+        }
     }
 }
 
@@ -146,78 +287,315 @@ function welcomePage() {
     }
 }
 
-function chooseProfile() {}
-
-function choosePic() {
+function chooseProfile() {
     //background
     animation(startPage, 400, 400);
     //corgi\\
     animation(corgi1, dogx, dogy);
     if (mouseIsPressed && mouseX >= dogx - 50 && mouseX <= dogx + 30 && mouseY >= dogy - 50 && mouseY <= dogy + 20) {
-        imageSet = animation(corgi1, dogx + 100, dogy + 100);
+        corgi1_s++;
     }
     animation(corgi2, dogx + 100, dogy);
     if (mouseIsPressed && mouseX >= dogx + 50 && mouseX <= dogx + 130 && mouseY >= dogy - 50 && mouseY <= dogy + 20) {
-        imageSet = animation(corgi2, dogx + 100, dogy + 100);
+        corgi2_s++;
     }
     animation(corgi3, dogx + 200, dogy);
     if (mouseIsPressed && mouseX >= dogx + 150 && mouseX <= dogx + 230 && mouseY >= dogy - 50 && mouseY <= dogy + 20) {
-        imageSet = animation(corgi3, dogx + 100, dogy + 100);
+        corgi3_s++;
     }
     animation(corgi4, dogx + 300, dogy);
     if (mouseIsPressed && mouseX >= dogx + 250 && mouseX <= dogx + 330 && mouseY >= dogy - 50 && mouseY <= dogy + 20) {
-        imageSet = animation(corgi4, dogx + 100, dogy + 100);
+        corgi4_s++;
     }
     //ibizan\\
     animation(iEar2B, dogx, dogy + 100);
     if (mouseIsPressed && mouseX >= dogx - 50 && mouseX <= dogx + 30 && mouseY >= dogy + 50 && mouseY <= dogy + 160) {
-        imageSet = animation(iEar2B, dogx + 100, dogy + 100);
+        ibizan1_s++;
     }
     animation(iEar3G, dogx + 100, dogy + 100);
     if (mouseIsPressed && mouseX >= dogx + 50 && mouseX <= dogx + 130 && mouseY >= dogy + 50 && mouseY <= dogy + 160) {
-        imageSet = animation(iEar3G, dogx + 100, dogy + 100);
+        ibizan2_s++;
     }
     animation(iEar4M, dogx + 200, dogy + 100);
     if (mouseIsPressed && mouseX >= dogx + 150 && mouseX <= dogx + 230 && mouseY >= dogy + 50 && mouseY <= dogy + 160) {
-        imageSet = animation(iEar4M, dogx + 100, dogy + 100);
-        //imageChange += 1;
+        ibizan3_s++;
     }
     animation(iEar1W, dogx + 300, dogy + 100);
     if (mouseIsPressed && mouseX >= dogx + 250 && mouseX <= dogx + 300 && mouseY >= dogy + 50 && mouseY <= dogy + 160) {
-        imageSet = animation(iEar1W, dogx + 100, dogy + 100);
+        ibizan4_s++;
     }
     //shepherd\\
     animation(sEye1B, dogx, dogy + 225);
     if (mouseIsPressed && mouseX >= dogx - 50 && mouseX <= dogx + 30 && mouseY >= dogy + 150 && mouseY <= dogy + 300) {
-        imageSet = animation(sEye1B, dogx + 100, dogy + 100);
+        shep1_s++;
     }
     animation(sEye1BL, dogx + 100, dogy + 225);
     if (mouseIsPressed && mouseX >= dogx + 50 && mouseX <= dogx + 130 && mouseY >= dogy + 150 && mouseY <= dogy + 300) {
-        imageSet = animation(sEye1BL, dogx + 100, dogy + 100);
+        shep2_s++;
     }
     animation(sEye3G, dogx + 200, dogy + 225);
     if (mouseIsPressed && mouseX >= dogx + 150 && mouseX <= dogx + 230 && mouseY >= dogy + 150 && mouseY <= dogy + 300) {
-        imageSet = animation(sEye3G, dogx + 100, dogy + 100);
+        shep3_s++;
     }
     animation(sEye2W, dogx + 300, dogy + 225);
     if (mouseIsPressed && mouseX >= dogx + 250 && mouseX <= dogx + 330 && mouseY >= dogy + 150 && mouseY <= dogy + 300) {
-        imageSet = animation(sEye2W, dogx + 100, dogy + 100);
+        shep4_s++;
     }
     //pug\\
     image(pug1, dogx - 60, dogy + 225, 200, 200);
     if (mouseIsPressed && mouseX >= dogx - 50 && mouseX <= dogx + 50 && mouseY >= dogy + 300 && mouseY <= dogy + 440) {
-        imageSet = image(pug1, dogx + 100, dogy + 100);
+        pug1_s++;
     }
     image(pug2, dogx + 60, dogy + 225, 200, 200);
     if (mouseIsPressed && mouseX >= dogx + 50 && mouseX <= dogx + 180 && mouseY >= dogy + 300 && mouseY <= dogy + 440) {
-        imageSet = image(pug2, dogx + 100, dogy + 100);
+        pug2_s++;
     }
     image(pug6, dogx + 180, dogy + 225, 200, 200);
     if (mouseIsPressed && mouseX >= dogx + 200 && mouseX <= dogx + 300 && mouseY >= dogy + 300 && mouseY <= dogy + 400) {
-        imageSet = image(pug6, dogx + 100, dogy + 100);
+        pug3_s++;
     }
     image(pug7, dogx + 300, dogy + 225, 200, 200);
     if (mouseIsPressed && mouseX >= dogx + 300 && mouseX <= dogx + 400 && mouseY >= dogy + 300 && mouseY <= dogy + 400) {
-        imageSet = image(pug7, dogx + 100, dogy + 100);
+        pug4_s++;
     }
+}
+
+function corgi1Profile() {
+    image(corgi1_p, 0, 0, 800, 800);
+    fill(180);
+    rect(650, 776, 125, 100);
+    rect(525, 776, 124, 100);
+    if (mouseIsPressed && mouseX >= 650 && mouseX <= 775 && mouseY >= 776) {
+        goBack += 1;
+    }
+    fill(255, 0, 220);
+    textFont(Font, 50);
+    textAlign(CENTER);
+    text('choose', 585, 800);
+    text('return', 715, 800);
+}
+
+function corgi2Profile() {
+    image(corgi2_p, 0, 0, 800, 800);
+    fill(180);
+    rect(650, 776, 125, 100);
+    rect(525, 776, 124, 100);
+    if (mouseIsPressed && mouseX >= 650 && mouseX <= 775 && mouseY >= 776) {
+        goBack1 += 1;
+    }
+    fill(255, 0, 220);
+    textFont(Font, 50);
+    textAlign(CENTER);
+    text('choose', 585, 800);
+    text('return', 715, 800);
+}
+
+function corgi3Profile() {
+    image(corgi3_p, 0, 0, 800, 800);
+    fill(180);
+    rect(650, 776, 125, 100);
+    rect(525, 776, 124, 100);
+    if (mouseIsPressed && mouseX >= 650 && mouseX <= 775 && mouseY >= 776) {
+        goBack2 += 1;
+    }
+    fill(255, 0, 220);
+    textFont(Font, 50);
+    textAlign(CENTER);
+    text('choose', 585, 800);
+    text('return', 715, 800);
+}
+
+function corgi4Profile() {
+    image(corgi4_p, 0, 0, 800, 800);
+    fill(180);
+    rect(650, 776, 125, 100);
+    rect(525, 776, 124, 100);
+    if (mouseIsPressed && mouseX >= 650 && mouseX <= 775 && mouseY >= 776) {
+        goBack3 += 1;
+    }
+    fill(255, 0, 220);
+    textFont(Font, 50);
+    textAlign(CENTER);
+    text('choose', 585, 800);
+    text('return', 715, 800);
+}
+
+function ibizan1Profile() {
+    image(ibizan1_p, 0, 0, 800, 800);
+    fill(180);
+    rect(650, 776, 125, 100);
+    rect(525, 776, 124, 100);
+    if (mouseIsPressed && mouseX >= 650 && mouseX <= 775 && mouseY >= 776) {
+        goBack4 += 1;
+    }
+    fill(255, 0, 220);
+    textFont(Font, 50);
+    textAlign(CENTER);
+    text('choose', 585, 800);
+    text('return', 715, 800);
+}
+
+function ibizan2Profile() {
+    image(ibizan2_p, 0, 0, 800, 800);
+    fill(180);
+    rect(650, 776, 125, 100);
+    rect(525, 776, 124, 100);
+    if (mouseIsPressed && mouseX >= 650 && mouseX <= 775 && mouseY >= 776) {
+        goBack5 += 1;
+    }
+    fill(255, 0, 220);
+    textFont(Font, 50);
+    textAlign(CENTER);
+    text('choose', 585, 800);
+    text('return', 715, 800);
+}
+
+function ibizan3Profile() {
+    image(ibizan3, 0, 0, 800, 800);
+    fill(180);
+    rect(650, 776, 125, 100);
+    rect(525, 776, 124, 100);
+    if (mouseIsPressed && mouseX >= 650 && mouseX <= 775 && mouseY >= 776) {
+        goBack6 += 1;
+    }
+    fill(255, 0, 220);
+    textFont(Font, 50);
+    textAlign(CENTER);
+    text('choose', 585, 800);
+    text('return', 715, 800);
+}
+
+function ibizan4Profile() {
+    image(ibizan4_p, 0, 0, 800, 800);
+    fill(180);
+    rect(650, 776, 125, 100);
+    rect(525, 776, 124, 100);
+    if (mouseIsPressed && mouseX >= 650 && mouseX <= 775 && mouseY >= 776) {
+        goBack7 += 1;
+    }
+    fill(255, 0, 220);
+    textFont(Font, 50);
+    textAlign(CENTER);
+    text('choose', 585, 800);
+    text('return', 715, 800);
+}
+
+function pug1Profile() {
+    image(pug1_p, 0, 0, 800, 800);
+    fill(180);
+    rect(650, 776, 125, 100);
+    rect(525, 776, 124, 100);
+    if (mouseIsPressed && mouseX >= 650 && mouseX <= 775 && mouseY >= 776) {
+        goBack8 += 1;
+    }
+    fill(255, 0, 220);
+    textFont(Font, 50);
+    textAlign(CENTER);
+    text('choose', 585, 800);
+    text('return', 715, 800);
+}
+
+function pug2Profile() {
+    image(pug2_p, 0, 0, 800, 800);
+    fill(180);
+    rect(650, 776, 125, 100);
+    rect(525, 776, 124, 100);
+    if (mouseIsPressed && mouseX >= 650 && mouseX <= 775 && mouseY >= 776) {
+        goBack9 += 1;
+    }
+    fill(255, 0, 220);
+    textFont(Font, 50);
+    textAlign(CENTER);
+    text('choose', 585, 800);
+    text('return', 715, 800);
+}
+
+function pug3Profile() {
+    image(pug3_p, 0, 0, 800, 800);
+    fill(180);
+    rect(650, 776, 125, 100);
+    rect(525, 776, 124, 100);
+    if (mouseIsPressed && mouseX >= 650 && mouseX <= 775 && mouseY >= 776) {
+        goBack10 += 1;
+    }
+    fill(255, 0, 220);
+    textFont(Font, 50);
+    textAlign(CENTER);
+    text('choose', 585, 800);
+    text('return', 715, 800);
+}
+
+function pug4Profile() {
+    image(pug4_p, 0, 0, 800, 800);
+    fill(180);
+    rect(650, 776, 125, 100);
+    rect(525, 776, 124, 100);
+    if (mouseIsPressed && mouseX >= 650 && mouseX <= 775 && mouseY >= 776) {
+        goBack11 += 1;
+    }
+    fill(255, 0, 220);
+    textFont(Font, 50);
+    textAlign(CENTER);
+    text('choose', 585, 800);
+    text('return', 715, 800);
+}
+
+function shep1Profile() {
+    image(shep1_p, 0, 0, 800, 800);
+    fill(180);
+    rect(650, 776, 125, 100);
+    rect(525, 776, 124, 100);
+    if (mouseIsPressed && mouseX >= 650 && mouseX <= 775 && mouseY >= 776) {
+        goBack12 += 1;
+    }
+    fill(255, 0, 220);
+    textFont(Font, 50);
+    textAlign(CENTER);
+    text('choose', 585, 800);
+    text('return', 715, 800);
+}
+
+function shep2Profile() {
+    image(shep2_p, 0, 0, 800, 800);
+    fill(180);
+    rect(650, 776, 125, 100);
+    rect(525, 776, 124, 100);
+    if (mouseIsPressed && mouseX >= 650 && mouseX <= 775 && mouseY >= 776) {
+        goBack13 += 1;
+    }
+    fill(255, 0, 220);
+    textFont(Font, 50);
+    textAlign(CENTER);
+    text('choose', 585, 800);
+    text('return', 715, 800);
+}
+
+function shep3Profile() {
+    image(shep3_p, 0, 0, 800, 800);
+    fill(180);
+    rect(650, 776, 125, 100);
+    rect(525, 776, 124, 100);
+    if (mouseIsPressed && mouseX >= 650 && mouseX <= 775 && mouseY >= 776) {
+        goBack14 += 1;
+    }
+    fill(255, 0, 220);
+    textFont(Font, 50);
+    textAlign(CENTER);
+    text('choose', 585, 800);
+    text('return', 715, 800);
+}
+
+function shep4Profile() {
+    image(shep4_p, 0, 0, 800, 800);
+    fill(180);
+    rect(650, 776, 125, 100);
+    rect(525, 776, 124, 100);
+    if (mouseIsPressed && mouseX >= 650 && mouseX <= 775 && mouseY >= 776) {
+        goBack15 += 1;
+    }
+    fill(255, 0, 220);
+    textFont(Font, 50);
+    textAlign(CENTER);
+    text('choose', 585, 800);
+    text('return', 715, 800);
 }
