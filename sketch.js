@@ -170,7 +170,7 @@ function draw() {
             chooseProfile();
         }
         if (corgi2_s >= 5) {
-            corgi2Chosen();
+           corgi2Chosen();
         }
     }
     if (corgi3_s >= 1) {
@@ -178,126 +178,126 @@ function draw() {
         if (corgi3_s == 0) {
             chooseProfile();
         }
-        if (corgi3_s >= 5) {
+       if (corgi3_s >= 5) {
             corgi3Chosen();
         }
     }
-    if (corgi4_s >= 1) {
+   if (corgi4_s >= 1) {
         corgi4Profile();
         if (corgi4_s == 0) {
             chooseProfile();
         }
-        if (corgi4_s >= 5) {
-            corgi4Chosen();
-        }
-    }
-    if (ibizan1_s >= 1) {
-        ibizan1Profile();
-        if (ibizan1_s == 0) {
-            chooseProfile();
-        }
-        if (ibizan1_s >= 5) {
-            ibizan1Chosen();
-        }
-    }
-    if (ibizan2_s >= 1) {
-        ibizan2Profile();
-        if (ibizan2_s == 0) {
-            chooseProfile();
-        }
-        if (ibizan2_s >= 5) {
-            ibizan2Chosen();
-        }
-    }
-    if (ibizan3_s >= 1) {
-        ibizan3Profile();
-        if (ibizan3_s == 0) {
-            chooseProfile();
-        }
-        if (ibizan3_s >= 5) {
-            ibizan3Chosen();
-        }
-    }
-    if (ibizan4_s >= 1) {
-        ibizan4Profile();
-        if (ibizan4_s == 0) {
-            chooseProfile();
-        }
-        if (ibizan4_s >= 5) {
-            ibizan4Chosen();
-        }
-    }
-    if (pug1_s >= 1) {
-        pug1Profile();
-        if (pug1_s == 0) {
-            chooseProfile();
-        }
-        if (pug1_s >= 5) {
-            pug1Chosen();
-        }
-    }
-    if (pug2_s >= 1) {
-        pug2Profile();
-        if (pug2_s == 0) {
-            chooseProfile();
-        }
-        if (pug2_s >= 5) {
-            pug2Chosen();
-        }
-    }
-    if (pug3_s >= 1) {
-        pug3Profile();
-        if (pug3_s == 0) {
-            chooseProfile();
-        }
-        if (pug3_s >= 5) {
-            pug3Chosen();
-        }
-    }
-    if (pug4_s >= 1) {
-        pug4Profile();
-        if (pug4_s == 0) {
-            chooseProfile();
-        }
-        if (pug4_s >= 5) {
-            pug4Chosen();
-        }
-    }
-    if (shep1_s >= 1) {
-        shep1Profile();
-        if (shep1_s == 0) {
-            chooseProfile();
-        }
-        if (shep1_s >= 5) {
-            shep1Chosen();
-        }
-    }
-    if (shep2_s >= 1) {
-        shep2Profile();
-        if (shep2_s == 0) {
-            chooseProfile();
-        }
-        if (shep2_s >= 5) {
-            shep2Chosen();
-        }
-    }
-    if (shep3_s >= 1) {
-        shep3Profile();
-        if (shep3_s == 0) {
-            chooseProfile();
-        }
-        if (shep3_s >= 5) {
-            shep3Chosen();
-        }
-    }
-    if (shep4_s >= 1) {
-        shep4Profile();
-        if (shep4_s == 0) {
-            chooseProfile();
-        }
-        if (shep4_s >= 5) {
-            shep4Chosen();
-        }
+//        if (corgi4_s >= 5) {
+ //           corgi4Chosen();
+//       }
+ //   }
+ //   if (ibizan1_s >= 1) {
+ //       ibizan1Profile();
+ //       if (ibizan1_s == 0) {
+ //           chooseProfile();
+ //       }
+ //       if (ibizan1_s >= 5) {
+ //           ibizan1Chosen();
+ //       }
+ //   }
+ //   if (ibizan2_s >= 1) {
+ //       ibizan2Profile();
+ //       if (ibizan2_s == 0) {
+ //           chooseProfile();
+ //       }
+ //       if (ibizan2_s >= 5) {
+ //           ibizan2Chosen();
+ //       }
+ //   }
+ //   if (ibizan3_s >= 1) {
+ //       ibizan3Profile();
+ //       if (ibizan3_s == 0) {
+ //           chooseProfile();
+ //       }
+ //       if (ibizan3_s >= 5) {
+ //           ibizan3Chosen();
+ //       }
+ //   }
+ //   if (ibizan4_s >= 1) {
+ //       ibizan4Profile();
+ //       if (ibizan4_s == 0) {
+ //           chooseProfile();
+  //      }
+  //      if (ibizan4_s >= 5) {
+  //          ibizan4Chosen();
+ //       }
+ //   }
+ //   if (pug1_s >= 1) {
+ //       pug1Profile();
+ //       if (pug1_s == 0) {
+ //           chooseProfile();
+ //       }
+ //       if (pug1_s >= 5) {
+ //           pug1Chosen();
+ //       }
+ //   }
+//    if (pug2_s >= 1) {
+ //       pug2Profile();
+ //       if (pug2_s == 0) {
+  //          chooseProfile();
+  //      }
+  //      if (pug2_s >= 5) {
+ //           pug2Chosen();
+ //       }
+ //   }
+ //   if (pug3_s >= 1) {
+ //       pug3Profile();
+ //       if (pug3_s == 0) {
+ //           chooseProfile();
+ //       }
+ //       if (pug3_s >= 5) {
+ //           pug3Chosen();
+//        }
+ //   }
+ //   if (pug4_s >= 1) {
+ //       pug4Profile();
+ //       if (pug4_s == 0) {
+ //           chooseProfile();
+ //       }
+ //       if (pug4_s >= 5) {
+ //           pug4Chosen();
+//        }
+//    }
+//    if (shep1_s >= 1) {
+//        shep1Profile();
+//        if (shep1_s == 0) {
+//            chooseProfile();
+//        }
+//        if (shep1_s >= 5) {
+//            shep1Chosen();
+//        }
+//    }
+ //   if (shep2_s >= 1) {
+ //       shep2Profile();
+ //       if (shep2_s == 0) {
+ //           chooseProfile();
+ //       }
+ //       if (shep2_s >= 5) {
+ //           shep2Chosen();
+ //       }
+ //   }
+ //   if (shep3_s >= 1) {
+ //       shep3Profile();
+ //       if (shep3_s == 0) {
+ //           chooseProfile();
+ //       }
+ //       if (shep3_s >= 5) {
+ //           shep3Chosen();
+ //       }
+ //   }
+ //   if (shep4_s >= 1) {
+ //       shep4Profile();
+ //       if (shep4_s == 0) {
+ // //          chooseProfile();
+  //      }
+  //      if (shep4_s >= 5) {
+ //           shep4Chosen();
+  //      }
     }
 }
 
@@ -679,10 +679,23 @@ function shep4Profile() {
 //after having chosen an avatar\\
 function corgi1Chosen() {
     background(180);
+    //top bar\\
+    fill(100);
+    rect(0, 0, 799, 50);
+    //home button\\
     fill(255, 0, 220);
     textFont(Font, 50);
     textAlign(CENTER);
-    text('welcome', 400, 400);
+    text('home', 750, 40);
+    line(705, 0, 705, 50);
+    //profile button\\
+    text('Jean-Pier Claude III', 500, 40);
+    line(305, 0, 305, 50);
+    if (mouseIsPressed && mouseX >= 305 && mouseX <= 700 && mouseY >= 0 && mouseY <= 50){
+        corgi1_s -= 4;
+    }
+    //header\\
+    text('Here are your matches!', 400, 100);
 }
 
 function corgi2Chosen() {
