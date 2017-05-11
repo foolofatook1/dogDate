@@ -160,11 +160,17 @@ function draw() {
         if (corgi1_s == 0) {
             chooseProfile();
         }
+        if (corgi1_s >= 5) {
+            corgi1Chosen();
+        }
     }
     if (corgi2_s >= 1) {
         corgi2Profile();
         if (corgi2_s == 0) {
             chooseProfile();
+        }
+        if (corgi2_s >= 5) {
+            corgi2Chosen();
         }
     }
     if (corgi3_s >= 1) {
@@ -172,11 +178,17 @@ function draw() {
         if (corgi3_s == 0) {
             chooseProfile();
         }
+        if (corgi3_s >= 5) {
+            corgi3Chosen();
+        }
     }
     if (corgi4_s >= 1) {
         corgi4Profile();
         if (corgi4_s == 0) {
             chooseProfile();
+        }
+        if (corgi4_s >= 5) {
+            corgi4Chosen();
         }
     }
     if (ibizan1_s >= 1) {
@@ -184,11 +196,17 @@ function draw() {
         if (ibizan1_s == 0) {
             chooseProfile();
         }
+        if (ibizan1_s >= 5) {
+            ibizan1Chosen();
+        }
     }
     if (ibizan2_s >= 1) {
         ibizan2Profile();
         if (ibizan2_s == 0) {
             chooseProfile();
+        }
+        if (ibizan2_s >= 5) {
+            ibizan2Chosen();
         }
     }
     if (ibizan3_s >= 1) {
@@ -196,11 +214,17 @@ function draw() {
         if (ibizan3_s == 0) {
             chooseProfile();
         }
+        if (ibizan3_s >= 5) {
+            ibizan3Chosen();
+        }
     }
     if (ibizan4_s >= 1) {
         ibizan4Profile();
         if (ibizan4_s == 0) {
             chooseProfile();
+        }
+        if (ibizan4_s >= 5) {
+            ibizan4Chosen();
         }
     }
     if (pug1_s >= 1) {
@@ -208,11 +232,17 @@ function draw() {
         if (pug1_s == 0) {
             chooseProfile();
         }
+        if (pug1_s >= 5) {
+            pug1Chosen();
+        }
     }
     if (pug2_s >= 1) {
         pug2Profile();
         if (pug2_s == 0) {
             chooseProfile();
+        }
+        if (pug2_s >= 5) {
+            pug2Chosen();
         }
     }
     if (pug3_s >= 1) {
@@ -220,11 +250,17 @@ function draw() {
         if (pug3_s == 0) {
             chooseProfile();
         }
+        if (pug3_s >= 5) {
+            pug3Chosen();
+        }
     }
     if (pug4_s >= 1) {
         pug4Profile();
         if (pug4_s == 0) {
             chooseProfile();
+        }
+        if (pug4_s >= 5) {
+            pug4Chosen();
         }
     }
     if (shep1_s >= 1) {
@@ -232,11 +268,17 @@ function draw() {
         if (shep1_s == 0) {
             chooseProfile();
         }
+        if (shep1_s >= 5) {
+            shep1Chosen();
+        }
     }
     if (shep2_s >= 1) {
         shep2Profile();
         if (shep2_s == 0) {
             chooseProfile();
+        }
+        if (shep2_s >= 5) {
+            shep2Chosen();
         }
     }
     if (shep3_s >= 1) {
@@ -244,11 +286,17 @@ function draw() {
         if (shep3_s == 0) {
             chooseProfile();
         }
+        if (shep3_s >= 5) {
+            shep3Chosen();
+        }
     }
     if (shep4_s >= 1) {
         shep4Profile();
         if (shep4_s == 0) {
             chooseProfile();
+        }
+        if (shep4_s >= 5) {
+            shep4Chosen();
         }
     }
 }
@@ -349,6 +397,9 @@ function corgi1Profile() {
     if (mouseIsPressed && mouseX >= 650 && mouseX <= 775 && mouseY >= 776) {
         corgi1_s--;
     }
+    if (mouseIsPressed && mouseX >= 525 && mouseX <= 649 && mouseY >= 776) {
+        corgi1_s += 5;
+    }
     fill(255, 0, 220);
     textFont(Font, 50);
     textAlign(CENTER);
@@ -363,6 +414,9 @@ function corgi2Profile() {
     rect(525, 776, 124, 100);
     if (mouseIsPressed && mouseX >= 650 && mouseX <= 775 && mouseY >= 776) {
         corgi2_s--;
+    }
+    if (mouseIsPressed && mouseX >= 525 && mouseX <= 649 && mouseY >= 776) {
+        corgi2_s += 5;
     }
     fill(255, 0, 220);
     textFont(Font, 50);
@@ -379,6 +433,9 @@ function corgi3Profile() {
     if (mouseIsPressed && mouseX >= 650 && mouseX <= 775 && mouseY >= 776) {
         corgi3_s--;
     }
+    if (mouseIsPressed && mouseX >= 525 && mouseX <= 649 && mouseY >= 776) {
+        corgi3_s += 5;
+    }
     fill(255, 0, 220);
     textFont(Font, 50);
     textAlign(CENTER);
@@ -393,6 +450,9 @@ function corgi4Profile() {
     rect(525, 776, 124, 100);
     if (mouseIsPressed && mouseX >= 650 && mouseX <= 775 && mouseY >= 776) {
         corgi4_s--;
+    }
+    if (mouseIsPressed && mouseX >= 525 && mouseX <= 649 && mouseY >= 776) {
+        corgi4_s += 5;
     }
     fill(255, 0, 220);
     textFont(Font, 50);
@@ -409,6 +469,9 @@ function ibizan1Profile() {
     if (mouseIsPressed && mouseX >= 650 && mouseX <= 775 && mouseY >= 776) {
         ibizan1_s--;
     }
+    if (mouseIsPressed && mouseX >= 525 && mouseX <= 649 && mouseY >= 776) {
+        ibizan1_s += 5;
+    }
     fill(255, 0, 220);
     textFont(Font, 50);
     textAlign(CENTER);
@@ -424,6 +487,9 @@ function ibizan2Profile() {
     if (mouseIsPressed && mouseX >= 650 && mouseX <= 775 && mouseY >= 776) {
         ibizan2_s--;
     }
+    if (mouseIsPressed && mouseX >= 525 && mouseX <= 649 && mouseY >= 776) {
+        ibizan2_s += 5;
+    }
     fill(255, 0, 220);
     textFont(Font, 50);
     textAlign(CENTER);
@@ -437,7 +503,10 @@ function ibizan3Profile() {
     rect(650, 776, 125, 100);
     rect(525, 776, 124, 100);
     if (mouseIsPressed && mouseX >= 650 && mouseX <= 775 && mouseY >= 776) {
-       ibizan3_s--;
+        ibizan3_s--;
+    }
+    if (mouseIsPressed && mouseX >= 525 && mouseX <= 649 && mouseY >= 776) {
+        ibizan3_s += 5;
     }
     fill(255, 0, 220);
     textFont(Font, 50);
@@ -454,6 +523,9 @@ function ibizan4Profile() {
     if (mouseIsPressed && mouseX >= 650 && mouseX <= 775 && mouseY >= 776) {
         ibizan4_s--;
     }
+    if (mouseIsPressed && mouseX >= 525 && mouseX <= 649 && mouseY >= 776) {
+        ibizan4_s += 5;
+    }
     fill(255, 0, 220);
     textFont(Font, 50);
     textAlign(CENTER);
@@ -468,6 +540,9 @@ function pug1Profile() {
     rect(525, 776, 124, 100);
     if (mouseIsPressed && mouseX >= 650 && mouseX <= 775 && mouseY >= 776) {
         pug1_s--;
+    }
+    if (mouseIsPressed && mouseX >= 525 && mouseX <= 649 && mouseY >= 776) {
+        pug1_s += 5;
     }
     fill(255, 0, 220);
     textFont(Font, 50);
@@ -484,6 +559,9 @@ function pug2Profile() {
     if (mouseIsPressed && mouseX >= 650 && mouseX <= 775 && mouseY >= 776) {
         pug2_s--;
     }
+    if (mouseIsPressed && mouseX >= 525 && mouseX <= 649 && mouseY >= 776) {
+        pug2_s += 5;
+    }
     fill(255, 0, 220);
     textFont(Font, 50);
     textAlign(CENTER);
@@ -498,6 +576,9 @@ function pug3Profile() {
     rect(525, 776, 124, 100);
     if (mouseIsPressed && mouseX >= 650 && mouseX <= 775 && mouseY >= 776) {
         pug3_s--;
+    }
+    if (mouseIsPressed && mouseX >= 525 && mouseX <= 649 && mouseY >= 776) {
+        pug3_s += 5;
     }
     fill(255, 0, 220);
     textFont(Font, 50);
@@ -514,6 +595,9 @@ function pug4Profile() {
     if (mouseIsPressed && mouseX >= 650 && mouseX <= 775 && mouseY >= 776) {
         pug4_s--;
     }
+    if (mouseIsPressed && mouseX >= 525 && mouseX <= 649 && mouseY >= 776) {
+        pug4_s += 5;
+    }
     fill(255, 0, 220);
     textFont(Font, 50);
     textAlign(CENTER);
@@ -528,6 +612,9 @@ function shep1Profile() {
     rect(525, 776, 124, 100);
     if (mouseIsPressed && mouseX >= 650 && mouseX <= 775 && mouseY >= 776) {
         shep1_s--;
+    }
+    if (mouseIsPressed && mouseX >= 525 && mouseX <= 649 && mouseY >= 776) {
+        shep1_s += 5;
     }
     fill(255, 0, 220);
     textFont(Font, 50);
@@ -544,6 +631,9 @@ function shep2Profile() {
     if (mouseIsPressed && mouseX >= 650 && mouseX <= 775 && mouseY >= 776) {
         shep2_s--;
     }
+    if (mouseIsPressed && mouseX >= 525 && mouseX <= 649 && mouseY >= 776) {
+        shep2_s += 5;
+    }
     fill(255, 0, 220);
     textFont(Font, 50);
     textAlign(CENTER);
@@ -558,6 +648,9 @@ function shep3Profile() {
     rect(525, 776, 124, 100);
     if (mouseIsPressed && mouseX >= 650 && mouseX <= 775 && mouseY >= 776) {
         shep3_s--;
+    }
+    if (mouseIsPressed && mouseX >= 525 && mouseX <= 649 && mouseY >= 776) {
+        shep3_s += 5;
     }
     fill(255, 0, 220);
     textFont(Font, 50);
@@ -574,9 +667,148 @@ function shep4Profile() {
     if (mouseIsPressed && mouseX >= 650 && mouseX <= 775 && mouseY >= 776) {
         shep4_s--;
     }
+    if (mouseIsPressed && mouseX >= 525 && mouseX <= 649 && mouseY >= 776) {
+        shep4_s += 5;
+    }
     fill(255, 0, 220);
     textFont(Font, 50);
     textAlign(CENTER);
     text('choose', 585, 800);
     text('return', 715, 800);
+}
+//after having chosen an avatar\\
+function corgi1Chosen() {
+    background(180);
+    fill(255, 0, 220);
+    textFont(Font, 50);
+    textAlign(CENTER);
+    text('welcome', 400, 400);
+}
+
+function corgi2Chosen() {
+    background(180);
+    fill(255, 0, 220);
+    textFont(Font, 50);
+    textAlign(CENTER);
+    text('welcome', 400, 400);
+}
+
+function corgi3Chosen() {
+    background(180);
+    fill(255, 0, 220);
+    textFont(Font, 50);
+    textAlign(CENTER);
+    text('welcome', 400, 400);
+}
+
+function corgi4Chosen() {
+    background(180);
+    fill(255, 0, 220);
+    textFont(Font, 50);
+    textAlign(CENTER);
+    text('welcome', 400, 400);
+}
+
+function ibizan1Chosen() {
+    background(180);
+    fill(255, 0, 220);
+    textFont(Font, 50);
+    textAlign(CENTER);
+    text('welcome', 400, 400);
+}
+
+function ibizan2Chosen() {
+    background(180);
+    fill(255, 0, 220);
+    textFont(Font, 50);
+    textAlign(CENTER);
+    text('welcome', 400, 400);
+}
+
+function ibizan3Chosen() {
+    background(180);
+    fill(255, 0, 220);
+    textFont(Font, 50);
+    textAlign(CENTER);
+    text('welcome', 400, 400);
+}
+
+function ibizan4Chosen() {
+    background(180);
+    fill(255, 0, 220);
+    textFont(Font, 50);
+    textAlign(CENTER);
+    text('welcome', 400, 400);
+}
+
+function pug1Chosen() {
+    background(180);
+    fill(255, 0, 220);
+    textFont(Font, 50);
+    textAlign(CENTER);
+    text('welcome', 400, 400);
+}
+
+function pug2Chosen() {
+    background(180);
+    fill(255, 0, 220);
+    textFont(Font, 50);
+    textAlign(CENTER);
+    text('welcome', 400, 400);
+}
+
+function pug3Chosen() {
+    background(180);
+    fill(255, 0, 220);
+    textFont(Font, 50);
+    textAlign(CENTER);
+    text('welcome', 400, 400);
+}
+
+function pug4Chosen() {
+    background(180);
+    fill(255, 0, 220);
+    textFont(Font, 50);
+    textAlign(CENTER);
+    text('welcome', 400, 400);
+}
+
+function pug5Chosen() {
+    background(180);
+    fill(255, 0, 220);
+    textFont(Font, 50);
+    textAlign(CENTER);
+    text('welcome', 400, 400);
+}
+
+function shep1Chosen() {
+    background(180);
+    fill(255, 0, 220);
+    textFont(Font, 50);
+    textAlign(CENTER);
+    text('welcome', 400, 400);
+}
+
+function shep2Chosen() {
+    background(180);
+    fill(255, 0, 220);
+    textFont(Font, 50);
+    textAlign(CENTER);
+    text('welcome', 400, 400);
+}
+
+function shep3Chosen() {
+    background(180);
+    fill(255, 0, 220);
+    textFont(Font, 50);
+    textAlign(CENTER);
+    text('welcome', 400, 400);
+}
+
+function shep4Chosen() {
+    background(180);
+    fill(255, 0, 220);
+    textFont(Font, 50);
+    textAlign(CENTER);
+    text('welcome', 400, 400);
 }
