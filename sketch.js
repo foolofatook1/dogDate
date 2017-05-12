@@ -105,6 +105,13 @@ function preload() {
     shep2_p = loadImage('assets/textures/avatars/shepard_1.png');
     shep3_p = loadImage('assets/textures/avatars/shepard_4.png');
     shep4_p = loadImage('assets/textures/avatars/shepard_2.png');
+    //loading the dogs you can date\\
+    date1 = loadImage('assets/textures/dateProfiles/profile_1.png');
+    date2 = loadImage('assets/textures/dateProfiles/profile_2.png');
+    date3 = loadImage('assets/textures/dateProfiles/profile_3.png');
+    date4 = loadImage('assets/textures/dateProfiles/profile_4.png');
+    date5 = loadImage('assets/textures/dateProfiles/profile_5.png');
+    date6 = loadImage('assets/textures/dateProfiles/profile_6.png');
 }
 
 function setup() {
