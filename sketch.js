@@ -106,12 +106,30 @@ function preload() {
     shep3_p = loadImage('assets/textures/avatars/shepard_4.png');
     shep4_p = loadImage('assets/textures/avatars/shepard_2.png');
     //loading the dogs you can date\\
+    //datedog1 profile
     date1 = loadImage('assets/textures/dateProfiles/profile_1.png');
+    //datedog1 Sprite
+    date1s = loadImage('assets/textures/dateSprites/date_dog_1.gif');
+    //poodle profile
     date2 = loadImage('assets/textures/dateProfiles/profile_2.png');
+    //poodle sprite
+    date2s = loadImage('assets/textures/dateSprites/poodle.gif');
+    //chihuahua profile
     date3 = loadImage('assets/textures/dateProfiles/profile_3.png');
+    //chihuahua sprite
+    date3s = loadImage('assets/textures/dateSprites/chihuaha.gif');
+    //shiba inu profile
     date4 = loadImage('assets/textures/dateProfiles/profile_4.png');
+    //shiba inu sprite
+    date4s = loadImage('assets/textures/dateSprites/shiba_inu_1.gif');
+    //maltese profile
     date5 = loadImage('assets/textures/dateProfiles/profile_5.png');
+    //maltese sprite
+    date5s = loadImage('assets/textures/dateSprites/maltese_1.gif');
+    //creepy dude profile
     date6 = loadImage('assets/textures/dateProfiles/profile_6.png');
+    //creepy dude sprite
+    date6s = loadImage('assets/textures/dateSprites/creepy_dude_1.png');
 }
 
 function setup() {
@@ -177,7 +195,7 @@ function draw() {
             chooseProfile();
         }
         if (corgi2_s >= 5) {
-           corgi2Chosen();
+            corgi2Chosen();
         }
     }
     if (corgi3_s >= 1) {
@@ -185,127 +203,127 @@ function draw() {
         if (corgi3_s == 0) {
             chooseProfile();
         }
-       if (corgi3_s >= 5) {
+        if (corgi3_s >= 5) {
             corgi3Chosen();
         }
     }
-   if (corgi4_s >= 1) {
+    if (corgi4_s >= 1) {
         corgi4Profile();
         if (corgi4_s == 0) {
             chooseProfile();
         }
-//        if (corgi4_s >= 5) {
- //           corgi4Chosen();
-//       }
- //   }
- //   if (ibizan1_s >= 1) {
- //       ibizan1Profile();
- //       if (ibizan1_s == 0) {
- //           chooseProfile();
- //       }
- //       if (ibizan1_s >= 5) {
- //           ibizan1Chosen();
- //       }
- //   }
- //   if (ibizan2_s >= 1) {
- //       ibizan2Profile();
- //       if (ibizan2_s == 0) {
- //           chooseProfile();
- //       }
- //       if (ibizan2_s >= 5) {
- //           ibizan2Chosen();
- //       }
- //   }
- //   if (ibizan3_s >= 1) {
- //       ibizan3Profile();
- //       if (ibizan3_s == 0) {
- //           chooseProfile();
- //       }
- //       if (ibizan3_s >= 5) {
- //           ibizan3Chosen();
- //       }
- //   }
- //   if (ibizan4_s >= 1) {
- //       ibizan4Profile();
- //       if (ibizan4_s == 0) {
- //           chooseProfile();
-  //      }
-  //      if (ibizan4_s >= 5) {
-  //          ibizan4Chosen();
- //       }
- //   }
- //   if (pug1_s >= 1) {
- //       pug1Profile();
- //       if (pug1_s == 0) {
- //           chooseProfile();
- //       }
- //       if (pug1_s >= 5) {
- //           pug1Chosen();
- //       }
- //   }
-//    if (pug2_s >= 1) {
- //       pug2Profile();
- //       if (pug2_s == 0) {
-  //          chooseProfile();
-  //      }
-  //      if (pug2_s >= 5) {
- //           pug2Chosen();
- //       }
- //   }
- //   if (pug3_s >= 1) {
- //       pug3Profile();
- //       if (pug3_s == 0) {
- //           chooseProfile();
- //       }
- //       if (pug3_s >= 5) {
- //           pug3Chosen();
-//        }
- //   }
- //   if (pug4_s >= 1) {
- //       pug4Profile();
- //       if (pug4_s == 0) {
- //           chooseProfile();
- //       }
- //       if (pug4_s >= 5) {
- //           pug4Chosen();
-//        }
-//    }
-//    if (shep1_s >= 1) {
-//        shep1Profile();
-//        if (shep1_s == 0) {
-//            chooseProfile();
-//        }
-//        if (shep1_s >= 5) {
-//            shep1Chosen();
-//        }
-//    }
- //   if (shep2_s >= 1) {
- //       shep2Profile();
- //       if (shep2_s == 0) {
- //           chooseProfile();
- //       }
- //       if (shep2_s >= 5) {
- //           shep2Chosen();
- //       }
- //   }
- //   if (shep3_s >= 1) {
- //       shep3Profile();
- //       if (shep3_s == 0) {
- //           chooseProfile();
- //       }
- //       if (shep3_s >= 5) {
- //           shep3Chosen();
- //       }
- //   }
- //   if (shep4_s >= 1) {
- //       shep4Profile();
- //       if (shep4_s == 0) {
- // //          chooseProfile();
-  //      }
-  //      if (shep4_s >= 5) {
- //           shep4Chosen();
-  //      }
+        if (corgi4_s >= 5) {
+            corgi4Chosen();
+        }
     }
+    if (ibizan1_s >= 1) {
+        ibizan1Profile();
+        if (ibizan1_s == 0) {
+            chooseProfile();
+        }
+        if (ibizan1_s >= 5) {
+            ibizan1Chosen()
+        }
+    }
+    if (ibizan2_s >= 1) {
+        ibizan2Profile();
+        if (ibizan2_s == 0) {
+            chooseProfile();
+        }
+        if (ibizan2_s >= 5) {
+            ibizan2Chosen();
+        }
+    }
+    if (ibizan3_s >= 1) {
+        ibizan3Profile();
+        if (ibizan3_s == 0) {
+            chooseProfile();
+        }
+        if (ibizan3_s >= 5) {
+            ibizan3Chosen();
+        }
+    }
+    if (ibizan4_s >= 1) {
+        ibizan4Profile();
+        if (ibizan4_s == 0) {
+            chooseProfile();
+        }
+        if (ibizan4_s >= 5) {
+            ibizan4Chosen();
+        }
+    }
+    if (pug1_s >= 1) {
+        pug1Profile();
+        if (pug1_s == 0) {
+            chooseProfile();
+        }
+        if (pug1_s >= 5) {
+            pug1Chosen();
+        }
+    }
+    if (pug2_s >= 1) {
+        pug2Profile();
+        if (pug2_s == 0) {
+            chooseProfile();
+        }
+        if (pug2_s >= 5) {
+            pug2Chosen();
+        }
+    }
+    if (pug3_s >= 1) {
+        pug3Profile();
+        if (pug3_s == 0) {
+            chooseProfile();
+        }
+        if (pug3_s >= 5) {
+            pug3Chosen();
+        }
+    }
+    if (pug4_s >= 1) {
+        pug4Profile();
+        if (pug4_s == 0) {
+            chooseProfile();
+        }
+        if (pug4_s >= 5) {
+            pug4Chosen();
+        }
+    }
+    //    if (shep1_s >= 1) {
+    //        shep1Profile();
+    //        if (shep1_s == 0) {
+    //            chooseProfile();
+    //        }
+    //        if (shep1_s >= 5) {
+    //            shep1Chosen();
+    //        }
+    //    }
+    //   if (shep2_s >= 1) {
+    //       shep2Profile();
+    //       if (shep2_s == 0) {
+    //           chooseProfile();
+    //       }
+    //       if (shep2_s >= 5) {
+    //           shep2Chosen();
+    //       }
+    //   }
+    //   if (shep3_s >= 1) {
+    //       shep3Profile();
+    //       if (shep3_s == 0) {
+    //           chooseProfile();
+    //       }
+    //       if (shep3_s >= 5) {
+    //           shep3Chosen();
+    //       }
+    //   }
+    //   if (shep4_s >= 1) {
+    //       shep4Profile();
+    //       if (shep4_s == 0) {
+    // //          chooseProfile();
+    //      }
+    //      if (shep4_s >= 5) {
+    //           shep4Chosen();
+    //      }
+    //}
 }
 
 function welcomePage() {
@@ -696,13 +714,32 @@ function corgi1Chosen() {
     text('home', 750, 40);
     line(705, 0, 705, 50);
     //profile button\\
-    text('Jean-Pier Claude III', 500, 40);
-    line(305, 0, 305, 50);
-    if (mouseIsPressed && mouseX >= 305 && mouseX <= 700 && mouseY >= 0 && mouseY <= 50){
+    text('Jean-Pierre Claude III', 495, 40);
+    line(285, 0, 285, 50);
+    if (mouseIsPressed && mouseX >= 285 && mouseX <= 700 && mouseY >= 0 && mouseY <= 50) {
         corgi1_s -= 4;
     }
     //header\\
     text('Here are your matches!', 400, 100);
+    //matches\\
+    //datedog1
+    image(date1s, 10, 250, 200, 200);
+    if (mouseIsPressed && mouseX >= 10 && mouseX <= 200 && mouseY >= 250 && mouseY <= 445){
+        image(date1, 0, 0, 800, 800);
+    }
+    //poodle
+    image(date2s, 250, 250, 200, 200);
+    if (mouseIsPressed && mouseX >= 200 && mouseX <= 440 && mouseY >= 250 && mouseY <= 445){
+        image(date2, 0, 0, 800, 800);
+    }
+    //chihuaha
+    image(date3s, 500, 250, 200, 200);
+    //shiba inu
+    image(date4s, 10, 500, 200, 200);
+    //maltese
+    image(date5s, 250, 500, 200, 200);
+    //creepy dude
+    image(date6s, 500, 500, 200, 200);
 }
 
 function corgi2Chosen() {
