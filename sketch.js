@@ -914,4 +914,7 @@ function dogdate1Chat(){
     if (mouseIsPressed && mouseX >= 750 && mouseX <= 800 && mouseY >= 0 && mouseY <= 50){
         corgi1_s -= 5;
     }
+    fill(25, 249, 0);
+    text('Hi! Im Milo!', 125, 100);
+    text( 'Whats your ideal first date?', 275, 130);
 }
