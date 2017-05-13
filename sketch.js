@@ -156,7 +156,7 @@ function setup() {
     makeProfile = 0;
     //sets profile image
     profileSet = 0;
-    //integer for choosing different avatar\\
+    //integer for navigating website\\
     corgi1_s = 0;
     corgi2_s = 0;
     corgi3_s = 0;
@@ -187,6 +187,12 @@ function draw() {
         }
         if (corgi1_s >= 5) {
             corgi1Chosen();
+        }
+        if (corgi1_s >= 10){
+            dogdate1Page();
+        }
+        if (corgi1_s >= 15){
+            dogdate1Chat();
         }
     }
     if (corgi2_s >= 1) {
@@ -725,7 +731,7 @@ function corgi1Chosen() {
     //datedog1
     image(date1s, 10, 250, 200, 200);
     if (mouseIsPressed && mouseX >= 10 && mouseX <= 200 && mouseY >= 250 && mouseY <= 445){
-        image(date1, 0, 0, 800, 800);
+        corgi1_s += 5;
     }
     //poodle
     image(date2s, 250, 250, 200, 200);
@@ -868,4 +874,44 @@ function shep4Chosen() {
     textFont(Font, 50);
     textAlign(CENTER);
     text('welcome', 400, 400);
+}
+//dogdate1's profile page
+function dogdate1Page(){
+    image(date1, 0, 0, 800, 800);
+    //text
+    textSize(35);
+    text('you have a message from Milo!', 550, 795);
+    //exit box
+    fill(180);
+    rect(780, 0, 20, 19);
+    line(780, 0, 800, 19);
+    line(800, 0, 780, 19);
+    if (mouseIsPressed && mouseX >= 780 && mouseX <= 800 && mouseY >= 0 && mouseY <= 19){
+        corgi1_s -= 5;
+    }
+    //mail icon
+    fill(250);
+    rect(750, 780, 50, 20);
+    line(750, 780, 775, 800);
+    line(800, 780, 775, 800);
+    if (mouseIsPressed && mouseX >= 750 && mouseX <= 800 && mouseY >= 780 && mouseY <= 800){
+        corgi1_s += 5;
+    }
+}
+//if you click on chat for dogdate1
+function dogdate1Chat(){
+    background(250);
+    //top bar
+    fill(255, 0, 220);
+    textFont(Font, 50);
+    textAlign(CENTER);
+    text('Chat with Milo!', 150, 50);
+    line(0, 50, 800, 50);
+    //exit box
+    line(750, 0, 750, 50);
+    line(750, 0, 800, 50);
+    line(800, 0, 750, 50);
+    if (mouseIsPressed && mouseX >= 750 && mouseX <= 800 && mouseY >= 0 && mouseY <= 50){
+        corgi1_s -= 5;
+    }
 }
