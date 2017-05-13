@@ -51,6 +51,7 @@ var dogx, dogy;
 var corgi1_p, corgi2_p, corgi3_p, corgi4_p, ibizan1_p, ibizan2_p, ibizan3_p, ibizan4_p, pug1_p, pug2_p, pug3_p, pug4_p, shep1_p, shep2_p, shep3_p, shep4_p;
 //integer for choosing different avatar\\
 var corgi1_s, corgi2_s, corgi3_s, corgi4_s, ibizan1_s, ibizan2_s, ibizan3_s, ibizan4_s, pug1_s, pug2_s, pug3_s, pug4_s, shep1_s, shep2_s, shep3_s, shep4_s;
+var nextQ;
 /////////preload/////////
 function preload() {
     //font
@@ -173,6 +174,8 @@ function setup() {
     shep2_s = 0;
     shep3_s = 0;
     shep4_s = 0;
+    //moves to next question
+    nextQ = 0;
 }
 
 function draw() {
@@ -188,10 +191,10 @@ function draw() {
         if (corgi1_s >= 5) {
             corgi1Chosen();
         }
-        if (corgi1_s >= 10){
+        if (corgi1_s >= 10) {
             dogdate1Page();
         }
-        if (corgi1_s >= 15){
+        if (corgi1_s >= 15) {
             dogdate1Chat();
         }
     }
@@ -730,12 +733,12 @@ function corgi1Chosen() {
     //matches\\
     //datedog1
     image(date1s, 10, 250, 200, 200);
-    if (mouseIsPressed && mouseX >= 10 && mouseX <= 200 && mouseY >= 250 && mouseY <= 445){
+    if (mouseIsPressed && mouseX >= 10 && mouseX <= 200 && mouseY >= 250 && mouseY <= 445) {
         corgi1_s += 5;
     }
     //poodle
     image(date2s, 250, 250, 200, 200);
-    if (mouseIsPressed && mouseX >= 200 && mouseX <= 440 && mouseY >= 250 && mouseY <= 445){
+    if (mouseIsPressed && mouseX >= 200 && mouseX <= 440 && mouseY >= 250 && mouseY <= 445) {
         image(date2, 0, 0, 800, 800);
     }
     //chihuaha
@@ -876,7 +879,7 @@ function shep4Chosen() {
     text('welcome', 400, 400);
 }
 //dogdate1's profile page
-function dogdate1Page(){
+function dogdate1Page() {
     image(date1, 0, 0, 800, 800);
     //text
     textSize(35);
@@ -886,7 +889,7 @@ function dogdate1Page(){
     rect(780, 0, 20, 19);
     line(780, 0, 800, 19);
     line(800, 0, 780, 19);
-    if (mouseIsPressed && mouseX >= 780 && mouseX <= 800 && mouseY >= 0 && mouseY <= 19){
+    if (mouseIsPressed && mouseX >= 780 && mouseX <= 800 && mouseY >= 0 && mouseY <= 19) {
         corgi1_s -= 5;
     }
     //mail icon
@@ -894,12 +897,12 @@ function dogdate1Page(){
     rect(750, 780, 50, 20);
     line(750, 780, 775, 800);
     line(800, 780, 775, 800);
-    if (mouseIsPressed && mouseX >= 750 && mouseX <= 800 && mouseY >= 780 && mouseY <= 800){
+    if (mouseIsPressed && mouseX >= 750 && mouseX <= 800 && mouseY >= 780 && mouseY <= 800) {
         corgi1_s += 5;
     }
 }
 //if you click on chat for dogdate1
-function dogdate1Chat(){
+function dogdate1Chat() {
     background(250);
     //top bar
     fill(255, 0, 220);
@@ -911,10 +914,62 @@ function dogdate1Chat(){
     line(750, 0, 750, 50);
     line(750, 0, 800, 50);
     line(800, 0, 750, 50);
-    if (mouseIsPressed && mouseX >= 750 && mouseX <= 800 && mouseY >= 0 && mouseY <= 50){
+    if (mouseIsPressed && mouseX >= 750 && mouseX <= 800 && mouseY >= 0 && mouseY <= 50) {
         corgi1_s -= 5;
+        nextQ -= 3;
     }
+    //opening greeting
+    textSize(40);
     fill(25, 249, 0);
-    text('Hi! Im Milo!', 125, 100);
-    text( 'Whats your ideal first date?', 275, 130);
+    textAlign(LEFT);
+    text('Hi! Im Milo!', 10, 100);
+    text('Whats your ideal first date?', 10, 130);
+    //response options
+    fill(0, 66, 249);
+    textAlign(RIGHT);
+    text('Type a, b, c or d:', 790, 160);
+    text('a) a car ride', 790, 190);
+    text('b) long walk in the park', 790, 220);
+    text('c) butt sniffing', 790, 250);
+    text('d) squirrel hunts', 790, 280);
+    //when key is pressed
+    if (nextQ >= 1) {
+        //response question
+        fill(25, 249, 0);
+        textAlign(LEFT);
+        text('Cool! Whats your favorite... food?', 10, 310);
+        //response options
+        fill(0, 66, 249);
+        textAlign(RIGHT);
+        text('a) milk', 790, 340);
+        text('b) biscuits', 790, 370);
+        text('c) steak', 790, 400);
+        text('d) peanut butter', 790, 430);
+        if (nextQ >= 2) {
+            //final response question
+            fill(25, 249, 0);
+            textAlign(LEFT);
+            text('Yumma! Whats your political affiliation?', 10, 460);
+            //response options
+            fill(0, 66, 249);
+            textAlign(RIGHT);
+            text('a) Green Grass Party', 790, 490);
+            text('b) No-Least Party', 790, 520);
+            text('c) Democatic Party', 790, 550);
+            text('d) Working Dogs Party', 790, 580);
+            if (nextQ >= 3) {
+                //goodbye
+                fill(25, 249, 0);
+                textAlign(LEFT);
+                text('Great talking to you, Jean-Pierre III!', 10, 620);
+                text('Maybe we should hang out some time? ;p', 10, 650);
+            }
+        }
+    }
+}
+
+function keyPressed() {
+    if (keyCode == 'A' || 'B' || 'C' || 'D') {
+        nextQ++;
+    }
 }
