@@ -51,7 +51,10 @@ var dogx, dogy;
 var corgi1_p, corgi2_p, corgi3_p, corgi4_p, ibizan1_p, ibizan2_p, ibizan3_p, ibizan4_p, pug1_p, pug2_p, pug3_p, pug4_p, shep1_p, shep2_p, shep3_p, shep4_p;
 //integer for choosing different avatar\\
 var corgi1_s, corgi2_s, corgi3_s, corgi4_s, ibizan1_s, ibizan2_s, ibizan3_s, ibizan4_s, pug1_s, pug2_s, pug3_s, pug4_s, shep1_s, shep2_s, shep3_s, shep4_s;
+//goes to the next question in chat
 var nextQ;
+//points for each dog date
+var miloPoints, chouChouPoints, soupPoints, baguettePoints, demitriPoints, maxPoints;
 /////////preload/////////
 function preload() {
     //font
@@ -176,6 +179,13 @@ function setup() {
     shep4_s = 0;
     //moves to next question
     nextQ = 0;
+    //points for each dog date
+    miloPoints = 0;
+    chouChouPoints = 0;
+    soupPoints = 0;
+    baguettePoints = 0;
+    demitriPoints = 0;
+    maxPoints = 0;
 }
 
 function draw() {
@@ -753,10 +763,42 @@ function corgi1Chosen() {
 
 function corgi2Chosen() {
     background(180);
+    //top bar\\
+    fill(100);
+    rect(0, 0, 799, 50);
+    //home button\\
     fill(255, 0, 220);
     textFont(Font, 50);
     textAlign(CENTER);
-    text('welcome', 400, 400);
+    text('home', 750, 40);
+    line(705, 0, 705, 50);
+    //profile button\\
+    text('Ceder', 495, 40);
+    line(285, 0, 285, 50);
+    if (mouseIsPressed && mouseX >= 285 && mouseX <= 700 && mouseY >= 0 && mouseY <= 50) {
+        corgi1_s -= 4;
+    }
+    //header\\
+    text('Here are your matches!', 400, 100);
+    //matches\\
+    //datedog1
+    image(date1s, 10, 250, 200, 200);
+    if (mouseIsPressed && mouseX >= 10 && mouseX <= 200 && mouseY >= 250 && mouseY <= 445) {
+        corgi1_s += 5;
+    }
+    //poodle
+    image(date2s, 250, 250, 200, 200);
+    if (mouseIsPressed && mouseX >= 200 && mouseX <= 440 && mouseY >= 250 && mouseY <= 445) {
+        image(date2, 0, 0, 800, 800);
+    }
+    //chihuaha
+    image(date3s, 500, 250, 200, 200);
+    //shiba inu
+    image(date4s, 10, 500, 200, 200);
+    //maltese
+    image(date5s, 250, 500, 200, 200);
+    //creepy dude
+    image(date6s, 500, 500, 200, 200);
 }
 
 function corgi3Chosen() {
@@ -917,7 +959,11 @@ function dogdate1Chat() {
     if (mouseIsPressed && mouseX >= 750 && mouseX <= 800 && mouseY >= 0 && mouseY <= 50) {
         corgi1_s -= 5;
         nextQ -= 3;
+        miloPoints -= 3;
     }
+    //chat points
+    textAlign(RIGHT);
+    text(miloPoints, 790, 790);
     //opening greeting
     textSize(40);
     fill(25, 249, 0);
@@ -969,7 +1015,11 @@ function dogdate1Chat() {
 }
 
 function keyPressed() {
-    if (keyCode == 'A' || 'B' || 'C' || 'D') {
+    if (keyCode == 'A', 'B', 'C', 'D') {
         nextQ++;
+        miloPoints++;
     }
+    //if (keyCode = 'B') {
+//        miloPoints++;
+//    }
 }
