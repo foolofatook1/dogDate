@@ -1015,11 +1015,19 @@ function dogdate1Chat() {
 }
 
 function keyPressed() {
-    if (keyCode == 'A', 'B', 'C', 'D') {
+    if (keyCode == 'A') {
         nextQ++;
-        miloPoints++;
     }
-    //if (keyCode = 'B') {
-//        miloPoints++;
-//    }
+    else if (keyCode == 'B') {
+        nextQ++;
+        miloPoints+=1;
+    }
+    else if (keyCode == 'C') {
+        nextQ++;
+    }
+    else if(keyCode == 'D'){
+        nextQ++;
+    }
+    else
+        nextQ++;
 }
