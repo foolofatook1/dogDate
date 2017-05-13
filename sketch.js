@@ -804,122 +804,561 @@ function corgi2Chosen() {
 function corgi3Chosen() {
     background(180);
     fill(255, 0, 220);
+     rect(0, 0, 799, 50);
+    //home button\\
+    fill(255, 0, 220);
     textFont(Font, 50);
     textAlign(CENTER);
-    text('welcome', 400, 400);
+    text('home', 750, 40);
+    line(705, 0, 705, 50);
+    //profile button\\
+    text('Beverly', 495, 40);
+    line(285, 0, 285, 50);
+    if (mouseIsPressed && mouseX >= 285 && mouseX <= 700 && mouseY >= 0 && mouseY <= 50) {
+        corgi1_s -= 4;
+    }
+    //header\\
+    text('Here are your matches!', 400, 100);
+    //matches\\
+    //datedog1
+    image(date1s, 10, 250, 200, 200);
+    if (mouseIsPressed && mouseX >= 10 && mouseX <= 200 && mouseY >= 250 && mouseY <= 445) {
+        corgi1_s += 5;
+    }
+    //poodle
+    image(date2s, 250, 250, 200, 200);
+    if (mouseIsPressed && mouseX >= 200 && mouseX <= 440 && mouseY >= 250 && mouseY <= 445) {
+        image(date2, 0, 0, 800, 800);
+    }
+    //chihuaha
+    image(date3s, 500, 250, 200, 200);
+    //shiba inu
+    image(date4s, 10, 500, 200, 200);
+    //maltese
+    image(date5s, 250, 500, 200, 200);
+    //creepy dude
+    image(date6s, 500, 500, 200, 200);
 }
+   
 
 function corgi4Chosen() {
     background(180);
     fill(255, 0, 220);
+     rect(0, 0, 799, 50);
+    //home button\\
+    fill(255, 0, 220);
     textFont(Font, 50);
     textAlign(CENTER);
-    text('welcome', 400, 400);
+    text('home', 750, 40);
+    line(705, 0, 705, 50);
+    //profile button\\
+    text('Ricardo', 495, 40);
+    line(285, 0, 285, 50);
+    if (mouseIsPressed && mouseX >= 285 && mouseX <= 700 && mouseY >= 0 && mouseY <= 50) {
+        corgi1_s -= 4;
+    }
+    //header\\
+    text('Here are your matches!', 400, 100);
+    //matches\\
+    //datedog1
+    image(date1s, 10, 250, 200, 200);
+    if (mouseIsPressed && mouseX >= 10 && mouseX <= 200 && mouseY >= 250 && mouseY <= 445) {
+        corgi1_s += 5;
+    }
+    //poodle
+    image(date2s, 250, 250, 200, 200);
+    if (mouseIsPressed && mouseX >= 200 && mouseX <= 440 && mouseY >= 250 && mouseY <= 445) {
+        image(date2, 0, 0, 800, 800);
+    }
+    //chihuaha
+    image(date3s, 500, 250, 200, 200);
+    //shiba inu
+    image(date4s, 10, 500, 200, 200);
+    //maltese
+    image(date5s, 250, 500, 200, 200);
+    //creepy dude
+    image(date6s, 500, 500, 200, 200);
 }
+    
 
 function ibizan1Chosen() {
     background(180);
     fill(255, 0, 220);
+     rect(0, 0, 799, 50);
+    //home button\\
+    fill(255, 0, 220);
     textFont(Font, 50);
     textAlign(CENTER);
-    text('welcome', 400, 400);
+    text('home', 750, 40);
+    line(705, 0, 705, 50);
+    //profile button\\
+    text('Ken', 495, 40);
+    line(285, 0, 285, 50);
+    if (mouseIsPressed && mouseX >= 285 && mouseX <= 700 && mouseY >= 0 && mouseY <= 50) {
+        corgi1_s -= 4;
+    }
+    //header\\
+    text('Here are your matches!', 400, 100);
+    //matches\\
+    //datedog1
+    image(date1s, 10, 250, 200, 200);
+    if (mouseIsPressed && mouseX >= 10 && mouseX <= 200 && mouseY >= 250 && mouseY <= 445) {
+        corgi1_s += 5;
+    }
+    //poodle
+    image(date2s, 250, 250, 200, 200);
+    if (mouseIsPressed && mouseX >= 200 && mouseX <= 440 && mouseY >= 250 && mouseY <= 445) {
+        image(date2, 0, 0, 800, 800);
+    }
+    //chihuaha
+    image(date3s, 500, 250, 200, 200);
+    //shiba inu
+    image(date4s, 10, 500, 200, 200);
+    //maltese
+    image(date5s, 250, 500, 200, 200);
+    //creepy dude
+    image(date6s, 500, 500, 200, 200);
 }
+    
 
 function ibizan2Chosen() {
     background(180);
     fill(255, 0, 220);
-    textFont(Font, 50);
-    textAlign(CENTER);
-    text('welcome', 400, 400);
-}
-
-function ibizan3Chosen() {
-    background(180);
+     rect(0, 0, 799, 50);
+    //home button\\
     fill(255, 0, 220);
     textFont(Font, 50);
     textAlign(CENTER);
-    text('welcome', 400, 400);
+    text('home', 750, 40);
+    line(705, 0, 705, 50);
+    //profile button\\
+    text('Dizzie', 495, 40);
+    line(285, 0, 285, 50);
+    if (mouseIsPressed && mouseX >= 285 && mouseX <= 700 && mouseY >= 0 && mouseY <= 50) {
+        corgi1_s -= 4;
+    }
+    //header\\
+    text('Here are your matches!', 400, 100);
+    //matches\\
+    //datedog1
+    image(date1s, 10, 250, 200, 200);
+    if (mouseIsPressed && mouseX >= 10 && mouseX <= 200 && mouseY >= 250 && mouseY <= 445) {
+        corgi1_s += 5;
+    }
+    //poodle
+    image(date2s, 250, 250, 200, 200);
+    if (mouseIsPressed && mouseX >= 200 && mouseX <= 440 && mouseY >= 250 && mouseY <= 445) {
+        image(date2, 0, 0, 800, 800);
+    }
+    //chihuaha
+    image(date3s, 500, 250, 200, 200);
+    //shiba inu
+    image(date4s, 10, 500, 200, 200);
+    //maltese
+    image(date5s, 250, 500, 200, 200);
+    //creepy dude
+    image(date6s, 500, 500, 200, 200);
 }
+   
+function ibizan3Chosen() {
+    background(180);
+    fill(255, 0, 220);
+     rect(0, 0, 799, 50);
+    //home button\\
+    fill(255, 0, 220);
+    textFont(Font, 50);
+    textAlign(CENTER);
+    text('home', 750, 40);
+    line(705, 0, 705, 50);
+    //profile button\\
+    text('Rex', 495, 40);
+    line(285, 0, 285, 50);
+    if (mouseIsPressed && mouseX >= 285 && mouseX <= 700 && mouseY >= 0 && mouseY <= 50) {
+        corgi1_s -= 4;
+    }
+    //header\\
+    text('Here are your matches!', 400, 100);
+    //matches\\
+    //datedog1
+    image(date1s, 10, 250, 200, 200);
+    if (mouseIsPressed && mouseX >= 10 && mouseX <= 200 && mouseY >= 250 && mouseY <= 445) {
+        corgi1_s += 5;
+    }
+    //poodle
+    image(date2s, 250, 250, 200, 200);
+    if (mouseIsPressed && mouseX >= 200 && mouseX <= 440 && mouseY >= 250 && mouseY <= 445) {
+        image(date2, 0, 0, 800, 800);
+    }
+    //chihuaha
+    image(date3s, 500, 250, 200, 200);
+    //shiba inu
+    image(date4s, 10, 500, 200, 200);
+    //maltese
+    image(date5s, 250, 500, 200, 200);
+    //creepy dude
+    image(date6s, 500, 500, 200, 200);
+}
+   
 
 function ibizan4Chosen() {
     background(180);
     fill(255, 0, 220);
+     rect(0, 0, 799, 50);
+    //home button\\
+    fill(255, 0, 220);
     textFont(Font, 50);
     textAlign(CENTER);
-    text('welcome', 400, 400);
+    text('home', 750, 40);
+    line(705, 0, 705, 50);
+    //profile button\\
+    text('Gambo', 495, 40);
+    line(285, 0, 285, 50);
+    if (mouseIsPressed && mouseX >= 285 && mouseX <= 700 && mouseY >= 0 && mouseY <= 50) {
+        corgi1_s -= 4;
+    }
+    //header\\
+    text('Here are your matches!', 400, 100);
+    //matches\\
+    //datedog1
+    image(date1s, 10, 250, 200, 200);
+    if (mouseIsPressed && mouseX >= 10 && mouseX <= 200 && mouseY >= 250 && mouseY <= 445) {
+        corgi1_s += 5;
+    }
+    //poodle
+    image(date2s, 250, 250, 200, 200);
+    if (mouseIsPressed && mouseX >= 200 && mouseX <= 440 && mouseY >= 250 && mouseY <= 445) {
+        image(date2, 0, 0, 800, 800);
+    }
+    //chihuaha
+    image(date3s, 500, 250, 200, 200);
+    //shiba inu
+    image(date4s, 10, 500, 200, 200);
+    //maltese
+    image(date5s, 250, 500, 200, 200);
+    //creepy dude
+    image(date6s, 500, 500, 200, 200);
 }
+   
 
 function pug1Chosen() {
     background(180);
     fill(255, 0, 220);
+     rect(0, 0, 799, 50);
+    //home button\\
+    fill(255, 0, 220);
     textFont(Font, 50);
     textAlign(CENTER);
-    text('welcome', 400, 400);
+    text('home', 750, 40);
+    line(705, 0, 705, 50);
+    //profile button\\
+    text('Puggy Sue', 495, 40);
+    line(285, 0, 285, 50);
+    if (mouseIsPressed && mouseX >= 285 && mouseX <= 700 && mouseY >= 0 && mouseY <= 50) {
+        corgi1_s -= 4;
+    }
+    //header\\
+    text('Here are your matches!', 400, 100);
+    //matches\\
+    //datedog1
+    image(date1s, 10, 250, 200, 200);
+    if (mouseIsPressed && mouseX >= 10 && mouseX <= 200 && mouseY >= 250 && mouseY <= 445) {
+        corgi1_s += 5;
+    }
+    //poodle
+    image(date2s, 250, 250, 200, 200);
+    if (mouseIsPressed && mouseX >= 200 && mouseX <= 440 && mouseY >= 250 && mouseY <= 445) {
+        image(date2, 0, 0, 800, 800);
+    }
+    //chihuaha
+    image(date3s, 500, 250, 200, 200);
+    //shiba inu
+    image(date4s, 10, 500, 200, 200);
+    //maltese
+    image(date5s, 250, 500, 200, 200);
+    //creepy dude
+    image(date6s, 500, 500, 200, 200);
 }
+    
 
 function pug2Chosen() {
     background(180);
     fill(255, 0, 220);
+     rect(0, 0, 799, 50);
+    //home button\\
+    fill(255, 0, 220);
     textFont(Font, 50);
     textAlign(CENTER);
-    text('welcome', 400, 400);
+    text('home', 750, 40);
+    line(705, 0, 705, 50);
+    //profile button\\
+    text('Luke', 495, 40);
+    line(285, 0, 285, 50);
+    if (mouseIsPressed && mouseX >= 285 && mouseX <= 700 && mouseY >= 0 && mouseY <= 50) {
+        corgi1_s -= 4;
+    }
+    //header\\
+    text('Here are your matches!', 400, 100);
+    //matches\\
+    //datedog1
+    image(date1s, 10, 250, 200, 200);
+    if (mouseIsPressed && mouseX >= 10 && mouseX <= 200 && mouseY >= 250 && mouseY <= 445) {
+        corgi1_s += 5;
+    }
+    //poodle
+    image(date2s, 250, 250, 200, 200);
+    if (mouseIsPressed && mouseX >= 200 && mouseX <= 440 && mouseY >= 250 && mouseY <= 445) {
+        image(date2, 0, 0, 800, 800);
+    }
+    //chihuaha
+    image(date3s, 500, 250, 200, 200);
+    //shiba inu
+    image(date4s, 10, 500, 200, 200);
+    //maltese
+    image(date5s, 250, 500, 200, 200);
+    //creepy dude
+    image(date6s, 500, 500, 200, 200);
 }
 
 function pug3Chosen() {
     background(180);
     fill(255, 0, 220);
+     rect(0, 0, 799, 50);
+    //home button\\
+    fill(255, 0, 220);
     textFont(Font, 50);
     textAlign(CENTER);
-    text('welcome', 400, 400);
+    text('home', 750, 40);
+    line(705, 0, 705, 50);
+    //profile button\\
+    text('Coco', 495, 40);
+    line(285, 0, 285, 50);
+    if (mouseIsPressed && mouseX >= 285 && mouseX <= 700 && mouseY >= 0 && mouseY <= 50) {
+        corgi1_s -= 4;
+    }
+    //header\\
+    text('Here are your matches!', 400, 100);
+    //matches\\
+    //datedog1
+    image(date1s, 10, 250, 200, 200);
+    if (mouseIsPressed && mouseX >= 10 && mouseX <= 200 && mouseY >= 250 && mouseY <= 445) {
+        corgi1_s += 5;
+    }
+    //poodle
+    image(date2s, 250, 250, 200, 200);
+    if (mouseIsPressed && mouseX >= 200 && mouseX <= 440 && mouseY >= 250 && mouseY <= 445) {
+        image(date2, 0, 0, 800, 800);
+    }
+    //chihuaha
+    image(date3s, 500, 250, 200, 200);
+    //shiba inu
+    image(date4s, 10, 500, 200, 200);
+    //maltese
+    image(date5s, 250, 500, 200, 200);
+    //creepy dude
+    image(date6s, 500, 500, 200, 200);
 }
+    
 
 function pug4Chosen() {
     background(180);
     fill(255, 0, 220);
-    textFont(Font, 50);
-    textAlign(CENTER);
-    text('welcome', 400, 400);
-}
-
-function pug5Chosen() {
-    background(180);
+     rect(0, 0, 799, 50);
+    //home button\\
     fill(255, 0, 220);
     textFont(Font, 50);
     textAlign(CENTER);
-    text('welcome', 400, 400);
+    text('home', 750, 40);
+    line(705, 0, 705, 50);
+    //profile button\\
+    text('Gus', 495, 40);
+    line(285, 0, 285, 50);
+    if (mouseIsPressed && mouseX >= 285 && mouseX <= 700 && mouseY >= 0 && mouseY <= 50) {
+        corgi1_s -= 4;
+    }
+    //header\\
+    text('Here are your matches!', 400, 100);
+    //matches\\
+    //datedog1
+    image(date1s, 10, 250, 200, 200);
+    if (mouseIsPressed && mouseX >= 10 && mouseX <= 200 && mouseY >= 250 && mouseY <= 445) {
+        corgi1_s += 5;
+    }
+    //poodle
+    image(date2s, 250, 250, 200, 200);
+    if (mouseIsPressed && mouseX >= 200 && mouseX <= 440 && mouseY >= 250 && mouseY <= 445) {
+        image(date2, 0, 0, 800, 800);
+    }
+    //chihuaha
+    image(date3s, 500, 250, 200, 200);
+    //shiba inu
+    image(date4s, 10, 500, 200, 200);
+    //maltese
+    image(date5s, 250, 500, 200, 200);
+    //creepy dude
+    image(date6s, 500, 500, 200, 200);
 }
+    
+
+
 
 function shep1Chosen() {
     background(180);
     fill(255, 0, 220);
+     rect(0, 0, 799, 50);
+    //home button\\
+    fill(255, 0, 220);
     textFont(Font, 50);
     textAlign(CENTER);
-    text('welcome', 400, 400);
+    text('home', 750, 40);
+    line(705, 0, 705, 50);
+    //profile button\\
+    text('Garth', 495, 40);
+    line(285, 0, 285, 50);
+    if (mouseIsPressed && mouseX >= 285 && mouseX <= 700 && mouseY >= 0 && mouseY <= 50) {
+        corgi1_s -= 4;
+    }
+    //header\\
+    text('Here are your matches!', 400, 100);
+    //matches\\
+    //datedog1
+    image(date1s, 10, 250, 200, 200);
+    if (mouseIsPressed && mouseX >= 10 && mouseX <= 200 && mouseY >= 250 && mouseY <= 445) {
+        corgi1_s += 5;
+    }
+    //poodle
+    image(date2s, 250, 250, 200, 200);
+    if (mouseIsPressed && mouseX >= 200 && mouseX <= 440 && mouseY >= 250 && mouseY <= 445) {
+        image(date2, 0, 0, 800, 800);
+    }
+    //chihuaha
+    image(date3s, 500, 250, 200, 200);
+    //shiba inu
+    image(date4s, 10, 500, 200, 200);
+    //maltese
+    image(date5s, 250, 500, 200, 200);
+    //creepy dude
+    image(date6s, 500, 500, 200, 200);
 }
 
 function shep2Chosen() {
     background(180);
     fill(255, 0, 220);
+     rect(0, 0, 799, 50);
+    //home button\\
+    fill(255, 0, 220);
     textFont(Font, 50);
     textAlign(CENTER);
-    text('welcome', 400, 400);
+    text('home', 750, 40);
+    line(705, 0, 705, 50);
+    //profile button\\
+    text('Skylar', 495, 40);
+    line(285, 0, 285, 50);
+    if (mouseIsPressed && mouseX >= 285 && mouseX <= 700 && mouseY >= 0 && mouseY <= 50) {
+        corgi1_s -= 4;
+    }
+    //header\\
+    text('Here are your matches!', 400, 100);
+    //matches\\
+    //datedog1
+    image(date1s, 10, 250, 200, 200);
+    if (mouseIsPressed && mouseX >= 10 && mouseX <= 200 && mouseY >= 250 && mouseY <= 445) {
+        corgi1_s += 5;
+    }
+    //poodle
+    image(date2s, 250, 250, 200, 200);
+    if (mouseIsPressed && mouseX >= 200 && mouseX <= 440 && mouseY >= 250 && mouseY <= 445) {
+        image(date2, 0, 0, 800, 800);
+    }
+    //chihuaha
+    image(date3s, 500, 250, 200, 200);
+    //shiba inu
+    image(date4s, 10, 500, 200, 200);
+    //maltese
+    image(date5s, 250, 500, 200, 200);
+    //creepy dude
+    image(date6s, 500, 500, 200, 200);
 }
+    
 
 function shep3Chosen() {
     background(180);
     fill(255, 0, 220);
+     rect(0, 0, 799, 50);
+    //home button\\
+    fill(255, 0, 220);
     textFont(Font, 50);
     textAlign(CENTER);
-    text('welcome', 400, 400);
+    text('home', 750, 40);
+    line(705, 0, 705, 50);
+    //profile button\\
+    text('Shep', 495, 40);
+    line(285, 0, 285, 50);
+    if (mouseIsPressed && mouseX >= 285 && mouseX <= 700 && mouseY >= 0 && mouseY <= 50) {
+        corgi1_s -= 4;
+    }
+    //header\\
+    text('Here are your matches!', 400, 100);
+    //matches\\
+    //datedog1
+    image(date1s, 10, 250, 200, 200);
+    if (mouseIsPressed && mouseX >= 10 && mouseX <= 200 && mouseY >= 250 && mouseY <= 445) {
+        corgi1_s += 5;
+    }
+    //poodle
+    image(date2s, 250, 250, 200, 200);
+    if (mouseIsPressed && mouseX >= 200 && mouseX <= 440 && mouseY >= 250 && mouseY <= 445) {
+        image(date2, 0, 0, 800, 800);
+    }
+    //chihuaha
+    image(date3s, 500, 250, 200, 200);
+    //shiba inu
+    image(date4s, 10, 500, 200, 200);
+    //maltese
+    image(date5s, 250, 500, 200, 200);
+    //creepy dude
+    image(date6s, 500, 500, 200, 200);
 }
+    
 
 function shep4Chosen() {
     background(180);
     fill(255, 0, 220);
+     rect(0, 0, 799, 50);
+    //home button\\
+    fill(255, 0, 220);
     textFont(Font, 50);
     textAlign(CENTER);
-    text('welcome', 400, 400);
+    text('home', 750, 40);
+    line(705, 0, 705, 50);
+    //profile button\\
+    text('Lottie', 495, 40);
+    line(285, 0, 285, 50);
+    if (mouseIsPressed && mouseX >= 285 && mouseX <= 700 && mouseY >= 0 && mouseY <= 50) {
+        corgi1_s -= 4;
+    }
+    //header\\
+    text('Here are your matches!', 400, 100);
+    //matches\\
+    //datedog1
+    image(date1s, 10, 250, 200, 200);
+    if (mouseIsPressed && mouseX >= 10 && mouseX <= 200 && mouseY >= 250 && mouseY <= 445) {
+        corgi1_s += 5;
+    }
+    //poodle
+    image(date2s, 250, 250, 200, 200);
+    if (mouseIsPressed && mouseX >= 200 && mouseX <= 440 && mouseY >= 250 && mouseY <= 445) {
+        image(date2, 0, 0, 800, 800);
+    }
+    //chihuaha
+    image(date3s, 500, 250, 200, 200);
+    //shiba inu
+    image(date4s, 10, 500, 200, 200);
+    //maltese
+    image(date5s, 250, 500, 200, 200);
+    //creepy dude
+    image(date6s, 500, 500, 200, 200);
 }
+    
 //dogdate1's profile page
 function dogdate1Page() {
     image(date1, 0, 0, 800, 800);
@@ -959,7 +1398,7 @@ function dogdate1Chat() {
     if (mouseIsPressed && mouseX >= 750 && mouseX <= 800 && mouseY >= 0 && mouseY <= 50) {
         corgi1_s -= 5;
         nextQ -= 3;
-        miloPoints -= miloPoints;
+        miloPoints -= 3;
     }
     //chat points
     textAlign(RIGHT);
@@ -1015,9 +1454,8 @@ function dogdate1Chat() {
 }
 
 function keyPressed() {
-    if (keyCode == 'A' || 'B' || 'C' || 'D') {
+    if (keyCode == 'A') {
         nextQ++;
-        miloPoints++;
     }
     else if (keyCode == 'B') {
         nextQ++;
@@ -1029,6 +1467,6 @@ function keyPressed() {
     else if(keyCode == 'D'){
         nextQ++;
     }
-    //else
-    //    nextQ++;
+    else
+        nextQ++;
 }
