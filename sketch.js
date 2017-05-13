@@ -959,7 +959,7 @@ function dogdate1Chat() {
     if (mouseIsPressed && mouseX >= 750 && mouseX <= 800 && mouseY >= 0 && mouseY <= 50) {
         corgi1_s -= 5;
         nextQ -= 3;
-        miloPoints -= 3;
+        miloPoints -= miloPoints;
     }
     //chat points
     textAlign(RIGHT);
@@ -1015,8 +1015,9 @@ function dogdate1Chat() {
 }
 
 function keyPressed() {
-    if (keyCode == 'A') {
+    if (keyCode == 'A' || 'B' || 'C' || 'D') {
         nextQ++;
+        miloPoints++;
     }
     else if (keyCode == 'B') {
         nextQ++;
@@ -1028,6 +1029,6 @@ function keyPressed() {
     else if(keyCode == 'D'){
         nextQ++;
     }
-    else
-        nextQ++;
+    //else
+    //    nextQ++;
 }
