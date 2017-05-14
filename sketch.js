@@ -216,6 +216,7 @@ function draw() {
         if (corgi2_s >= 5) {
             corgi2Chosen();
         }
+
     }
     if (corgi3_s >= 1) {
         corgi3Profile();
@@ -307,42 +308,42 @@ function draw() {
             pug4Chosen();
         }
     }
-    //    if (shep1_s >= 1) {
-    //        shep1Profile();
-    //        if (shep1_s == 0) {
-    //            chooseProfile();
-    //        }
-    //        if (shep1_s >= 5) {
-    //            shep1Chosen();
-    //        }
-    //    }
-    //   if (shep2_s >= 1) {
-    //       shep2Profile();
-    //       if (shep2_s == 0) {
-    //           chooseProfile();
-    //       }
-    //       if (shep2_s >= 5) {
-    //           shep2Chosen();
-    //       }
-    //   }
-    //   if (shep3_s >= 1) {
-    //       shep3Profile();
-    //       if (shep3_s == 0) {
-    //           chooseProfile();
-    //       }
-    //       if (shep3_s >= 5) {
-    //           shep3Chosen();
-    //       }
-    //   }
-    //   if (shep4_s >= 1) {
-    //       shep4Profile();
-    //       if (shep4_s == 0) {
-    // //          chooseProfile();
-    //      }
-    //      if (shep4_s >= 5) {
-    //           shep4Chosen();
-    //      }
-    //}
+    if (shep1_s >= 1) {
+        shep1Profile();
+        if (shep1_s == 0) {
+            chooseProfile();
+        }
+        if (shep1_s >= 5) {
+            shep1Chosen();
+        }
+    }
+    if (shep2_s >= 1) {
+        shep2Profile();
+        if (shep2_s == 0) {
+            chooseProfile();
+        }
+        if (shep2_s >= 5) {
+            shep2Chosen();
+        }
+    }
+    if (shep3_s >= 1) {
+        shep3Profile();
+        if (shep3_s == 0) {
+            chooseProfile();
+        }
+        if (shep3_s >= 5) {
+            shep3Chosen();
+        }
+    }
+    if (shep4_s >= 1) {
+        shep4Profile();
+        if (shep4_s == 0) {
+            chooseProfile();
+        }
+        if (shep4_s >= 5) {
+            shep4Chosen();
+        }
+    }
 }
 
 function welcomePage() {
@@ -803,8 +804,9 @@ function corgi2Chosen() {
 
 function corgi3Chosen() {
     background(180);
-    fill(255, 0, 220);
-     rect(0, 0, 799, 50);
+    //top bar\\
+    fill(100);
+    rect(0, 0, 799, 50);
     //home button\\
     fill(255, 0, 220);
     textFont(Font, 50);
@@ -839,12 +841,12 @@ function corgi3Chosen() {
     //creepy dude
     image(date6s, 500, 500, 200, 200);
 }
-   
 
 function corgi4Chosen() {
     background(180);
-    fill(255, 0, 220);
-     rect(0, 0, 799, 50);
+    //top bar\\
+    fill(100);
+    rect(0, 0, 799, 50);
     //home button\\
     fill(255, 0, 220);
     textFont(Font, 50);
@@ -879,12 +881,12 @@ function corgi4Chosen() {
     //creepy dude
     image(date6s, 500, 500, 200, 200);
 }
-    
 
 function ibizan1Chosen() {
-    background(180);
-    fill(255, 0, 220);
-     rect(0, 0, 799, 50);
+   background(180);
+    //top bar\\
+    fill(100);
+    rect(0, 0, 799, 50);
     //home button\\
     fill(255, 0, 220);
     textFont(Font, 50);
@@ -919,12 +921,12 @@ function ibizan1Chosen() {
     //creepy dude
     image(date6s, 500, 500, 200, 200);
 }
-    
 
 function ibizan2Chosen() {
-    background(180);
-    fill(255, 0, 220);
-     rect(0, 0, 799, 50);
+   background(180);
+    //top bar\\
+    fill(100);
+    rect(0, 0, 799, 50);
     //home button\\
     fill(255, 0, 220);
     textFont(Font, 50);
@@ -959,11 +961,12 @@ function ibizan2Chosen() {
     //creepy dude
     image(date6s, 500, 500, 200, 200);
 }
-   
+
 function ibizan3Chosen() {
     background(180);
-    fill(255, 0, 220);
-     rect(0, 0, 799, 50);
+    //top bar\\
+    fill(100);
+    rect(0, 0, 799, 50);
     //home button\\
     fill(255, 0, 220);
     textFont(Font, 50);
@@ -998,12 +1001,12 @@ function ibizan3Chosen() {
     //creepy dude
     image(date6s, 500, 500, 200, 200);
 }
-   
 
 function ibizan4Chosen() {
     background(180);
-    fill(255, 0, 220);
-     rect(0, 0, 799, 50);
+    //top bar\\
+    fill(100);
+    rect(0, 0, 799, 50);
     //home button\\
     fill(255, 0, 220);
     textFont(Font, 50);
@@ -1038,12 +1041,12 @@ function ibizan4Chosen() {
     //creepy dude
     image(date6s, 500, 500, 200, 200);
 }
-   
 
 function pug1Chosen() {
     background(180);
-    fill(255, 0, 220);
-     rect(0, 0, 799, 50);
+    //top bar\\
+    fill(100);
+    rect(0, 0, 799, 50);
     //home button\\
     fill(255, 0, 220);
     textFont(Font, 50);
@@ -1078,12 +1081,12 @@ function pug1Chosen() {
     //creepy dude
     image(date6s, 500, 500, 200, 200);
 }
-    
 
 function pug2Chosen() {
     background(180);
-    fill(255, 0, 220);
-     rect(0, 0, 799, 50);
+    //top bar\\
+    fill(100);
+    rect(0, 0, 799, 50);
     //home button\\
     fill(255, 0, 220);
     textFont(Font, 50);
@@ -1120,9 +1123,10 @@ function pug2Chosen() {
 }
 
 function pug3Chosen() {
-    background(180);
-    fill(255, 0, 220);
-     rect(0, 0, 799, 50);
+   background(180);
+    //top bar\\
+    fill(100);
+    rect(0, 0, 799, 50);
     //home button\\
     fill(255, 0, 220);
     textFont(Font, 50);
@@ -1157,12 +1161,12 @@ function pug3Chosen() {
     //creepy dude
     image(date6s, 500, 500, 200, 200);
 }
-    
 
 function pug4Chosen() {
     background(180);
-    fill(255, 0, 220);
-     rect(0, 0, 799, 50);
+    //top bar\\
+    fill(100);
+    rect(0, 0, 799, 50);
     //home button\\
     fill(255, 0, 220);
     textFont(Font, 50);
@@ -1197,14 +1201,12 @@ function pug4Chosen() {
     //creepy dude
     image(date6s, 500, 500, 200, 200);
 }
-    
-
-
 
 function shep1Chosen() {
     background(180);
-    fill(255, 0, 220);
-     rect(0, 0, 799, 50);
+    //top bar\\
+    fill(100);
+    rect(0, 0, 799, 50);
     //home button\\
     fill(255, 0, 220);
     textFont(Font, 50);
@@ -1242,8 +1244,9 @@ function shep1Chosen() {
 
 function shep2Chosen() {
     background(180);
-    fill(255, 0, 220);
-     rect(0, 0, 799, 50);
+    //top bar\\
+    fill(100);
+    rect(0, 0, 799, 50);
     //home button\\
     fill(255, 0, 220);
     textFont(Font, 50);
@@ -1278,12 +1281,12 @@ function shep2Chosen() {
     //creepy dude
     image(date6s, 500, 500, 200, 200);
 }
-    
 
 function shep3Chosen() {
     background(180);
-    fill(255, 0, 220);
-     rect(0, 0, 799, 50);
+    //top bar\\
+    fill(100);
+    rect(0, 0, 799, 50);
     //home button\\
     fill(255, 0, 220);
     textFont(Font, 50);
@@ -1318,12 +1321,12 @@ function shep3Chosen() {
     //creepy dude
     image(date6s, 500, 500, 200, 200);
 }
-    
 
 function shep4Chosen() {
     background(180);
-    fill(255, 0, 220);
-     rect(0, 0, 799, 50);
+    //top bar\\
+    fill(100);
+    rect(0, 0, 799, 50);
     //home button\\
     fill(255, 0, 220);
     textFont(Font, 50);
@@ -1358,7 +1361,6 @@ function shep4Chosen() {
     //creepy dude
     image(date6s, 500, 500, 200, 200);
 }
-    
 //dogdate1's profile page
 function dogdate1Page() {
     image(date1, 0, 0, 800, 800);
@@ -1459,14 +1461,13 @@ function keyPressed() {
     }
     else if (keyCode == 'B') {
         nextQ++;
-        miloPoints+=1;
+        miloPoints += 1;
     }
     else if (keyCode == 'C') {
         nextQ++;
     }
-    else if(keyCode == 'D'){
+    else if (keyCode == 'D') {
         nextQ++;
     }
-    else
-        nextQ++;
+    else nextQ++;
 }
