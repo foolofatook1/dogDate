@@ -581,6 +581,100 @@ background(250);
         }
     }
 }
+function dogdate4Page(){
+    image(date3, 0, 0, 800, 800);
+    //text
+    textSize(35);
+    fill(255, 0, 220);
+    text('you have a message from Baguette!', 550, 795);
+    //exit box
+    fill(180);
+    rect(780, 0, 20, 19);
+    line(780, 0, 800, 19);
+    line(800, 0, 780, 19);
+    if (mouseIsPressed && mouseX >= 780 && mouseX <= 800 && mouseY >= 0 && mouseY <= 19) {
+        corgi1_s -= 30;
+    }
+    //mail icon
+    fill(250);
+    rect(750, 780, 50, 20);
+    line(750, 780, 775, 800);
+    line(800, 780, 775, 800);
+    if (mouseIsPressed && mouseX >= 750 && mouseX <= 800 && mouseY >= 780 && mouseY <= 800) {
+        corgi1_s += 5;
+    }
+}
+//Baguette's chat
+function dogdate4Chat(){
+    background(250);
+    //top bar
+    fill(255, 0, 220);
+    textFont(Font, 50);
+    textAlign(CENTER);
+    text('Chat with Baguette!', 200, 50);
+    line(0, 50, 800, 50);
+    //exit box
+    line(750, 0, 750, 50);
+    line(750, 0, 800, 50);
+    line(800, 0, 750, 50);
+    if (mouseIsPressed && mouseX >= 750 && mouseX <= 800 && mouseY >= 0 && mouseY <= 50) {
+        corgi1_s -= 5;
+        nextQ -= nextQ;
+        nextQc -= nextQc;
+        nextQs -= nextQs;
+    }
+    //chat points
+    textAlign(RIGHT);
+    text(soupPoints, 790, 790);
+    //opening greeting
+    textSize(40);
+    fill(25, 249, 0);
+    textAlign(LEFT);
+    text('Hi! Im Baguette!', 10, 100);
+    text('What type of coffee you like most?', 10, 130);
+    //response options
+    fill(0, 66, 249);
+    textAlign(RIGHT);
+    text('Type m, n, o, or p:', 790, 160);
+    text('m) Caffe Latte', 790, 190);
+    text('n) Caffe Mocha', 790, 220);
+    text('o) Coconutmilk Mocha Macciato', 790, 250);
+    text('p) Water', 790, 280);
+    //when key is pressed
+    if (nextQc >= 1) {
+        //response question
+        fill(25, 249, 0);
+        textAlign(LEFT);
+        text('Well, so do you like Frappuccino?', 10, 310);
+        //response options
+        fill(0, 66, 249);
+        textAlign(RIGHT);
+        text('m) I never drink iced thing', 790, 340);
+        text('n) Of course, i love Unicorn most!', 790, 370);
+        text('o) Yeah, Green Tea cream Frappuccino', 790, 400);
+        text('p) The Pokemon Go Frappuccino', 790, 430);
+        if (nextQc >= 2) {
+            //final response question
+            fill(25, 249, 0);
+            textAlign(LEFT);
+            text('Do you like Trump?', 10, 460);
+            //response options
+            fill(0, 66, 249);
+            textAlign(RIGHT);
+            text('m) Who is he?', 790, 490);
+            text('n) Very Much!', 790, 520);
+            text('o) Of course not', 790, 550);
+            text('p) Can i refuse to answer this question?', 790, 580);
+            if (nextQc >= 3) {
+                //goodbye
+                fill(25, 249, 0);
+                textAlign(LEFT);
+                text('Nice to meet you, Jean-Pierre III!', 10, 620);
+                text('I think we have some similar thoughts, see you soon!', 10, 650);
+            }
+        }
+    }
+}
 // points system for each dog\\
 function keyPressed() {
     //for milo
@@ -635,6 +729,23 @@ function keyPressed() {
     }
     else if (key == 'L' ){
         nextQc++;
+    }
+     //for Baguette
+    else if (key == 'M' && nextQc == 0){
+        baguettePoints -= 2;
+        nextQc++;
+    }
+    else if (key == 'N' && nextQc == 0){
+        baguettePoints -= 1;
+        nextQ++;
+    }
+    else if (key == 'O' && nextQc == 1){
+        baguettePoints++;
+        nextQc
+    }
+    else if (key == 'P' && nextQc == 2){
+        baguettePoints++;
+        nextQc;
     }
 }
 
