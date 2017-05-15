@@ -542,10 +542,10 @@ background(250);
     fill(0, 66, 249);
     textAlign(RIGHT);
     text('Type e, f, g, or h:', 790, 160);
-    text('e) baths', 790, 190);
-    text('f) playing in garden', 790, 220);
-    text('g) napping', 790, 250);
-    text('h) drinking milk', 790, 280);
+    text('i) baths', 790, 190);
+    text('j) playing in garden', 790, 220);
+    text('k) napping', 790, 250);
+    text('l) drinking milk', 790, 280);
     //when key is pressed
     if (nextQc >= 1) {
         //response question
@@ -555,10 +555,10 @@ background(250);
         //response options
         fill(0, 66, 249);
         textAlign(RIGHT);
-        text('e) California', 790, 340);
-        text('f) My home', 790, 370);
-        text('g) Swimming in the sea, 790, 400);
-        text('h) None of your business', 790, 430);
+        text('i) California', 790, 340);
+        text('j) My home', 790, 370);
+        text('k) Swimming in the sea, 790, 400);
+        text('l) None of your business', 790, 430);
         if (nextQc >= 2) {
             //final response question
             fill(25, 249, 0);
@@ -567,10 +567,10 @@ background(250);
             //response options
             fill(0, 66, 249);
             textAlign(RIGHT);
-            text('e) Arrow?', 790, 490);
-            text('f) I love all soap show', 790, 520);
-            text('g) I never watch TV show baby', 790, 550);
-            text('h) Sorry, i forgot its name', 790, 580);
+            text('i) Arrow?', 790, 490);
+            text('j) I love all soap show', 790, 520);
+            text('k) I never watch TV show baby', 790, 550);
+            text('l) Sorry, i forgot its name', 790, 580);
             if (nextQc >= 3) {
                 //goodbye
                 fill(25, 249, 0);
