@@ -511,7 +511,76 @@ function dogdate3Page(){
     }
 }
 //soup's chat
-function dogdate3Chat(){}
+function dogdate3Chat(){
+background(250);
+    //top bar
+    fill(255, 0, 220);
+    textFont(Font, 50);
+    textAlign(CENTER);
+    text('Chat with Soup!', 200, 50);
+    line(0, 50, 800, 50);
+    //exit box
+    line(750, 0, 750, 50);
+    line(750, 0, 800, 50);
+    line(800, 0, 750, 50);
+    if (mouseIsPressed && mouseX >= 750 && mouseX <= 800 && mouseY >= 0 && mouseY <= 50) {
+        corgi1_s -= 5;
+        nextQ -= nextQ;
+        nextQc -= nextQc;
+        nextQs -= nextQs;
+    }
+    //chat points
+    textAlign(RIGHT);
+    text(soupPoints, 790, 790);
+    //opening greeting
+    textSize(40);
+    fill(25, 249, 0);
+    textAlign(LEFT);
+    text('Hi! Im Soup!', 10, 100);
+    text('Whats your favorite activity?', 10, 130);
+    //response options
+    fill(0, 66, 249);
+    textAlign(RIGHT);
+    text('Type e, f, g, or h:', 790, 160);
+    text('e) baths', 790, 190);
+    text('f) playing in garden', 790, 220);
+    text('g) napping', 790, 250);
+    text('h) drinking milk', 790, 280);
+    //when key is pressed
+    if (nextQc >= 1) {
+        //response question
+        fill(25, 249, 0);
+        textAlign(LEFT);
+        text('Oh wow! What is your favourist state in the US?', 10, 310);
+        //response options
+        fill(0, 66, 249);
+        textAlign(RIGHT);
+        text('e) California', 790, 340);
+        text('f) My home', 790, 370);
+        text('g) Swimming in the sea, 790, 400);
+        text('h) None of your business', 790, 430);
+        if (nextQc >= 2) {
+            //final response question
+            fill(25, 249, 0);
+            textAlign(LEFT);
+            text('Hey, do you have your favourite TV show?', 10, 460);
+            //response options
+            fill(0, 66, 249);
+            textAlign(RIGHT);
+            text('e) Arrow?', 790, 490);
+            text('f) I love all soap show', 790, 520);
+            text('g) I never watch TV show baby', 790, 550);
+            text('h) Sorry, i forgot its name', 790, 580);
+            if (nextQc >= 3) {
+                //goodbye
+                fill(25, 249, 0);
+                textAlign(LEFT);
+                text('Great talking to you, Jean-Pierre III!', 10, 620);
+                text('We should hang out next time！.... really enjoy being with you!', 10, 650);
+            }
+        }
+    }
+}
 // points system for each dog\\
 function keyPressed() {
     //for milo
