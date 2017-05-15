@@ -211,7 +211,7 @@ function draw() {
             dogdate2Chat();
         }
         //options for dogdate2, soup
-        if (corgi1_s >= 45){
+        if (corgi1_s >= 45) {
             dogdate3Page();
         }
         //if (corgi1_s >= 50){}
@@ -293,9 +293,9 @@ function corgi1Chosen() {
     }
     //chihuaha
     image(date3s, 500, 250, 200, 200);
-    if (mouseIsPressed && mouseX >= 600 && mouseX <= 700 && mouseY >= 250 && mouseY <= 445){
+    if (mouseIsPressed && mouseX >= 600 && mouseX <= 700 && mouseY >= 250 && mouseY <= 445) {
         corgi1_s += 40;
-        }
+    }
     //shiba inu
     image(date4s, 10, 500, 200, 200);
     //maltese
@@ -493,7 +493,7 @@ function dogdate2Chat() {
     }
 }
 //soup's profile page
-function dogdate3Page(){
+function dogdate3Page() {
     image(date3, 0, 0, 800, 800);
     //text
     textSize(35);
@@ -517,8 +517,8 @@ function dogdate3Page(){
     }
 }
 //soup's chat
-function dogdate3Chat(){
-background(250);
+function dogdate3Chat() {
+    background(250);
     //top bar
     fill(255, 0, 220);
     textFont(Font, 50);
@@ -587,7 +587,8 @@ background(250);
         }
     }
 }
-function dogdate4Page(){
+
+function dogdate4Page() {
     image(date4, 0, 0, 800, 800);
     //text
     textSize(35);
@@ -611,7 +612,7 @@ function dogdate4Page(){
     }
 }
 //Baguette's chat
-function dogdate4Chat(){
+function dogdate4Chat() {
     background(250);
     //top bar
     fill(255, 0, 220);
@@ -682,7 +683,7 @@ function dogdate4Chat(){
     }
 }
 //Demitri's Profile
-function dogdate5Page(){
+function dogdate5Page() {
     image(date5, 0, 0, 800, 800);
     //text
     textSize(35);
@@ -706,7 +707,7 @@ function dogdate5Page(){
     }
 }
 //Demitri's chat
-function dogdate5Chat(){
+function dogdate5Chat() {
     background(250);
     //top bar
     fill(255, 0, 220);
@@ -775,7 +776,7 @@ function dogdate5Chat(){
             }
         }
     }
-} 
+}
 // points system for each dog//
 function keyPressed() {
     //for milo
@@ -810,43 +811,42 @@ function keyPressed() {
         chouChouPoints++;
         nextQc++;
     }
-
-    else {
-        nextQ++;
-        nextQc++;
-    }
-     //for Soup
-    else if (Key == 'I' && nextQs ==1){
+    //for Soup
+    else if (Key == 'I' && nextQs == 1) {
         soupPoints++;
         nextQs++;
     }
-    else if (key == 'J' && next Qs == 2){
+    else if (key == 'J' && nextQs == 2) {
         soupPoints++;
         nextQs++;
     }
-    else if (key == 'K' && nextQs == 0){
+    else if (key == 'K' && nextQs == 0) {
         soupPoints -= 1;
         nextQs++;
     }
-    else if (key == 'L' ){
+    else if (key == 'L') {
         nextQs++;
     }
-     //for Baguette
-    //else if (key == 'M' && nextQ == 0){
-        //baguettePoints -= 2;
-       // nextQ++;
-    //}
-    //else if (key == 'N' && nextQ == 0){
-        //baguettePoints -= 1;
-       // nextQ++;
- //   }
-    //else if (key == 'O' && nextQb == 1){
-        //baguettePoints++;
-        //nextQb
-   // }
-    //else if (key == 'P' && nextQb == 2){
-       // baguettePoints++;
-        //nextQb;
-    //}
+    //for Baguette
+    else if (key == 'M' && nextQ == 0){
+    baguettePoints -= 2;
+     nextQb++;
+    }
+    else if (key == 'N' && nextQ == 0){
+    baguettePoints -= 1;
+     nextQ++;
+       }
+    else if (key == 'O' && nextQb == 1){
+    baguettePoints++;
+    nextQb
+ }
+    else if (key == 'P' && nextQb == 2){
+     baguettePoints++;
+    nextQb;
+    }
+    else {
+        nextQ++;
+        nextQc++;
+        nextQb++;
+    }
 }
-
