@@ -204,6 +204,11 @@ function draw() {
         if (corgi1_s >= 30) {
             dogdate2Chat();
         }
+        //options for dogdate2, soup
+        if (corgi1_s >= 45){
+            dogdate3Page();
+        }
+        //if (corgi1_s >= 50){}
     }
 }
 
@@ -282,6 +287,9 @@ function corgi1Chosen() {
     }
     //chihuaha
     image(date3s, 500, 250, 200, 200);
+    if (mouseIsPressed && mouseX >= 600 && mouseX <= 700 && mouseY >= 250 && mouseY <= 445){
+        corgi1_s += 40;
+        }
     //shiba inu
     image(date4s, 10, 500, 200, 200);
     //maltese
@@ -407,7 +415,7 @@ function dogdate2Page() {
         corgi1_s += 5;
     }
 }
-
+//chou chou's chat
 function dogdate2Chat() {
     background(250);
     //top bar
@@ -478,6 +486,32 @@ function dogdate2Chat() {
         }
     }
 }
+//soup's profile page
+function dogdate3Page(){
+    image(date3, 0, 0, 800, 800);
+    //text
+    textSize(35);
+    fill(255, 0, 220);
+    text('you have a message from Soup!', 550, 795);
+    //exit box
+    fill(180);
+    rect(780, 0, 20, 19);
+    line(780, 0, 800, 19);
+    line(800, 0, 780, 19);
+    if (mouseIsPressed && mouseX >= 780 && mouseX <= 800 && mouseY >= 0 && mouseY <= 19) {
+        corgi1_s -= 30;
+    }
+    //mail icon
+    fill(250);
+    rect(750, 780, 50, 20);
+    line(750, 780, 775, 800);
+    line(800, 780, 775, 800);
+    if (mouseIsPressed && mouseX >= 750 && mouseX <= 800 && mouseY >= 780 && mouseY <= 800) {
+        corgi1_s += 5;
+    }
+}
+//soup's chat
+function dogdate3Chat(){}
 // points system for each dog\\
 function keyPressed() {
     //for milo
@@ -512,6 +546,7 @@ function keyPressed() {
         chouChouPoints++;
         nextQc++;
     }
+
     else {
         nextQ++;
         nextQc++;
