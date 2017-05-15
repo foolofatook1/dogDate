@@ -169,11 +169,11 @@ function setup() {
     //moves to the next question for soup
     nextQs = 0;
     //moves to the next question for baguette
-    nextQb = 0;
+    //nextQb = 0;
     //moves to the next question for demitri
-    nextQd = 0;
+    //nextQd = 0;
     //moves to the next question for max
-    nextQm = 0;
+    //nextQm = 0;
     //points for each dog date
     miloPoints = 0;
     chouChouPoints = 0;
@@ -588,7 +588,7 @@ background(250);
     }
 }
 function dogdate4Page(){
-    image(date3, 0, 0, 800, 800);
+    image(date4, 0, 0, 800, 800);
     //text
     textSize(35);
     fill(255, 0, 220);
@@ -683,7 +683,7 @@ function dogdate4Chat(){
 }
 //Demitri's Profile
 function dogdate5Page(){
-    image(date3, 0, 0, 800, 800);
+    image(date5, 0, 0, 800, 800);
     //text
     textSize(35);
     fill(255, 0, 220);
@@ -775,8 +775,8 @@ function dogdate5Chat(){
             }
         }
     }
-}
-// points system for each dog\\
+} 
+// points system for each dog//
 function keyPressed() {
     //for milo
     if (key == 'A' && nextQ == 1) {
@@ -832,21 +832,21 @@ function keyPressed() {
         nextQs++;
     }
      //for Baguette
-    else if (key == 'M' && nextQ == 0){
-        baguettePoints -= 2;
-        nextQ++;
-    }
-    else if (key == 'N' && nextQ == 0){
-        baguettePoints -= 1;
-        nextQ++;
-    }
-    else if (key == 'O' && nextQb == 1){
-        baguettePoints++;
-        nextQb
-    }
-    else if (key == 'P' && nextQb == 2){
-        baguettePoints++;
-        nextQb;
-    }
+    //else if (key == 'M' && nextQ == 0){
+        //baguettePoints -= 2;
+       // nextQ++;
+    //}
+    //else if (key == 'N' && nextQ == 0){
+        //baguettePoints -= 1;
+       // nextQ++;
+ //   }
+    //else if (key == 'O' && nextQb == 1){
+        //baguettePoints++;
+        //nextQb
+   // }
+    //else if (key == 'P' && nextQb == 2){
+       // baguettePoints++;
+        //nextQb;
+    //}
 }
 
