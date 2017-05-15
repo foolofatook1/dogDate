@@ -541,7 +541,7 @@ background(250);
     //response options
     fill(0, 66, 249);
     textAlign(RIGHT);
-    text('Type e, f, g, or h:', 790, 160);
+    text('Type i, j, k, or l:', 790, 160);
     text('i) baths', 790, 190);
     text('j) playing in garden', 790, 220);
     text('k) napping', 790, 250);
@@ -620,4 +620,21 @@ function keyPressed() {
         nextQ++;
         nextQc++;
     }
+     //for Soup
+    else if (Key == 'I' && nextQc ==1){
+        soupPoints++;
+        nextQc++;
+    }
+    else if (key == 'J' && next Qc == 2){
+        soupPoints++;
+        nextQc++;
+    }
+    else if (key == 'K' && nextQc == 0){
+        soupPoints -= 1;
+        nextQ++;
+    }
+    else if (key == 'L' ){
+        nextQc++;
+    }
 }
+
