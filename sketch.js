@@ -557,7 +557,7 @@ background(250);
         textAlign(RIGHT);
         text('i) California', 790, 340);
         text('j) My home', 790, 370);
-        text('k) Swimming in the sea, 790, 400);
+        text('k) Swimming in the sea', 790, 400);
         text('l) None of your business', 790, 430);
         if (nextQc >= 2) {
             //final response question
