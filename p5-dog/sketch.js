@@ -57,7 +57,7 @@ function draw() {
     // move paddles on X axis
     //paddle_x += (mouseX - paddle_x) * .1;
     paddle_x = paddle_x + paddle_step;
-        // hitting paddle1?
+    // hitting paddle1?
     if (ball_y + ball_r > paddle_y) {
         if (ball_x >= paddle_x && ball_x <= paddle_x + paddle_w) {
             ball_y_step = -ball_y_step;
@@ -73,9 +73,9 @@ function draw() {
         }
     }
     // is the ball hitting the right or left wall?
-  if (ball_x - ball_r < 0 || ball_x + ball_r > width) {
-    ball_x_step = -ball_x_step;
-  }
+    if (ball_x - ball_r < 0 || ball_x + ball_r > width) {
+        ball_x_step = -ball_x_step;
+    }
     // hitting paddle2?
     if (ball_y + ball_r < paddle2_y + paddle_h + ball_r) {
         if (ball_x >= paddle_x && ball_x <= paddle_x + paddle_w) {
@@ -114,9 +114,9 @@ function reset() {
     ball_x_step = random(-3, 3);
     ball_y_step = random(1, 3);
     x = 0
-    if( y <= 0){
-		alert("You lose the game, please refresh the webpage to restart")；
-	}
+    if (y <= 0) {
+        alert("You lose the game, please refresh the webpage to restart");
+    }
 }
 
 function keyPressed() {
@@ -134,4 +134,3 @@ function keyPressed() {
 function keyReleased() {
     paddle_step = 0;
 }
- 
