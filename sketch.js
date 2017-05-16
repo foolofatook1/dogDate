@@ -989,7 +989,7 @@ function dogdate6Page() {
     rect(750, 780, 50, 20);
     line(750, 780, 775, 800);
     line(800, 780, 775, 800);
-    if (mouseIsPressed && mouseX >= 750 && mouseX <= 800 && mouseY >= 780 && mouseY <= 800) {
+    if (mouseIsPressed && mouseX >= 750 && mouseX <= 800 && mouseY >= 780 && mouseY <= 700) {
         corgi1_s += 20;
     }
 }
