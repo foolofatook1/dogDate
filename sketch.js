@@ -378,11 +378,6 @@ function chooseProfile() {
     if (mouseIsPressed && mouseX >= dogx - 50 && mouseX <= dogx + 30 && mouseY >= dogy - 50 && mouseY <= dogy + 20) {
         corgi1_s++;
     }
-    fill(255, 0, 0);
-    rect(450, 450, 100, 100);
-    if (mouseIsPressed && mouseX >= 450 && mouseX <= 550 && mouseY >= 450 && mouseY <= 550) {
-        pong_s++;
-    }
     textAlign(LEFT);
     textSize(50);
     fill(5, 255, 34);
