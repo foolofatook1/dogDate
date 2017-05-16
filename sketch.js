@@ -52,12 +52,11 @@ var corgi1_p, corgi2_p, corgi3_p, corgi4_p, ibizan1_p, ibizan2_p, ibizan3_p, ibi
 //integer for choosing different avatar\\
 var corgi1_s, corgi2_s, corgi3_s, corgi4_s, ibizan1_s, ibizan2_s, ibizan3_s, ibizan4_s, pug1_s, pug2_s, pug3_s, pug4_s, shep1_s, shep2_s, shep3_s, shep4_s;
 //goes to the next question in chat
-var nextQ, nextQc, nextQs;
+var nextQ, nextQc, nextQs, nextQb;
 //points for each dog date
 var miloPoints, chouChouPoints, soupPoints, baguettePoints, demitriPoints, maxPoints;
 //page change increments for the different dogs
 var miloP, chouchouP, souP, baguetteP, demitriP, maxP;
-
 /////////preload/////////
 function preload() {
     //font
@@ -172,7 +171,7 @@ function setup() {
     //moves to the next question for soup
     nextQs = 0;
     //moves to the next question for baguette
-    //nextQb = 0;
+    nextQb = 0;
     //moves to the next question for demitri
     //nextQd = 0;
     //moves to the next question for max
@@ -217,14 +216,22 @@ function draw() {
         if (corgi1_s >= chouchouP) {
             dogdate2Page();
         }
-        if (corgi1_s >= chouchouP+5) {
+        if (corgi1_s >= chouchouP + 5) {
             dogdate2Chat();
         }
         //options for dogdate2, soup
         if (corgi1_s >= souP) {
             dogdate3Page();
         }
-        //if (corgi1_s >= 50){}
+        if (corgi1_s >= souP + 5) {
+            dogdate3Chat();
+        }
+        if (corgi1_s >= baguetteP) {
+            dogdate4Page();
+        }
+        if (corgi1_s >= baguetteP + 5) {
+            dogdate4Chat();
+        }
     }
 }
 
@@ -308,6 +315,9 @@ function corgi1Chosen() {
     }
     //shiba inu
     image(date4s, 10, 500, 200, 200);
+    if (mouseIsPressed && mouseX >= 10 && mouseX <= 200 && mouseY >= 450 && mouseY <= 800) {
+        corgi1_s += baguetteP;
+    }
     //maltese
     image(date5s, 250, 500, 200, 200);
     //creepy dude
@@ -350,10 +360,11 @@ function dogdate1Chat() {
     line(750, 0, 800, 50);
     line(800, 0, 750, 50);
     if (mouseIsPressed && mouseX >= 750 && mouseX <= 800 && mouseY >= 0 && mouseY <= 50) {
-        corgi1_s -= 5;
+        corgi1_s -= corgi1_s;
         nextQ -= nextQ;
         nextQc -= nextQc;
         nextQs -= nextQs;
+        nextQb -= nextQb;
     }
     //chat points
     textAlign(RIGHT);
@@ -445,10 +456,11 @@ function dogdate2Chat() {
     line(750, 0, 800, 50);
     line(800, 0, 750, 50);
     if (mouseIsPressed && mouseX >= 750 && mouseX <= 800 && mouseY >= 0 && mouseY <= 50) {
-        corgi1_s -= 5;
+        corgi1_s -= corgi1_s;
         nextQ -= nextQ;
         nextQc -= nextQc;
         nextQs -= nextQs;
+        nextQb -= nextQb;
     }
     //chat points
     textAlign(RIGHT);
@@ -540,10 +552,11 @@ function dogdate3Chat() {
     line(750, 0, 800, 50);
     line(800, 0, 750, 50);
     if (mouseIsPressed && mouseX >= 750 && mouseX <= 800 && mouseY >= 0 && mouseY <= 50) {
-        corgi1_s -= 5;
+        corgi1_s -= corgi1_s;
         nextQ -= nextQ;
         nextQc -= nextQc;
         nextQs -= nextQs;
+        nextQb -= nextQb;
     }
     //chat points
     textAlign(RIGHT);
@@ -563,7 +576,7 @@ function dogdate3Chat() {
     text('k) napping', 790, 250);
     text('l) drinking milk', 790, 280);
     //when key is pressed
-    if (nextQc >= 1) {
+    if (nextQs >= 1) {
         //response question
         fill(25, 249, 0);
         textAlign(LEFT);
@@ -575,7 +588,7 @@ function dogdate3Chat() {
         text('j) My home', 790, 370);
         text('k) Swimming in the sea', 790, 400);
         text('l) None of your business', 790, 430);
-        if (nextQc >= 2) {
+        if (nextQs >= 2) {
             //final response question
             fill(25, 249, 0);
             textAlign(LEFT);
@@ -587,7 +600,7 @@ function dogdate3Chat() {
             text('j) I love all soap show', 790, 520);
             text('k) I never watch TV show baby', 790, 550);
             text('l) Sorry, i forgot its name', 790, 580);
-            if (nextQc >= 3) {
+            if (nextQs >= 3) {
                 //goodbye
                 fill(25, 249, 0);
                 textAlign(LEFT);
@@ -597,7 +610,7 @@ function dogdate3Chat() {
         }
     }
 }
-
+//baguette
 function dogdate4Page() {
     image(date4, 0, 0, 800, 800);
     //text
@@ -635,10 +648,11 @@ function dogdate4Chat() {
     line(750, 0, 800, 50);
     line(800, 0, 750, 50);
     if (mouseIsPressed && mouseX >= 750 && mouseX <= 800 && mouseY >= 0 && mouseY <= 50) {
-        corgi1_s -= 5;
+        corgi1_s -= corgi1_s;
         nextQ -= nextQ;
         nextQc -= nextQc;
         nextQs -= nextQs;
+        nextQb -= nextQb;
     }
     //chat points
     textAlign(RIGHT);
@@ -658,7 +672,7 @@ function dogdate4Chat() {
     text('o) Coconutmilk Mocha Macciato', 790, 250);
     text('p) Water', 790, 280);
     //when key is pressed
-    if (nextQc >= 1) {
+    if (nextQb >= 1) {
         //response question
         fill(25, 249, 0);
         textAlign(LEFT);
@@ -670,7 +684,7 @@ function dogdate4Chat() {
         text('n) Of course, i love Unicorn most!', 790, 370);
         text('o) Yeah, Green Tea cream Frappuccino', 790, 400);
         text('p) The Pokemon Go Frappuccino', 790, 430);
-        if (nextQc >= 2) {
+        if (nextQb >= 2) {
             //final response question
             fill(25, 249, 0);
             textAlign(LEFT);
@@ -682,7 +696,7 @@ function dogdate4Chat() {
             text('n) Very Much!', 790, 520);
             text('o) Of course not', 790, 550);
             text('p) Can i refuse to answer this question?', 790, 580);
-            if (nextQc >= 3) {
+            if (nextQb >= 3) {
                 //goodbye
                 fill(25, 249, 0);
                 textAlign(LEFT);
@@ -692,109 +706,14 @@ function dogdate4Chat() {
         }
     }
 }
-//Demitri's Profile
-function dogdate5Page() {
-    image(date5, 0, 0, 800, 800);
-    //text
-    textSize(35);
-    fill(255, 0, 220);
-    text('you have a message from Demitri!', 550, 795);
-    //exit box
-    fill(180);
-    rect(780, 0, 20, 19);
-    line(780, 0, 800, 19);
-    line(800, 0, 780, 19);
-    if (mouseIsPressed && mouseX >= 780 && mouseX <= 800 && mouseY >= 0 && mouseY <= 19) {
-        corgi1_s -= 30;
-    }
-    //mail icon
-    fill(250);
-    rect(750, 780, 50, 20);
-    line(750, 780, 775, 800);
-    line(800, 780, 775, 800);
-    if (mouseIsPressed && mouseX >= 750 && mouseX <= 800 && mouseY >= 780 && mouseY <= 800) {
-        corgi1_s += 5;
-    }
-}
-//Demitri's chat
-function dogdate5Chat() {
-    background(250);
-    //top bar
-    fill(255, 0, 220);
-    textFont(Font, 50);
-    textAlign(CENTER);
-    text('Chat with Demitri!', 200, 50);
-    line(0, 50, 800, 50);
-    //exit box
-    line(750, 0, 750, 50);
-    line(750, 0, 800, 50);
-    line(800, 0, 750, 50);
-    if (mouseIsPressed && mouseX >= 750 && mouseX <= 800 && mouseY >= 0 && mouseY <= 50) {
-        corgi1_s -= 5;
-        nextQ -= nextQ;
-        nextQc -= nextQc;
-        nextQs -= nextQs;
-    }
-    //chat points
-    textAlign(RIGHT);
-    text(soupPoints, 790, 790);
-    //opening greeting
-    textSize(40);
-    fill(25, 249, 0);
-    textAlign(LEFT);
-    text('Hi! I am Demitri!', 10, 100);
-    text('Do you like to cut hair?', 10, 130);
-    //response options
-    fill(0, 66, 249);
-    textAlign(RIGHT);
-    text('Type q, r, s, or t:', 790, 160);
-    text('q) I love my white lon hair', 790, 190);
-    text('r) No way for shaving', 790, 220);
-    text('s) i have no idea', 790, 250);
-    text('t) Yes! Cutting haie make me feel cool', 790, 280);
-    //when key is pressed
-    if (nextQc >= 1) {
-        //response question
-        fill(25, 249, 0);
-        textAlign(LEFT);
-        text('Hey, girl. Do you enjoy taking the bath?', 10, 310);
-        //response options
-        fill(0, 66, 249);
-        textAlign(RIGHT);
-        text('q) Not at all, i am afraid of water', 790, 340);
-        text('r) I love swimming!', 790, 370);
-        text('s) I love being in the bath for a long time, it makes me feel relaxed', 790, 400);
-        text('t) I love diving', 790, 430);
-        if (nextQc >= 2) {
-            //final response question
-            fill(25, 249, 0);
-            textAlign(LEFT);
-            text('You are a special dog!', 10, 460);
-            //response options
-            fill(0, 66, 249);
-            textAlign(RIGHT);
-            text('q) yeah, because i love bath!', 790, 490);
-            text('r) What do you mean?', 790, 520);
-            text('s) Thank you babe', 790, 550);
-            text('t) I love jumpping in the rain as well, i love water', 790, 580);
-            if (nextQc >= 3) {
-                //goodbye
-                fill(25, 249, 0);
-                textAlign(LEFT);
-                text('Glad to meet you, Jean-Pierre III!', 10, 620);
-                text('You are an interestng dog, i hope we can have more development', 10, 650);
-            }
-        }
-    }
-}
 // points system for each dog//
 function keyPressed() {
     //for milo
-    if (key == 'A' && nextQ == 1) {
+    if (key == 'A' && nextQ == 2) {
         miloPoints++;
         nextQ++;
     }
-    else if (key == 'B' && nextQm == 2) {
+    else if (key == 'B' && nextQ == 1) {
         miloPoints++;
         nextQ++;
     }
@@ -822,7 +741,7 @@ function keyPressed() {
         nextQc++;
     }
     //for Soup
-    else if (Key == 'I' && nextQs == 1) {
+    else if (key == 'I' && nextQs == 1) {
         soupPoints++;
         nextQs++;
     }
@@ -831,32 +750,33 @@ function keyPressed() {
         nextQs++;
     }
     else if (key == 'K' && nextQs == 0) {
-        soupPoints -= 1;
+        soupPoints += 1;
         nextQs++;
     }
     else if (key == 'L') {
         nextQs++;
     }
     //for Baguette
-    else if (key == 'M' && nextQ == 0){
-    baguettePoints -= 2;
-     nextQb++;
+    else if (key == 'M' && nextQb == 0) {
+        baguettePoints -= 2;
+        nextQb++;
     }
-    else if (key == 'N' && nextQ == 0){
-    baguettePoints -= 1;
-     nextQ++;
-       }
-    else if (key == 'O' && nextQb == 1){
-    baguettePoints++;
-    nextQb
- }
-    else if (key == 'P' && nextQb == 2){
-     baguettePoints++;
-    nextQb;
+    else if (key == 'N') {
+        baguettePoints -= 1;
+        nextQb++;
+    }
+    else if (key == 'O' && nextQb == 1) {
+        baguettePoints++;
+        nextQb++;
+    }
+    else if (key == 'P' && nextQb == 2) {
+        baguettePoints++;
+        nextQb++;
     }
     else {
         nextQ++;
         nextQc++;
+        nextQs++;
         nextQb++;
     }
 }
