@@ -364,7 +364,7 @@ function welcomePage() {
     textAlign(CENTER);
     text('WELCOME TO eBARK!', 400, 400);
     textFont(Font, 30);
-    text('♡ FIND LOVE ♡, 400, 460);
+    text('♡ FIND LOVE ♡', 400, 460);
     if (mouseIsPressed && mouseX >= rectX && mouseX <= rectX + rectL && mouseY >= rectY && mouseY <= rectY + rectH) {
         makeProfile += 1;
     }
@@ -564,7 +564,7 @@ function dogdate1Chat() {
             fill(0, 66, 249);
             textAlign(RIGHT);
             text('a) Green Grass Party', 790, 490);
-            text('b) No-Least Party', 790, 520);
+            text('b) No-Leash Party', 790, 520);
             text('c) Democatic Party', 790, 550);
             text('d) Working Dogs Party', 790, 580);
             if (nextQ >= 3) {
