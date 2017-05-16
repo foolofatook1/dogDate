@@ -1078,6 +1078,7 @@ function keyPressed() {
         paddle_step = 3;
     }
     else if (key == ' ') {
+        pong_s += 1;
         reset();
     }
     //for milo
