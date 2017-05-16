@@ -114,6 +114,9 @@ function reset() {
     ball_x_step = random(-3, 3);
     ball_y_step = random(1, 3);
     x = 0
+    if( y <= 0){
+		alert("You lose the game, please refresh the webpage to restart")；
+	}
 }
 
 function keyPressed() {
@@ -130,29 +133,5 @@ function keyPressed() {
 
 function keyReleased() {
     paddle_step = 0;
-}
- if(lives == 3) {
-    score == 3;
-}
-else if (lives == 2) {
-    score == 2;
-}
-else if (lives == 1) {
-    score === 1;
-}
-else if (lives == 0){
-    score == 0;
-}
-else if (lives < 0){
-    fill(255);
-    stroke(0);
-    strokeWeight(4);
-    fill(0);
-    textSize(20);
-    text("You are supposed to get the frisbee",140,390);
-    text("click anywhere to try again", 140,420);
-    if (mouseIsPressed){
-        reset();
-    }
 }
  
