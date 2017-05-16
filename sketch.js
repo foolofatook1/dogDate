@@ -52,11 +52,13 @@ var corgi1_p, corgi2_p, corgi3_p, corgi4_p, ibizan1_p, ibizan2_p, ibizan3_p, ibi
 //integer for choosing different avatar\\
 var corgi1_s, corgi2_s, corgi3_s, corgi4_s, ibizan1_s, ibizan2_s, ibizan3_s, ibizan4_s, pug1_s, pug2_s, pug3_s, pug4_s, shep1_s, shep2_s, shep3_s, shep4_s;
 //goes to the next question in chat
-var nextQ, nextQc, nextQs, nextQb;
+var nextQ, nextQc, nextQs, nextQb, nextQd, nextQm;
 //points for each dog date
 var miloPoints, chouChouPoints, soupPoints, baguettePoints, demitriPoints, maxPoints;
 //page change increments for the different dogs
 var miloP, chouchouP, souP, baguetteP, demitriP, maxP;
+//score array
+var scores;
 /////////preload/////////
 function preload() {
     //font
@@ -173,9 +175,9 @@ function setup() {
     //moves to the next question for baguette
     nextQb = 0;
     //moves to the next question for demitri
-    //nextQd = 0;
+    nextQd = 0;
     //moves to the next question for max
-    //nextQm = 0;
+    nextQm = 0;
     //points for each dog date
     miloPoints = 0;
     chouChouPoints = 0;
@@ -183,6 +185,8 @@ function setup() {
     baguettePoints = 0;
     demitriPoints = 0;
     maxPoints = 0;
+    //scores array
+   // scores = [miloPoints, chouChouPoints, soupPoints, baguettePoints, demitriPoints, maxPoints];
     //increments of page change
     miloP = 100;
     chouchouP = 1000;
@@ -232,6 +236,18 @@ function draw() {
         if (corgi1_s >= baguetteP + 20) {
             dogdate4Chat();
         }
+        if (corgi1_s >= demitriP) {
+            dogdate5Page();
+        }
+        if (corgi1_s >= demitriP + 20) {
+            dogdate5Chat();
+        }
+        if (corgi1_s >= maxP){
+            dogdate6Page();
+        }
+        if (corgi1_s >= maxP + 20) {
+            dogdate6Chat();
+        }
     }
 }
 
@@ -248,6 +264,7 @@ function welcomePage() {
     if (mouseIsPressed && mouseX >= rectX && mouseX <= rectX + rectL && mouseY >= rectY && mouseY <= rectY + rectH) {
         makeProfile += 1;
     }
+
 }
 
 function chooseProfile() {
@@ -258,6 +275,28 @@ function chooseProfile() {
     if (mouseIsPressed && mouseX >= dogx - 50 && mouseX <= dogx + 30 && mouseY >= dogy - 50 && mouseY <= dogy + 20) {
         corgi1_s++;
     }
+    textAlign(LEFT);
+    textSize(50);
+    fill(5, 255, 34);
+    text('Date Scores: ', 10, 500);
+    //milo chart
+    text('Milo: ', 10, 525);
+    text(miloPoints, 115, 525);
+    //chouchou chart
+    text('Chou Chou: ', 10, 550);
+    text(chouChouPoints, 200, 550);
+    //soup chart
+    text('Soup: ', 10, 575);
+    text(soupPoints, 115, 575);
+    //baguette chart
+    text('Baguette: ', 10, 600);
+    text(baguettePoints, 190, 600);
+    //demitri chart
+    text('Demitri: ', 10, 625);
+    text(demitriPoints, 170, 625);
+    //max chart
+    text('Max: ', 10, 650);
+    text(maxPoints, 90, 650);
 }
 
 function corgi1Profile() {
@@ -320,8 +359,14 @@ function corgi1Chosen() {
     }
     //maltese
     image(date5s, 250, 500, 200, 200);
+    if (mouseIsPressed && mouseX >= 200 && mouseX <= 440 && mouseY >= 450 && mouseY <= 800){
+        corgi1_s += demitriP;
+    }
     //creepy dude
     image(date6s, 500, 500, 200, 200);
+    if (mouseIsPressed && mouseX >= 600 && mouseX <= 700 && mouseY >= 450 && mouseY <= 800){
+        corgi1_s += maxP;
+    }
 }
 //dogdate1's profile page
 function dogdate1Page() {
@@ -361,6 +406,12 @@ function dogdate1Chat() {
     line(800, 0, 750, 50);
     if (mouseIsPressed && mouseX >= 750 && mouseX <= 800 && mouseY >= 0 && mouseY <= 50) {
         corgi1_s -= corgi1_s;
+        nextQ -= nextQ;
+        nextQc -= nextQc;
+        nextQs -= nextQs;
+        nextQb -= nextQb;
+        nextQd -= nextQd;
+        nextQm -= nextQm;
     }
     //chat points
     textAlign(RIGHT);
@@ -453,6 +504,12 @@ function dogdate2Chat() {
     line(800, 0, 750, 50);
     if (mouseIsPressed && mouseX >= 750 && mouseX <= 800 && mouseY >= 0 && mouseY <= 50) {
         corgi1_s -= corgi1_s;
+        nextQ -= nextQ;
+        nextQc -= nextQc;
+        nextQs -= nextQs;
+        nextQb -= nextQb;
+        nextQd -= nextQd;
+        nextQm -= nextQm;
     }
     //chat points
     textAlign(RIGHT);
@@ -545,6 +602,12 @@ function dogdate3Chat() {
     line(800, 0, 750, 50);
     if (mouseIsPressed && mouseX >= 750 && mouseX <= 800 && mouseY >= 0 && mouseY <= 50) {
         corgi1_s -= corgi1_s;
+        nextQ -= nextQ;
+        nextQc -= nextQc;
+        nextQs -= nextQs;
+        nextQb -= nextQb;
+        nextQd -= nextQd;
+        nextQm -= nextQm;
     }
     //chat points
     textAlign(RIGHT);
@@ -637,6 +700,12 @@ function dogdate4Chat() {
     line(800, 0, 750, 50);
     if (mouseIsPressed && mouseX >= 750 && mouseX <= 800 && mouseY >= 0 && mouseY <= 50) {
         corgi1_s -= corgi1_s;
+        nextQ -= nextQ;
+        nextQc -= nextQc;
+        nextQs -= nextQs;
+        nextQb -= nextQb;
+        nextQd -= nextQd;
+        nextQm -= nextQm;
     }
     //chat points
     textAlign(RIGHT);
@@ -729,6 +798,12 @@ function dogdate5Chat(){
     line(800, 0, 750, 50);
     if (mouseIsPressed && mouseX >= 750 && mouseX <= 800 && mouseY >= 0 && mouseY <= 50) {
         corgi1_s -= corgi1_s;
+        nextQ -= nextQ;
+        nextQc -= nextQc;
+        nextQs -= nextQs;
+        nextQb -= nextQb;
+        nextQd -= nextQd;
+        nextQm -= nextQm;
     }
     //chat points
     textAlign(RIGHT);
@@ -748,7 +823,7 @@ function dogdate5Chat(){
     text('s) green', 790, 250);
     text('t) not sure', 790, 280);
     //when key is pressed
-    if (nextQb >= 1) {
+    if (nextQd >= 1) {
         //response question
         fill(25, 249, 0);
         textAlign(LEFT);
@@ -756,11 +831,11 @@ function dogdate5Chat(){
         //response options
         fill(0, 66, 249);
         textAlign(RIGHT);
-        text('m) Im not like other dogs', 790, 340);
-        text('n) frisbee. all day, everyday', 790, 370);
-        text('o) fetch!', 790, 400);
-        text('p) tail chaser', 790, 430);
-        if (nextQb >= 2) {
+        text('q) Im not like other dogs', 790, 340);
+        text('r) frisbee. all day, everyday', 790, 370);
+        text('s) fetch!', 790, 400);
+        text('t) tail chaser', 790, 430);
+        if (nextQd >= 2) {
             //final response question
             fill(25, 249, 0);
             textAlign(LEFT);
@@ -768,16 +843,113 @@ function dogdate5Chat(){
             //response options
             fill(0, 66, 249);
             textAlign(RIGHT);
-            text('m) where the red ferns grow', 790, 490);
-            text('n) marley and me...', 790, 520);
-            text('o) old yeller', 790, 550);
-            text('p) of mice and men', 790, 580);
-            if (nextQb >= 3) {
+            text('q) where the red ferns grow', 790, 490);
+            text('r) marley and me...', 790, 520);
+            text('s) old yeller', 790, 550);
+            text('t) of mice and men', 790, 580);
+            if (nextQd >= 3) {
                 //goodbye
                 fill(25, 249, 0);
                 textAlign(LEFT);
                 text('Nice to meet you, Jean-Pierre III!', 10, 620);
                 text('Join my book club!', 10, 650);
+            }
+        }
+    }
+}
+//max's page
+function dogdate6Page(){
+    image(date6, 0, 0, 800, 800);
+    //text
+    textSize(35);
+    fill(255, 0, 220);
+    text('you have a message from Max!', 550, 795);
+    //exit box
+    fill(180);
+    rect(780, 0, 20, 19);
+    line(780, 0, 800, 19);
+    line(800, 0, 780, 19);
+    if (mouseIsPressed && mouseX >= 780 && mouseX <= 800 && mouseY >= 0 && mouseY <= 19) {
+        corgi1_s -= 30;
+    }
+    //mail icon
+    fill(250);
+    rect(750, 780, 50, 20);
+    line(750, 780, 775, 800);
+    line(800, 780, 775, 800);
+    if (mouseIsPressed && mouseX >= 750 && mouseX <= 800 && mouseY >= 780 && mouseY <= 800) {
+        corgi1_s += 20;
+    }
+}
+//chat with max
+function dogdate6Chat(){
+    background(250);
+    //top bar
+    fill(255, 0, 220);
+    textFont(Font, 50);
+    textAlign(CENTER);
+    text('Chat with Demitri!', 200, 50);
+    line(0, 50, 800, 50);
+    //exit box
+    line(750, 0, 750, 50);
+    line(750, 0, 800, 50);
+    line(800, 0, 750, 50);
+    if (mouseIsPressed && mouseX >= 750 && mouseX <= 800 && mouseY >= 0 && mouseY <= 50) {
+        corgi1_s -= corgi1_s;
+        nextQ -= nextQ;
+        nextQc -= nextQc;
+        nextQs -= nextQs;
+        nextQb -= nextQb;
+        nextQd -= nextQd;
+        nextQm -= nextQm;
+    }
+    //chat points
+    textAlign(RIGHT);
+    text(maxPoints, 790, 790);
+    //opening greeting
+    textSize(40);
+    fill(25, 249, 0);
+    textAlign(LEFT);
+    text('Woof woof!', 10, 100);
+    text('woof woof!', 10, 130);
+    //response options
+    fill(0, 66, 249);
+    textAlign(RIGHT);
+    text('Type u, v, w or x:', 790, 160);
+    text('u) what the...', 790, 190);
+    text('v) woof?', 790, 220);
+    text('w) excuse me?', 790, 250);
+    text('x) hi hello!', 790, 280);
+    //when key is pressed
+    if (nextQm >= 1) {
+        //response question
+        fill(25, 249, 0);
+        textAlign(LEFT);
+        text('woof woof!', 10, 310);
+        //response options
+        fill(0, 66, 249);
+        textAlign(RIGHT);
+        text('u) okay', 790, 340);
+        text('v) woof woof', 790, 370);
+        text('w) i beg your pardon?', 790, 400);
+        text('x) cheese cake is my favorite as well!', 790, 430);
+        if (nextQm >= 2) {
+            //final response question
+            fill(25, 249, 0);
+            textAlign(LEFT);
+            text('waroo!', 10, 460);
+            //response options
+            fill(0, 66, 249);
+            textAlign(RIGHT);
+            text('u) rude.', 790, 490);
+            text('v) waroooooo', 790, 520);
+            text('w) alrighty then.', 790, 550);
+            text('x) its funny you say that!', 790, 580);
+            if (nextQm >= 3) {
+                //goodbye
+                fill(25, 249, 0);
+                textAlign(LEFT);
+                text('woof woof!', 10, 620);
             }
         }
     }
@@ -849,10 +1021,47 @@ function keyPressed() {
         baguettePoints++;
         nextQb++;
     }
+    //for demitri
+    else if (key == 'Q' && nextQd == 1){
+        demitriPoints++;
+        nextQd++;
+    }
+    else if (key == 'R' && nextQd == 0) {
+        demitriPoints++;
+        nextQd++;
+    }
+    else if (key == 'S' && nextQd == 2 || nextQd == 3) {
+        demitriPoints++;
+        nextQd++;
+    }
+    else if (key == 'T' && nextQd == 2 || nextQd == 3) {
+        demitriPoints++;
+        nextQd++;
+    }
+    //max
+    else if (key == 'U'){
+        nextQm++;
+        maxPoints++;
+    }
+    else if (key == 'V'){
+        nextQm++;
+        nextQd++;
+    }
+    else if (key == 'W'){
+        nextQm++;
+        nextQd++;
+    }
+    else if (key == 'X'){
+        nextQm++;
+        nextQd++;
+    }
+
     else {
         nextQ++;
         nextQc++;
         nextQs++;
         nextQb++;
+        nextQd++;
+        nextQm++;
     }
 }
