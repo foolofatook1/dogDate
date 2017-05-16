@@ -364,7 +364,7 @@ function welcomePage() {
     textAlign(CENTER);
     text('WELCOME TO eBARK!', 400, 400);
     textFont(Font, 30);
-    text('♡ FIND LOVE ♡, 400, 460);
+    text('FIND LOVE', 400, 460);
     if (mouseIsPressed && mouseX >= rectX && mouseX <= rectX + rectL && mouseY >= rectY && mouseY <= rectY + rectH) {
         makeProfile += 1;
     }
