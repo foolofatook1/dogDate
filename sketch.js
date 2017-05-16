@@ -409,6 +409,9 @@ function chooseProfile() {
     //max chart
     text('Max: ', 10, 650);
     text(maxPoints, 90, 650);
+    //to play pong
+    text('Press space to go on', 400, 500);
+    text('a date in the park!', 400, 530);
     //click to see profile 
     text('Click on your avatar to see your profile!', 10, 720);
 }
