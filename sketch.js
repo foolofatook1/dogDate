@@ -186,7 +186,7 @@ function setup() {
     demitriPoints = 0;
     maxPoints = 0;
     //scores array
-   // scores = [miloPoints, chouChouPoints, soupPoints, baguettePoints, demitriPoints, maxPoints];
+    scores = [miloPoints, chouChouPoints, soupPoints, baguettePoints, demitriPoints, maxPoints];
     //increments of page change
     miloP = 100;
     chouchouP = 1000;
@@ -278,6 +278,10 @@ function chooseProfile() {
     textAlign(LEFT);
     textSize(50);
     fill(5, 255, 34);
+    //high score
+    text('High Score: ', 10, 475);
+    text(highScore(scores), 225, 475);
+    //header
     text('Date Scores: ', 10, 500);
     //milo chart
     text('Milo: ', 10, 525);
@@ -1064,4 +1068,14 @@ function keyPressed() {
         nextQd++;
         nextQm++;
     }
+}
+
+function highScore(input){
+    var l = 0;
+    for (x = 0; x <= input.length; x++){
+        if (input[x] > l){
+            l = input[x];
+        }
+    }
+    return l;
 }
