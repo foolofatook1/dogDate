@@ -301,6 +301,8 @@ function chooseProfile() {
     //max chart
     text('Max: ', 10, 650);
     text(maxPoints, 90, 650);
+    //click to see profile 
+    text('Click on your avatar to see your profile!', 10, 720);
 }
 
 function corgi1Profile() {
