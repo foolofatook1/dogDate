@@ -55,6 +55,9 @@ var corgi1_s, corgi2_s, corgi3_s, corgi4_s, ibizan1_s, ibizan2_s, ibizan3_s, ibi
 var nextQ, nextQc, nextQs;
 //points for each dog date
 var miloPoints, chouChouPoints, soupPoints, baguettePoints, demitriPoints, maxPoints;
+//page change increments for the different dogs
+var miloP, chouchouP, souP, baguetteP, demitriP, maxP;
+
 /////////preload/////////
 function preload() {
     //font
@@ -181,6 +184,13 @@ function setup() {
     baguettePoints = 0;
     demitriPoints = 0;
     maxPoints = 0;
+    //increments of page change
+    miloP = 100;
+    chouchouP = 1000;
+    souP = 10000;
+    baguetteP = 100000;
+    demitriP = 1000000;
+    maxP = 10000000;
 }
 
 function draw() {
@@ -197,21 +207,21 @@ function draw() {
             corgi1Chosen();
         }
         //options for dogdate1, milo
-        if (corgi1_s >= 10) {
+        if (corgi1_s >= miloP) {
             dogdate1Page();
         }
-        if (corgi1_s >= 15) {
+        if (corgi1_s >= miloP + 5) {
             dogdate1Chat();
         }
         //options for dogdate2, chou chou
-        if (corgi1_s >= 25) {
+        if (corgi1_s >= chouchouP) {
             dogdate2Page();
         }
-        if (corgi1_s >= 30) {
+        if (corgi1_s >= chouchouP+5) {
             dogdate2Chat();
         }
         //options for dogdate2, soup
-        if (corgi1_s >= 45) {
+        if (corgi1_s >= souP) {
             dogdate3Page();
         }
         //if (corgi1_s >= 50){}
@@ -276,7 +286,7 @@ function corgi1Chosen() {
     text('Jean-Pierre Claude III', 495, 40);
     line(285, 0, 285, 50);
     if (mouseIsPressed && mouseX >= 285 && mouseX <= 700 && mouseY >= 0 && mouseY <= 50) {
-        corgi1_s -= 4;
+        corgi1_s -= 5;
     }
     //header\\
     text('Here are your matches!', 400, 100);
@@ -284,17 +294,17 @@ function corgi1Chosen() {
     //datedog1
     image(date1s, 10, 250, 200, 200);
     if (mouseIsPressed && mouseX >= 10 && mouseX <= 200 && mouseY >= 250 && mouseY <= 445) {
-        corgi1_s += 5;
+        corgi1_s += miloP;
     }
     //poodle
     image(date2s, 250, 250, 200, 200);
     if (mouseIsPressed && mouseX >= 200 && mouseX <= 440 && mouseY >= 250 && mouseY <= 445) {
-        corgi1_s += 20;
+        corgi1_s += chouchouP;
     }
     //chihuaha
     image(date3s, 500, 250, 200, 200);
     if (mouseIsPressed && mouseX >= 600 && mouseX <= 700 && mouseY >= 250 && mouseY <= 445) {
-        corgi1_s += 40;
+        corgi1_s += souP;
     }
     //shiba inu
     image(date4s, 10, 500, 200, 200);
@@ -315,7 +325,7 @@ function dogdate1Page() {
     line(780, 0, 800, 19);
     line(800, 0, 780, 19);
     if (mouseIsPressed && mouseX >= 780 && mouseX <= 800 && mouseY >= 0 && mouseY <= 19) {
-        corgi1_s -= 5;
+        corgi1_s -= miloP;
     }
     //mail icon
     fill(250);
@@ -410,7 +420,7 @@ function dogdate2Page() {
     line(780, 0, 800, 19);
     line(800, 0, 780, 19);
     if (mouseIsPressed && mouseX >= 780 && mouseX <= 800 && mouseY >= 0 && mouseY <= 19) {
-        corgi1_s -= 15;
+        corgi1_s -= chouchouP;
     }
     //mail icon
     fill(250);
@@ -505,7 +515,7 @@ function dogdate3Page() {
     line(780, 0, 800, 19);
     line(800, 0, 780, 19);
     if (mouseIsPressed && mouseX >= 780 && mouseX <= 800 && mouseY >= 0 && mouseY <= 19) {
-        corgi1_s -= 30;
+        corgi1_s -= souP;
     }
     //mail icon
     fill(250);
