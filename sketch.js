@@ -564,7 +564,7 @@ function dogdate1Chat() {
             fill(0, 66, 249);
             textAlign(RIGHT);
             text('a) Green Grass Party', 790, 490);
-            text('b) No-Least Party', 790, 520);
+            text('b) No-Leash Party', 790, 520);
             text('c) Democatic Party', 790, 550);
             text('d) Working Dogs Party', 790, 580);
             if (nextQ >= 3) {
@@ -989,7 +989,7 @@ function dogdate6Page() {
     rect(750, 780, 50, 20);
     line(750, 780, 775, 800);
     line(800, 780, 775, 800);
-    if (mouseIsPressed && mouseX >= 750 && mouseX <= 800 && mouseY >= 780 && mouseY <= 800) {
+    if (mouseIsPressed && mouseX >= 750 && mouseX <= 800 && mouseY >= 780 && mouseY <= 700) {
         corgi1_s += 20;
     }
 }

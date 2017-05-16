@@ -17,10 +17,10 @@ var x;
 var y;
 
 function preload() {
-    dog1 = loadImage("assets/date_dog.gif");
-    dog2 = loadImage("assets/pd_player.gif");
-    frisbee = loadImage("assets/frisb.gif");
-    park = loadImage("assets/park.jpg");
+    dog1 = loadImage("p5-dog/assets/date_dog.gif");
+    dog2 = loadImage("p5-dog/assets/pd_player.gif");
+    frisbee = loadImage("p5-dog/assets/frisb.gif");
+    park = loadImage("p5-dog/assets/park.jpg");
 }
 
 function setup() {
