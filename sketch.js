@@ -777,6 +777,6 @@ function keyPressed() {
         nextQ++;
         nextQc++;
         nextQs++;
-        nextQb++;
+        //nextQb++;
     }
 }
