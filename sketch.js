@@ -209,27 +209,27 @@ function draw() {
         if (corgi1_s >= miloP) {
             dogdate1Page();
         }
-        if (corgi1_s >= miloP + 5) {
+        if (corgi1_s >= miloP + 200) {
             dogdate1Chat();
         }
         //options for dogdate2, chou chou
         if (corgi1_s >= chouchouP) {
             dogdate2Page();
         }
-        if (corgi1_s >= chouchouP + 5) {
+        if (corgi1_s >= chouchouP + 20) {
             dogdate2Chat();
         }
         //options for dogdate2, soup
         if (corgi1_s >= souP) {
             dogdate3Page();
         }
-        if (corgi1_s >= souP + 5) {
+        if (corgi1_s >= souP + 20) {
             dogdate3Chat();
         }
         if (corgi1_s >= baguetteP) {
             dogdate4Page();
         }
-        if (corgi1_s >= baguetteP + 5) {
+        if (corgi1_s >= baguetteP + 20) {
             dogdate4Chat();
         }
     }
@@ -343,7 +343,7 @@ function dogdate1Page() {
     line(750, 780, 775, 800);
     line(800, 780, 775, 800);
     if (mouseIsPressed && mouseX >= 750 && mouseX <= 800 && mouseY >= 780 && mouseY <= 800) {
-        corgi1_s += 5;
+        corgi1_s += 200;
     }
 }
 //if you click on chat for dogdate1
@@ -361,10 +361,6 @@ function dogdate1Chat() {
     line(800, 0, 750, 50);
     if (mouseIsPressed && mouseX >= 750 && mouseX <= 800 && mouseY >= 0 && mouseY <= 50) {
         corgi1_s -= corgi1_s;
-        nextQ -= nextQ;
-        nextQc -= nextQc;
-        nextQs -= nextQs;
-        nextQb -= nextQb;
     }
     //chat points
     textAlign(RIGHT);
@@ -439,7 +435,7 @@ function dogdate2Page() {
     line(750, 780, 775, 800);
     line(800, 780, 775, 800);
     if (mouseIsPressed && mouseX >= 750 && mouseX <= 800 && mouseY >= 780 && mouseY <= 800) {
-        corgi1_s += 5;
+        corgi1_s += 20;
     }
 }
 //chou chou's chat
@@ -457,10 +453,6 @@ function dogdate2Chat() {
     line(800, 0, 750, 50);
     if (mouseIsPressed && mouseX >= 750 && mouseX <= 800 && mouseY >= 0 && mouseY <= 50) {
         corgi1_s -= corgi1_s;
-        nextQ -= nextQ;
-        nextQc -= nextQc;
-        nextQs -= nextQs;
-        nextQb -= nextQb;
     }
     //chat points
     textAlign(RIGHT);
@@ -535,7 +527,7 @@ function dogdate3Page() {
     line(750, 780, 775, 800);
     line(800, 780, 775, 800);
     if (mouseIsPressed && mouseX >= 750 && mouseX <= 800 && mouseY >= 780 && mouseY <= 800) {
-        corgi1_s += 5;
+        corgi1_s += 20;
     }
 }
 //soup's chat
@@ -553,10 +545,6 @@ function dogdate3Chat() {
     line(800, 0, 750, 50);
     if (mouseIsPressed && mouseX >= 750 && mouseX <= 800 && mouseY >= 0 && mouseY <= 50) {
         corgi1_s -= corgi1_s;
-        nextQ -= nextQ;
-        nextQc -= nextQc;
-        nextQs -= nextQs;
-        nextQb -= nextQb;
     }
     //chat points
     textAlign(RIGHT);
@@ -631,7 +619,7 @@ function dogdate4Page() {
     line(750, 780, 775, 800);
     line(800, 780, 775, 800);
     if (mouseIsPressed && mouseX >= 750 && mouseX <= 800 && mouseY >= 780 && mouseY <= 800) {
-        corgi1_s += 5;
+        corgi1_s += 20;
     }
 }
 //Baguette's chat
@@ -649,14 +637,10 @@ function dogdate4Chat() {
     line(800, 0, 750, 50);
     if (mouseIsPressed && mouseX >= 750 && mouseX <= 800 && mouseY >= 0 && mouseY <= 50) {
         corgi1_s -= corgi1_s;
-        nextQ -= nextQ;
-        nextQc -= nextQc;
-        nextQs -= nextQs;
-        nextQb -= nextQb;
     }
     //chat points
     textAlign(RIGHT);
-    text(soupPoints, 790, 790);
+    text(baguettePoints, 790, 790);
     //opening greeting
     textSize(40);
     fill(25, 249, 0);
@@ -702,6 +686,98 @@ function dogdate4Chat() {
                 textAlign(LEFT);
                 text('Nice to meet you, Jean-Pierre III!', 10, 620);
                 text('I think we have some similar thoughts, see you soon!', 10, 650);
+            }
+        }
+    }
+}
+//demitri
+function dogdate5Page(){
+    image(date5, 0, 0, 800, 800);
+    //text
+    textSize(35);
+    fill(255, 0, 220);
+    text('you have a message from Demitri!', 550, 795);
+    //exit box
+    fill(180);
+    rect(780, 0, 20, 19);
+    line(780, 0, 800, 19);
+    line(800, 0, 780, 19);
+    if (mouseIsPressed && mouseX >= 780 && mouseX <= 800 && mouseY >= 0 && mouseY <= 19) {
+        corgi1_s -= 30;
+    }
+    //mail icon
+    fill(250);
+    rect(750, 780, 50, 20);
+    line(750, 780, 775, 800);
+    line(800, 780, 775, 800);
+    if (mouseIsPressed && mouseX >= 750 && mouseX <= 800 && mouseY >= 780 && mouseY <= 800) {
+        corgi1_s += 20;
+    }
+}
+//demitri chat
+function dogdate5Chat(){
+    background(250);
+    //top bar
+    fill(255, 0, 220);
+    textFont(Font, 50);
+    textAlign(CENTER);
+    text('Chat with Demitri!', 200, 50);
+    line(0, 50, 800, 50);
+    //exit box
+    line(750, 0, 750, 50);
+    line(750, 0, 800, 50);
+    line(800, 0, 750, 50);
+    if (mouseIsPressed && mouseX >= 750 && mouseX <= 800 && mouseY >= 0 && mouseY <= 50) {
+        corgi1_s -= corgi1_s;
+    }
+    //chat points
+    textAlign(RIGHT);
+    text(demitriPoints, 790, 790);
+    //opening greeting
+    textSize(40);
+    fill(25, 249, 0);
+    textAlign(LEFT);
+    text('Wassup! Im Demitri!', 10, 100);
+    text('whats your favorite color?', 10, 130);
+    //response options
+    fill(0, 66, 249);
+    textAlign(RIGHT);
+    text('Type q, r, s or t:', 790, 160);
+    text('q) black and white', 790, 190);
+    text('r) beige', 790, 220);
+    text('s) green', 790, 250);
+    text('t) not sure', 790, 280);
+    //when key is pressed
+    if (nextQb >= 1) {
+        //response question
+        fill(25, 249, 0);
+        textAlign(LEFT);
+        text('I like baby blue. Are you an athletic doggo?', 10, 310);
+        //response options
+        fill(0, 66, 249);
+        textAlign(RIGHT);
+        text('m) Im not like other dogs', 790, 340);
+        text('n) frisbee. all day, everyday', 790, 370);
+        text('o) fetch!', 790, 400);
+        text('p) tail chaser', 790, 430);
+        if (nextQb >= 2) {
+            //final response question
+            fill(25, 249, 0);
+            textAlign(LEFT);
+            text('Favorite novel', 10, 460);
+            //response options
+            fill(0, 66, 249);
+            textAlign(RIGHT);
+            text('m) where the red ferns grow', 790, 490);
+            text('n) marley and me...', 790, 520);
+            text('o) old yeller', 790, 550);
+            text('p) of mice and men', 790, 580);
+            if (nextQb >= 3) {
+                //goodbye
+                fill(25, 249, 0);
+                textAlign(LEFT);
+                text('Nice to meet you, Jean-Pierre III!', 10, 620);
+                text('Join my book club!', 10, 650);
             }
         }
     }
@@ -777,6 +853,6 @@ function keyPressed() {
         nextQ++;
         nextQc++;
         nextQs++;
-        //nextQb++;
+        nextQb++;
     }
 }
