@@ -59,6 +59,22 @@ var miloPoints, chouChouPoints, soupPoints, baguettePoints, demitriPoints, maxPo
 var miloP, chouchouP, souP, baguetteP, demitriP, maxP;
 //score array
 var scores;
+//switches to pong
+var pong_s;
+///PONG VARIABLES\\\
+var paddle_x, paddle_y;
+var paddle_w, paddle_h;
+var paddle_step;
+var paddle_step_y;
+var paddle2_y;
+var paddle3_x, paddle3_y;
+var paddle3_w, paddle3_h;
+var paddle4_x;
+var ball_x, ball_y;
+var ball_r;
+var ball_x_step, ball_y_step;
+var x;
+var y;
 /////////preload/////////
 function preload() {
     //font
@@ -138,6 +154,11 @@ function preload() {
     date6 = loadImage('assets/textures/dateProfiles/profile_6.png');
     //creepy dude sprite
     date6s = loadImage('assets/textures/dateSprites/creepy_dude_1.png');
+    //PONG PRELOAD\\
+    dog1 = loadImage("p5-dog/assets/date_dog.gif");
+    dog2 = loadImage("p5-dog/assets/pd_player.gif");
+    frisbee = loadImage("p5-dog/assets/frisb.gif");
+    park = loadImage("p5-dog/assets/park.jpg");
 }
 
 function setup() {
@@ -194,6 +215,19 @@ function setup() {
     baguetteP = 100000;
     demitriP = 1000000;
     maxP = 10000000;
+    //pong switch
+    pong_s = 0;
+    //PONG VARIABLES\\
+    paddle_h = 64;
+    paddle_w = 64;
+    paddle_x = width / 2;
+    paddle_y = height - paddle_h;
+    paddle2_y = 32;
+    paddle_step = 0;
+    ball_r = 13;
+    x = 0;
+    y = 3;
+    reset();
 }
 
 function draw() {
@@ -242,12 +276,82 @@ function draw() {
         if (corgi1_s >= demitriP + 20) {
             dogdate5Chat();
         }
-        if (corgi1_s >= maxP){
+        if (corgi1_s >= maxP) {
             dogdate6Page();
         }
         if (corgi1_s >= maxP + 20) {
             dogdate6Chat();
         }
+    } //PONGSWITCH\\
+    if (pong_s >= 1) {
+        image(park, 0, 0, 800, 800);
+        textSize(32);
+        textFont("monospace");
+        stroke(0);
+        strokeWeight(4);
+        fill(255);
+        //score
+        text("Score:", 25, 25);
+        text(x, 150, 25);
+        //lives
+        text("Lives:", 350, 25);
+        text(y, 475, 25);
+        if (y <= 0) {
+            y = 3;
+            x = 0;
+        }
+        // move paddles on X axis
+        //paddle_x += (mouseX - paddle_x) * .1;
+        paddle_x = paddle_x + paddle_step;
+        // hitting paddle1?
+        if (ball_y + ball_r > paddle_y) {
+            if (ball_x >= paddle_x && ball_x <= paddle_x + paddle_w) {
+                ball_y_step = -ball_y_step;
+                ball_y = paddle_y - ball_r;
+                x = x + 1;
+                if (x % 5 == 0) {
+                    y = y + 1;
+                }
+            }
+            else if (ball_y + ball_r > paddle_y) {
+                y = y - 1;
+                reset();
+            }
+        }
+        // is the ball hitting the right or left wall?
+        if (ball_x - ball_r < 0 || ball_x + ball_r > width) {
+            ball_x_step = -ball_x_step;
+        }
+        // hitting paddle2?
+        if (ball_y + ball_r < paddle2_y + paddle_h + ball_r) {
+            if (ball_x >= paddle_x && ball_x <= paddle_x + paddle_w) {
+                ball_y_step = random(1, 3);
+                ball_y = paddle2_y + paddle_h + ball_r;
+                x = x + 1;
+                if (x % 5 == 0) {
+                    y = y + 1;
+                }
+            }
+            else if (ball_y + ball_r < paddle2_y + paddle_h) {
+                y = y - 1
+                reset();
+            }
+        }
+        // move ball by ball_x_step and ball_y_step
+        ball_x = ball_x + ball_x_step;
+        ball_y = ball_y + ball_y_step;
+        //draw ball
+        noStroke();
+        fill(196, 0, 0);
+        image(frisbee, ball_x, ball_y, ball_r * 2, ball_r * 2);
+        // draw paddle
+        stroke(24);
+        fill(64);
+        image(dog1, paddle_x, paddle_y, paddle_w, paddle_h);
+        //draw paddle2
+        stroke(24);
+        fill(64);
+        image(dog2, paddle_x, paddle2_y, paddle_w, paddle_h);
     }
 }
 
@@ -264,7 +368,6 @@ function welcomePage() {
     if (mouseIsPressed && mouseX >= rectX && mouseX <= rectX + rectL && mouseY >= rectY && mouseY <= rectY + rectH) {
         makeProfile += 1;
     }
-
 }
 
 function chooseProfile() {
@@ -274,6 +377,11 @@ function chooseProfile() {
     animation(corgi1, dogx, dogy);
     if (mouseIsPressed && mouseX >= dogx - 50 && mouseX <= dogx + 30 && mouseY >= dogy - 50 && mouseY <= dogy + 20) {
         corgi1_s++;
+    }
+    fill(255, 0, 0);
+    rect(450, 450, 100, 100);
+    if (mouseIsPressed && mouseX >= 450 && mouseX <= 550 && mouseY >= 450 && mouseY <= 550) {
+        pong_s++;
     }
     textAlign(LEFT);
     textSize(50);
@@ -363,12 +471,12 @@ function corgi1Chosen() {
     }
     //maltese
     image(date5s, 250, 500, 200, 200);
-    if (mouseIsPressed && mouseX >= 200 && mouseX <= 440 && mouseY >= 450 && mouseY <= 800){
+    if (mouseIsPressed && mouseX >= 200 && mouseX <= 440 && mouseY >= 450 && mouseY <= 800) {
         corgi1_s += demitriP;
     }
     //creepy dude
     image(date6s, 500, 500, 200, 200);
-    if (mouseIsPressed && mouseX >= 600 && mouseX <= 700 && mouseY >= 450 && mouseY <= 800){
+    if (mouseIsPressed && mouseX >= 600 && mouseX <= 700 && mouseY >= 450 && mouseY <= 800) {
         corgi1_s += maxP;
     }
 }
@@ -764,7 +872,7 @@ function dogdate4Chat() {
     }
 }
 //demitri
-function dogdate5Page(){
+function dogdate5Page() {
     image(date5, 0, 0, 800, 800);
     //text
     textSize(35);
@@ -788,7 +896,7 @@ function dogdate5Page(){
     }
 }
 //demitri chat
-function dogdate5Chat(){
+function dogdate5Chat() {
     background(250);
     //top bar
     fill(255, 0, 220);
@@ -862,7 +970,7 @@ function dogdate5Chat(){
     }
 }
 //max's page
-function dogdate6Page(){
+function dogdate6Page() {
     image(date6, 0, 0, 800, 800);
     //text
     textSize(35);
@@ -886,13 +994,13 @@ function dogdate6Page(){
     }
 }
 //chat with max
-function dogdate6Chat(){
+function dogdate6Chat() {
     background(250);
     //top bar
     fill(255, 0, 220);
     textFont(Font, 50);
     textAlign(CENTER);
-    text('Chat with Demitri!', 200, 50);
+    text('Chat with Max!', 200, 50);
     line(0, 50, 800, 50);
     //exit box
     line(750, 0, 750, 50);
@@ -960,8 +1068,18 @@ function dogdate6Chat(){
 }
 // points system for each dog//
 function keyPressed() {
+    //for PONG\\
+    if (keyCode == LEFT_ARROW) {
+        paddle_step = -3;
+    }
+    else if (keyCode == RIGHT_ARROW) {
+        paddle_step = 3;
+    }
+    else if (key == ' ') {
+        reset();
+    }
     //for milo
-    if (key == 'A' && nextQ == 2) {
+    else if (key == 'A' && nextQ == 2) {
         miloPoints++;
         nextQ++;
     }
@@ -1026,7 +1144,7 @@ function keyPressed() {
         nextQb++;
     }
     //for demitri
-    else if (key == 'Q' && nextQd == 1){
+    else if (key == 'Q' && nextQd == 1) {
         demitriPoints++;
         nextQd++;
     }
@@ -1043,23 +1161,22 @@ function keyPressed() {
         nextQd++;
     }
     //max
-    else if (key == 'U'){
+    else if (key == 'U') {
         nextQm++;
         maxPoints++;
     }
-    else if (key == 'V'){
+    else if (key == 'V') {
         nextQm++;
         nextQd++;
     }
-    else if (key == 'W'){
+    else if (key == 'W') {
         nextQm++;
         nextQd++;
     }
-    else if (key == 'X'){
+    else if (key == 'X') {
         nextQm++;
         nextQd++;
     }
-
     else {
         nextQ++;
         nextQc++;
@@ -1070,12 +1187,27 @@ function keyPressed() {
     }
 }
 
-function highScore(input){
+function keyReleased() {
+    paddle_step = 0;
+}
+
+function highScore(input) {
     var l = 0;
-    for (x = 0; x <= input.length; x++){
-        if (input[x] > l){
+    for (x = 0; x <= input.length; x++) {
+        if (input[x] > l) {
             l = input[x];
         }
     }
     return l;
+}
+
+function reset() {
+    ball_x = random(ball_r, width - ball_r);
+    ball_y = random(ball_r, height / 2);
+    ball_x_step = random(-3, 3);
+    ball_y_step = random(1, 3);
+    x = 0
+    if (y <= 0) {
+        alert("You lose the game, please refresh the webpage to restart");
+    }
 }
