@@ -159,8 +159,6 @@ function preload() {
     dog2 = loadImage("p5-dog/assets/pd_player.gif");
     frisbee = loadImage("p5-dog/assets/frisb.gif");
     park = loadImage("p5-dog/assets/park.jpg");
-    crying = loadImage("assets/crying_corgi.gif");
-	love = loadImage("assets/winScreen.gif");
 }
 
 function setup() {
@@ -1212,9 +1210,6 @@ function reset() {
     x = 0
     if (y <= 0) {
         alert("You lose the game, please refresh the webpage to restart");
-        image(crying, 400,200,200,400);
+		image ()
     }
-    else if (y >=10){
-        alert("Jesue! You find love!");
-        image(love,400,200,200,400);
 }
