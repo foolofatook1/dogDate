@@ -155,7 +155,8 @@ function preload() {
     //creepy dude sprite
     date6s = loadImage('assets/textures/dateSprites/creepy_dude_1.png');
     //PONG PRELOAD\\
-    dog1 = loadImage("p5-dog/assets/date_dog.gif");
+    dog1 = loadImage("p5-dog/assets/
+                     ");
     dog2 = loadImage("p5-dog/assets/pd_player.gif");
     frisbee = loadImage("p5-dog/assets/frisb.gif");
     park = loadImage("p5-dog/assets/park.jpg");
@@ -364,7 +365,7 @@ function welcomePage() {
     textAlign(CENTER);
     text('WELCOME TO eBARK!', 400, 400);
     textFont(Font, 30);
-    text('FIND LOVE', 400, 460);
+    text('♡ FIND LOVE ♡', 400, 460);
     if (mouseIsPressed && mouseX >= rectX && mouseX <= rectX + rectL && mouseY >= rectY && mouseY <= rectY + rectH) {
         makeProfile += 1;
     }
