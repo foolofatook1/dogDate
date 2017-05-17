@@ -363,11 +363,11 @@ function draw() {
         }
         //lose condition\\
         if (y <= 0) {
-        image(loser, 0, 0, 800, 800);
-        animation(crying, 200, 400, 400, 200);
-        text("You lose the game, please refresh the webpage to restart");
+            image(loser, 0, 0, 800, 800);
+            animation(crying, 200, 400, 400, 200);
+            text("You lose the game, please refresh the webpage to restart");
             noLoop();
-    }
+        }
     }
 }
 
