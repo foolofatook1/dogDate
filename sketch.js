@@ -1203,22 +1203,3 @@ function keyPressed() {
         nextQm++;
     }
 }
-
-function keyReleased() {
-    paddle_step = 0;
-}
-//function highScore(input) {
-//    var l = 0;
-//    for (i = 0; i <= input.length; i++) {
-//        if (input[i] > l) {
-//            l = input[i];
-//        }
-//    }
-//    return l;
-//}
-function reset() {
-    ball_x = random(ball_r, width - ball_r);
-    ball_y = random(ball_r, height / 2);
-    ball_x_step = random(-3, 3);
-    ball_y_step = random(1, 3);
-}
