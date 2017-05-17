@@ -159,6 +159,9 @@ function preload() {
     dog2 = loadImage("p5-dog/assets/pd_player.gif");
     frisbee = loadImage("p5-dog/assets/frisb.gif");
     park = loadImage("p5-dog/assets/park.jpg");
+	crying = loadImage("assets/crying_corgi.gif");
+	love = loadImage("assets/winScreen.gif");
+	loser = loadImage("assets/Loser-Red-Stamp-Picture.jpg")
 }
 
 function setup() {
@@ -1202,14 +1205,25 @@ function keyReleased() {
 //    return l;
 //}
 
-function reset() {
-    ball_x = random(ball_r, width - ball_r);
+function reset(){
+		ball_x = random(ball_r, width - ball_r);
     ball_y = random(ball_r, height / 2);
     ball_x_step = random(-3, 3);
     ball_y_step = random(1, 3);
-    x = 0
-    if (y <= 0) {
+    x = 0;
+	
+if (y <= 0) {
+		
+	    image (loser,0,0,800,800);
+	    image (crying,200,400,400,200);
         alert("You lose the game, please refresh the webpage to restart");
-		image ()
-    }
+        Loop();
 }
+	else if (x == 5) {
+		image(love,200,400,400,200);
+		alert("Congratulations! You find love!");
+		noLoop();
+	}
+    }
+
+
